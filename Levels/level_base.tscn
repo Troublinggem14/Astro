@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://de4wst1jnnvyn"]
+
+[ext_resource type="Texture2D" uid="uid://dlu0gdyj58r3h" path="res://icon.svg" id="1_4uu8v"]
+
+[node name="Level_base" type="Node2D" unique_id=823952948]
+
+[node name="TestBackground" type="Sprite2D" parent="." unique_id=1692146758]
+scale = Vector2(17.6, 17.6)
+texture = ExtResource("1_4uu8v")
