@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://j77hnlci51qy" path="res://Components/player_movement.gd" id="1_ot5p3"]
 [ext_resource type="Texture2D" uid="uid://dlhaokv68b7wk" path="res://Aseprite/Pickaxe/Astro Pickaxe_Deploy.png" id="4_fhj3i"]
 [ext_resource type="Texture2D" uid="uid://dh36f0lusowbj" path="res://Aseprite/Pickaxe/Astro_Pickaxe_extended.png" id="5_mmdgc"]
+[ext_resource type="Script" uid="uid://skxjwfeidnpb" path="res://Characters/Astro/state_machine.gd" id="6_4k583"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vhqp"]
 radius = 7.0
@@ -1383,3 +1384,6 @@ move_speed = 200
 
 [node name="AstroAnimationPlayer" type="AnimationPlayer" parent="." unique_id=2070000717]
 libraries/ = SubResource("AnimationLibrary_fhj3i")
+
+[node name="State_Machine" type="Node2D" parent="." unique_id=318471665]
+script = ExtResource("6_4k583")
