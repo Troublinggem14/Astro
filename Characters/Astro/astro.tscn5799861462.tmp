@@ -10,7 +10,7 @@
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vhqp"]
 radius = 7.0
-height = 22.0
+height = 20.0
 
 [sub_resource type="Animation" id="Animation_mmdgc"]
 resource_name = "Idle_East"
@@ -1374,7 +1374,7 @@ hframes = 27
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821428530]
-position = Vector2(-1, 2)
+position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_7vhqp")
 
 [node name="Movement" type="Node2D" parent="." unique_id=57830787 node_paths=PackedStringArray("player")]
@@ -1391,20 +1391,11 @@ libraries/ = SubResource("AnimationLibrary_fhj3i")
 
 [node name="UI" parent="." unique_id=1314799245 instance=ExtResource("6_4k583")]
 
-[node name="PauseMenu" parent="UI" unique_id=710253817 instance=ExtResource("7_1s7r3")]
-visible = false
+[node name="PauseMenu" parent="." unique_id=710253817 instance=ExtResource("7_1s7r3")]
 
-[node name="FovSlider" parent="UI/PauseMenu/Control" parent_id_path=PackedInt32Array(710253817, 5852087) index="0" unique_id=1270081679 node_paths=PackedStringArray("camera")]
-offset_left = 18.0
-offset_top = 25.0
-offset_right = 193.0
-offset_bottom = 41.0
-min_value = 2.0
-max_value = 5.0
-step = 0.1
-value = 3.0
-camera = NodePath("../../../../Camera2D")
+[node name="FovSlider" parent="PauseMenu/Control" parent_id_path=PackedInt32Array(710253817, 5852087) index="0" unique_id=1270081679 node_paths=PackedStringArray("camera")]
+camera = NodePath("../../../Camera2D")
 
-[connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
+[connection signal="value_changed" from="PauseMenu/Control/FovSlider" to="." method="_on_fov_slider_value_changed"]
 
-[editable path="UI/PauseMenu"]
+[editable path="PauseMenu"]

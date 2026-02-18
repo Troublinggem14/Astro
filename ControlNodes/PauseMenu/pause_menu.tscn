@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://yglwqsap2xd3"]
+
+[ext_resource type="Script" uid="uid://cy0rqb34hcyhg" path="res://ControlNodes/PauseMenu/pause_menu.gd" id="1_mqdw6"]
+[ext_resource type="Script" uid="uid://dv5cxvm6bjeic" path="res://ControlNodes/PauseMenu/fov_slider.gd" id="1_x2232"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mqdw6"]
+font_size = 63
+
+[node name="PauseMenu" type="Node2D" unique_id=710253817]
+process_mode = 3
+script = ExtResource("1_mqdw6")
+
+[node name="Control" type="Control" parent="." unique_id=5852087]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FovSlider" type="HSlider" parent="Control" unique_id=1270081679]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 24.0
+offset_right = 185.0
+offset_bottom = 40.0
+value = 100.0
+script = ExtResource("1_x2232")
+
+[node name="Label" type="Label" parent="Control/FovSlider" unique_id=959235190]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -25.0
+offset_right = 42.0
+offset_bottom = -2.0
+text = "FOV:"
+
+[node name="PausedText" type="Label" parent="Control" unique_id=921560622]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 457.0
+offset_top = 42.0
+offset_right = 678.0
+offset_bottom = 129.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_mqdw6")

@@ -8,3 +8,4 @@
 [node name="Level_base" parent="." unique_id=823952948 instance=ExtResource("1_ig7tw")]
 
 [node name="Astro" parent="." unique_id=605047117 instance=ExtResource("2_0xm2m")]
+position = Vector2(88, 47)
