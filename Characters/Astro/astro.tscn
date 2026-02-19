@@ -2234,6 +2234,7 @@ _data = {
 
 [node name="Astro" type="CharacterBody2D" unique_id=605047117]
 collision_mask = 46
+motion_mode = 1
 script = ExtResource("1_vb1uq")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=973382487]

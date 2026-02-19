@@ -12,7 +12,7 @@ script = ExtResource("1_7y0h0")
 scale = Vector2(1.7999995, 1.7999995)
 shape = SubResource("RectangleShape2D_fjs6p")
 
-[node name="SpawnPoint" type="Marker2D" parent="." unique_id=2088618001]
+[node name="SpawnPoint" type="Marker2D" parent="." unique_id=1342361131]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

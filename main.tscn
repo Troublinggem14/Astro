@@ -1,15 +1,40 @@
 [gd_scene format=3 uid="uid://cy08xdbgpwo0b"]
 
+[ext_resource type="Script" uid="uid://2hnsxuosuj07" path="res://Levels/level.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/OpenWorld/level_base.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://w68qxm8ifxfr" path="res://Objects/Door/door.tscn" id="3_1bvp3"]
 
 [node name="Main" type="Node2D" unique_id=122740768]
-
-[node name="Level_base" parent="." unique_id=823952948 instance=ExtResource("1_ig7tw")]
+script = ExtResource("1_1bvp3")
 
 [node name="Y_sorted_objects" type="Node2D" parent="." unique_id=290903617]
 y_sort_enabled = true
 
 [node name="Astro" parent="Y_sorted_objects" unique_id=605047117 instance=ExtResource("2_0xm2m")]
 y_sort_enabled = true
-position = Vector2(471, 200)
+position = Vector2(860, 219)
+
+[node name="Level_base" parent="Y_sorted_objects" unique_id=823952948 instance=ExtResource("1_ig7tw")]
+y_sort_enabled = true
+
+[node name="BrokenFin" parent="Y_sorted_objects/Level_base" index="4" unique_id=1181083111]
+z_as_relative = false
+
+[node name="Doors" type="Node" parent="." unique_id=276073244]
+
+[node name="Door_OutsideShip" parent="Doors" unique_id=884870198 instance=ExtResource("3_1bvp3")]
+position = Vector2(961, 183)
+scale = Vector2(0.4800195, 0.4800195)
+desitnation_level_name = "inside_ship"
+desination_door_name = "InsideShip"
+spawn_direction = "South"
+
+[node name="CollisionShape2D" parent="Doors/Door_OutsideShip" index="0" unique_id=1671389555]
+scale = Vector2(5.049867, 5.049867)
+
+[node name="SpawnPoint" parent="Doors/Door_OutsideShip" index="1" unique_id=1342361131]
+position = Vector2(0, 70.83045)
+
+[editable path="Y_sorted_objects/Level_base"]
+[editable path="Doors/Door_OutsideShip"]
