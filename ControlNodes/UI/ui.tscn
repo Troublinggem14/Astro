@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dn23xhnkwcadu"]
 
-[ext_resource type="Texture2D" uid="uid://cvv7c2lo64qrj" path="res://Aseprite/UI_Bars.png" id="1_xcysr"]
+[ext_resource type="Texture2D" uid="uid://cvv7c2lo64qrj" path="res://Aseprite/UI/UI_Bars.png" id="1_xcysr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8m25"]
 atlas = ExtResource("1_xcysr")

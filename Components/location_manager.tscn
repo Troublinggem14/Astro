@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cag8icvi274f6"]
+
+[ext_resource type="Script" uid="uid://cu7fo2a2k2a27" path="res://Components/LocationManager.gd" id="1_0aegj"]
+
+[node name="LocationManager" type="Node2D" unique_id=6740291]
+script = ExtResource("1_0aegj")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1709155363]
+
+[node name="interact label" type="Label" parent="." unique_id=359038484]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

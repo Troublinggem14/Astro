@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dabu7exyrms0p"]
 
-[ext_resource type="Texture2D" uid="uid://l2rqtdfc4yll" path="res://Aseprite/Astro Mk3.png" id="1_7vhqp"]
+[ext_resource type="Texture2D" uid="uid://l2rqtdfc4yll" path="res://Aseprite/UI/Astro Mk3.png" id="1_7vhqp"]
 [ext_resource type="Script" uid="uid://6oc0bttlk6r5" path="res://Characters/Astro/astro.gd" id="1_d00dw"]
 [ext_resource type="Script" uid="uid://j77hnlci51qy" path="res://Components/player_movement.gd" id="1_ot5p3"]
 [ext_resource type="Texture2D" uid="uid://dlhaokv68b7wk" path="res://Aseprite/Pickaxe/Astro Pickaxe_Deploy.png" id="4_fhj3i"]
@@ -1370,11 +1370,12 @@ script = ExtResource("1_d00dw")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=973382487]
 texture = ExtResource("1_7vhqp")
+offset = Vector2(0, -14.055)
 hframes = 27
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821428530]
-position = Vector2(-1, 2)
+position = Vector2(0, -12)
 shape = SubResource("CapsuleShape2D_7vhqp")
 
 [node name="Movement" type="Node2D" parent="." unique_id=57830787 node_paths=PackedStringArray("player")]

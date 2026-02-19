@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l2rqtdfc4yll"
-path="res://.godot/imported/Astro Mk3.png-24cb1f50a5e5034668340208ae907b3b.ctex"
+uid="uid://p48sxdjn64if"
+path="res://.godot/imported/CrashedShip.png-4b776b47bf48b006b35aca2d511e2959.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Aseprite/Astro Mk3.png"
-dest_files=["res://.godot/imported/Astro Mk3.png-24cb1f50a5e5034668340208ae907b3b.ctex"]
+source_file="res://Aseprite/TileSets/CrashedShip.png"
+dest_files=["res://.godot/imported/CrashedShip.png-4b776b47bf48b006b35aca2d511e2959.ctex"]
 
 [params]
 
