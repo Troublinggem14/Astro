@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/level_base.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://4te86bo0w1uy" path="res://Objects/Ship/crashed_ship.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D" unique_id=122740768]
 
@@ -14,7 +13,3 @@ y_sort_enabled = true
 [node name="Astro" parent="Y_sorted_objects" unique_id=605047117 instance=ExtResource("2_0xm2m")]
 y_sort_enabled = true
 position = Vector2(471, 200)
-
-[node name="CrashedShip" parent="Y_sorted_objects" unique_id=6740291 instance=ExtResource("3_h2yge")]
-y_sort_enabled = true
-position = Vector2(502, 144)

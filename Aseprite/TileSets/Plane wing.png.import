@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djansomx3j0gf"
-path="res://.godot/imported/GroundTileMapbadone.png-5e0389343c527f4510a024ed25d77b9e.ctex"
+uid="uid://cko8i48mtgyyq"
+path="res://.godot/imported/Plane wing.png-f88709602baf913382e03ba2e4c11f6e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Aseprite/TileSets/GroundTileMapbadone.png"
-dest_files=["res://.godot/imported/GroundTileMapbadone.png-5e0389343c527f4510a024ed25d77b9e.ctex"]
+source_file="res://Aseprite/TileSets/Plane wing.png"
+dest_files=["res://.godot/imported/Plane wing.png-f88709602baf913382e03ba2e4c11f6e.ctex"]
 
 [params]
 
