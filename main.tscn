@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cy08xdbgpwo0b"]
 
-[ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/level_base.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/OpenWorld/level_base.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_0xm2m"]
 
 [node name="Main" type="Node2D" unique_id=122740768]

@@ -1,18 +1,23 @@
 extends Node2D
 @export var player: Node2D
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+@export var tool_node: Node2D
 
 var last_direction = Vector2.DOWN
 var velocity: Vector2
 var Direction : String = "South"
 
+enum Tool {
+	NONE,
+	AXE,
+	PICKAXE
+}
 
 func _physics_process(delta: float) -> void:
 	velocity = player.velocity
 	direction()
 	IdleWalkanimations()
-	print(velocity)
-	
+
 
 func IdleWalkanimations() -> void:
 	if velocity != Vector2.ZERO:
