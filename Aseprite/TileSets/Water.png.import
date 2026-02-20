@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l2rqtdfc4yll"
-path="res://.godot/imported/Astro Mk3.png-30ac93a4f8ae4d8c59d9919005cdf421.ctex"
+uid="uid://by0hka2bey2a8"
+path="res://.godot/imported/Water.png-10cf2056c3b79be8b5156ce09c95c28d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Aseprite/UI/Astro Mk3.png"
-dest_files=["res://.godot/imported/Astro Mk3.png-30ac93a4f8ae4d8c59d9919005cdf421.ctex"]
+source_file="res://Aseprite/TileSets/Water.png"
+dest_files=["res://.godot/imported/Water.png-10cf2056c3b79be8b5156ce09c95c28d.ctex"]
 
 [params]
 

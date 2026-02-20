@@ -1,0 +1,6 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://ctxbo8ckctbmp"]
+
+[ext_resource type="FontFile" uid="uid://byr5m74fgh60p" path="res://Fonts/SPACEBOY.TTF" id="1_a0pbc"]
+
+[resource]
+font = ExtResource("1_a0pbc")

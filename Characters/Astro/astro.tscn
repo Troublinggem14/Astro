@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dabu7exyrms0p"]
 
-[ext_resource type="Texture2D" uid="uid://l2rqtdfc4yll" path="res://Aseprite/UI/Astro Mk3.png" id="1_7vhqp"]
+[ext_resource type="Texture2D" uid="uid://l2rqtdfc4yll" path="res://Aseprite/Characters/Astro Mk3.png" id="1_7vhqp"]
 [ext_resource type="Script" uid="uid://j77hnlci51qy" path="res://Components/player_movement.gd" id="1_ot5p3"]
 [ext_resource type="Script" uid="uid://6oc0bttlk6r5" path="res://Characters/Astro/astro.gd" id="1_vb1uq"]
 [ext_resource type="Script" uid="uid://dc3vxrfgfj6h3" path="res://Components/animations.gd" id="3_1s7r3"]
@@ -2252,9 +2252,10 @@ script = ExtResource("1_ot5p3")
 player = NodePath("..")
 move_speed = 100
 
-[node name="Animations" type="Node2D" parent="." unique_id=1155778364 node_paths=PackedStringArray("player", "tool_node")]
+[node name="Animations" type="Node2D" parent="." unique_id=1155778364 node_paths=PackedStringArray("player", "animation_player", "tool_node")]
 script = ExtResource("3_1s7r3")
 player = NodePath("..")
+animation_player = NodePath("../AnimationPlayer")
 tool_node = NodePath("../Tools")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=21292110]

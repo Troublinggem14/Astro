@@ -1,0 +1,489 @@
+[gd_scene format=3 uid="uid://cu3lk2hnyq8it"]
+
+[ext_resource type="Script" uid="uid://dkixq0obbxtsy" path="res://Levels/Menus/StartMenu/start_menu.gd" id="1_0puwl"]
+[ext_resource type="Texture2D" uid="uid://bfnd1875jngnk" path="res://Aseprite/UI/StartMenuBackgroundStars.png" id="2_0puwl"]
+[ext_resource type="Texture2D" uid="uid://bauu3ne230p21" path="res://Aseprite/UI/StartMenuBackground2.png" id="2_0yjaa"]
+[ext_resource type="Texture2D" uid="uid://cx5236mci1r44" path="res://Aseprite/UI/UI_Buttons-sheet.png" id="3_0yjaa"]
+[ext_resource type="LabelSettings" uid="uid://ctxbo8ckctbmp" path="res://Fonts/Base_label_setting.tres" id="5_0yjaa"]
+[ext_resource type="Script" uid="uid://bt7otas1qevt2" path="res://Components/OptionsComponent.gd" id="6_mor63"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5nps"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1680, 256, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qsie7"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1728, 256, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0bhqb"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1632, 256, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6jem"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1680, 240, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wluh"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1728, 240, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6cl6m"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1632, 240, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hxws"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1680, 272, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhkh6"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1728, 240, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r33eb"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(1632, 240, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfx3v"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(112, 256, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5kg5"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(129, 259, 14, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6b34"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(97, 257, 14, 14)
+
+[sub_resource type="Animation" id="Animation_0yjaa"]
+resource_name = "Press_play"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Screen_Press_Play:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_mor63"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Screen_Press_Play:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_mor63"]
+_data = {
+&"Press_play": SubResource("Animation_0yjaa"),
+&"RESET": SubResource("Animation_mor63")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yjaa"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(160, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mor63"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(176, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kt4xk"]
+atlas = ExtResource("3_0yjaa")
+region = Rect2(144, 176, 16, 16)
+
+[node name="StartMenu" type="Control" unique_id=453079802]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0puwl")
+
+[node name="Planet" type="TextureRect" parent="." unique_id=1724763769]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_0yjaa")
+
+[node name="Stars" type="Parallax2D" parent="." unique_id=1014242458]
+repeat_size = Vector2(576.2222, 326)
+autoscroll = Vector2(20, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Stars" unique_id=1016400095]
+z_index = -1
+position = Vector2(576.2222, 326)
+scale = Vector2(2.3925927, 2.3925927)
+texture = ExtResource("2_0puwl")
+
+[node name="Real_Buttons" type="Node" parent="." unique_id=21150227]
+
+[node name="PlayButton" type="TextureButton" parent="Real_Buttons" unique_id=1233489033]
+offset_left = 203.0
+offset_top = 436.0
+offset_right = 251.0
+offset_bottom = 452.0
+scale = Vector2(3.8, 3.8)
+texture_normal = SubResource("AtlasTexture_f5nps")
+texture_pressed = SubResource("AtlasTexture_qsie7")
+texture_hover = SubResource("AtlasTexture_0bhqb")
+
+[node name="OptionsButton" type="TextureButton" parent="Real_Buttons" unique_id=411334832]
+offset_left = 494.0
+offset_top = 436.0
+offset_right = 542.0
+offset_bottom = 452.0
+scale = Vector2(3.8, 3.8)
+texture_normal = SubResource("AtlasTexture_a6jem")
+texture_pressed = SubResource("AtlasTexture_4wluh")
+texture_hover = SubResource("AtlasTexture_6cl6m")
+
+[node name="QuitButton" type="TextureButton" parent="Real_Buttons" unique_id=1126859710]
+offset_left = 770.0
+offset_top = 436.0
+offset_right = 818.0
+offset_bottom = 452.0
+scale = Vector2(3.8, 3.8)
+texture_normal = SubResource("AtlasTexture_0hxws")
+texture_pressed = SubResource("AtlasTexture_yhkh6")
+texture_hover = SubResource("AtlasTexture_r33eb")
+
+[node name="FakeButtons" type="Node" parent="." unique_id=533652968]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FakeButtons" unique_id=1764030097]
+offset_left = 122.0
+offset_top = 502.0
+offset_right = 518.0
+offset_bottom = 542.0
+scale = Vector2(2.28, 2.28)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FakeButtons/VBoxContainer" unique_id=555668869]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1228877548]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton19" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1461643947]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton20" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=449326896]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton2" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1065895850]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton3" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1883419800]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton4" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=2100511780]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton5" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=153705762]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton6" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=860713035]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton7" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=397769009]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton8" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=2104609839]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton9" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=635310342]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton10" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=659715844]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton11" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1883032169]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton12" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1071264783]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton13" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=415931266]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton14" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1197051091]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton15" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1106830486]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton16" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1011417604]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton17" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1999248833]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton18" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1566438883]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="FakeButtons/VBoxContainer" unique_id=553981510]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=638962112]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton19" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1225080194]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton20" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=732953473]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton2" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1871935217]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton3" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1910912301]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton4" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1058217045]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton5" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1351401321]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton6" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1883857531]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton7" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=512403888]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton8" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1360529989]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton9" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1949226302]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton10" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=835628178]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton11" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1007896736]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton12" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1096140470]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton13" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1828786314]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton14" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=423780949]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton15" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=987572730]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton16" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1888442889]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton17" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=561594260]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextureButton18" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1215161221]
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_gfx3v")
+texture_pressed = SubResource("AtlasTexture_p5kg5")
+texture_hover = SubResource("AtlasTexture_e6b34")
+
+[node name="TextLabels" type="Node" parent="." unique_id=1076241410]
+
+[node name="Screen_Press_Play" type="Label" parent="TextLabels" unique_id=201037215]
+offset_left = 496.0
+offset_top = 251.0
+offset_right = 642.0
+offset_bottom = 274.0
+text = "Press Play"
+label_settings = ExtResource("5_0yjaa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="TextLabels" unique_id=1195137251]
+libraries/ = SubResource("AnimationLibrary_mor63")
+autoplay = &"Press_play"
+
+[node name="FullScreenToWindowedComponent" type="Node2D" parent="." unique_id=417090832]
+script = ExtResource("6_mor63")
+
+[node name="Options" type="Node2D" parent="." unique_id=2045326764]
+visible = false
+
+[node name="Fullscreen" type="Label" parent="Options" unique_id=985317320]
+offset_left = 317.0
+offset_top = 193.0
+offset_right = 485.0
+offset_bottom = 216.0
+text = "FullScreen: "
+label_settings = ExtResource("5_0yjaa")
+
+[node name="V-sync" type="Label" parent="Options" unique_id=177393297]
+offset_left = 317.0
+offset_top = 228.0
+offset_right = 485.0
+offset_bottom = 251.0
+text = "V-sync:"
+label_settings = ExtResource("5_0yjaa")
+
+[node name="toggle_fullscreen" type="TextureButton" parent="Options" unique_id=633788007]
+offset_left = 474.0
+offset_top = 184.0
+offset_right = 490.0
+offset_bottom = 200.0
+scale = Vector2(2.24, 2.24)
+toggle_mode = true
+button_pressed = true
+texture_normal = SubResource("AtlasTexture_0yjaa")
+texture_pressed = SubResource("AtlasTexture_mor63")
+texture_hover = SubResource("AtlasTexture_kt4xk")
+
+[node name="OptionButton" type="OptionButton" parent="Options" unique_id=230436799]
+offset_left = 415.0
+offset_top = 227.0
+offset_right = 516.0
+offset_bottom = 258.0
+item_count = 3
+popup/item_0/text = "Disabled"
+popup/item_0/id = 0
+popup/item_1/text = "Enabled"
+popup/item_1/id = 1
+popup/item_2/text = "Adaptive"
+popup/item_2/id = 2
+
+[connection signal="pressed" from="Real_Buttons/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Real_Buttons/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Real_Buttons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="toggled" from="Options/toggle_fullscreen" to="FullScreenToWindowedComponent" method="_on_toggle_fullscreen_toggled"]
+[connection signal="item_selected" from="Options/OptionButton" to="FullScreenToWindowedComponent" method="_on_option_button_item_selected"]
