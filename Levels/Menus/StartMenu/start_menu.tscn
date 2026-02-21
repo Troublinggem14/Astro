@@ -2,10 +2,11 @@
 
 [ext_resource type="Script" uid="uid://dkixq0obbxtsy" path="res://Levels/Menus/StartMenu/start_menu.gd" id="1_0puwl"]
 [ext_resource type="Texture2D" uid="uid://bfnd1875jngnk" path="res://Assets/Aseprite/UI/StartMenuBackgroundStars.png" id="2_0puwl"]
-[ext_resource type="Texture2D" uid="uid://bauu3ne230p21" path="res://Assets/Aseprite/UI/StartMenuBackground2.png" id="2_0yjaa"]
+[ext_resource type="Texture2D" uid="uid://bha1g7i3ab2e1" path="res://Assets/Aseprite/UI/StartMenuBackground1.png" id="2_mor63"]
 [ext_resource type="Texture2D" uid="uid://cx5236mci1r44" path="res://Assets/Aseprite/UI/UI_Buttons-sheet.png" id="3_0yjaa"]
 [ext_resource type="LabelSettings" uid="uid://ctxbo8ckctbmp" path="res://Fonts/Base_label_setting.tres" id="5_0yjaa"]
 [ext_resource type="Script" uid="uid://bt7otas1qevt2" path="res://Components/OptionsComponent.gd" id="6_mor63"]
+[ext_resource type="Texture2D" uid="uid://b1ql4qxwssgx" path="res://Assets/Aseprite/UI/StartMenuBackground-sheet.png" id="7_kt4xk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f5nps"]
 atlas = ExtResource("3_0yjaa")
@@ -105,6 +106,89 @@ region = Rect2(176, 176, 16, 16)
 atlas = ExtResource("3_0yjaa")
 region = Rect2(144, 176, 16, 16)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6hdj"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(480, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6rdwr"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(960, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6640"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(1440, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uk8bu"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(1920, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nehlc"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(2400, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfekc"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(2880, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwdtp"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(3360, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlvka"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(3840, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tpwfc"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(4320, 0, 480, 270)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uu7i1"]
+atlas = ExtResource("7_kt4xk")
+region = Rect2(0, 0, 480, 270)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6hdj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6hdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6rdwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6640")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uk8bu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nehlc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfekc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwdtp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlvka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tpwfc")
+}],
+"loop": false,
+"name": &"Explosion",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uu7i1")
+}],
+"loop": false,
+"name": &"Planet",
+"speed": 5.0
+}]
+
 [node name="StartMenu" type="Control" unique_id=453079802]
 layout_mode = 3
 anchors_preset = 15
@@ -114,7 +198,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0puwl")
 
-[node name="Planet" type="TextureRect" parent="." unique_id=1724763769]
+[node name="InsideShip" type="TextureRect" parent="." unique_id=1724763769]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -122,7 +206,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("2_0yjaa")
+texture = ExtResource("2_mor63")
 
 [node name="Stars" type="Parallax2D" parent="." unique_id=1014242458]
 repeat_size = Vector2(576.2222, 326)
@@ -274,7 +358,7 @@ texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
 texture_hover = SubResource("AtlasTexture_e6b34")
 
-[node name="TextureButton15" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1106830486]
+[node name="2" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1106830486]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
@@ -337,7 +421,7 @@ texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
 texture_hover = SubResource("AtlasTexture_e6b34")
 
-[node name="TextureButton5" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1351401321]
+[node name="1" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=1351401321]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
@@ -409,7 +493,7 @@ texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
 texture_hover = SubResource("AtlasTexture_e6b34")
 
-[node name="TextureButton17" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=561594260]
+[node name="3" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer2" unique_id=561594260]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
@@ -482,8 +566,19 @@ popup/item_1/id = 1
 popup/item_2/text = "Adaptive"
 popup/item_2/id = 2
 
+[node name="Planet" type="AnimatedSprite2D" parent="." unique_id=1505887191]
+z_index = -1
+position = Vector2(357, 94)
+scale = Vector2(0.6296297, 0.6296296)
+sprite_frames = SubResource("SpriteFrames_d6hdj")
+animation = &"Planet"
+autoplay = "Planet"
+
 [connection signal="pressed" from="Real_Buttons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Real_Buttons/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="Real_Buttons/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="FakeButtons/VBoxContainer/HBoxContainer/2" to="." method="two_on__pressed"]
+[connection signal="pressed" from="FakeButtons/VBoxContainer/HBoxContainer2/1" to="." method="_on__pressed"]
+[connection signal="pressed" from="FakeButtons/VBoxContainer/HBoxContainer2/3" to="." method="three_on__pressed"]
 [connection signal="toggled" from="Options/toggle_fullscreen" to="FullScreenToWindowedComponent" method="_on_toggle_fullscreen_toggled"]
 [connection signal="item_selected" from="Options/OptionButton" to="FullScreenToWindowedComponent" method="_on_option_button_item_selected"]

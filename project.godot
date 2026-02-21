@@ -24,7 +24,6 @@ NavigationManager="*uid://cnyj65smhkkia"
 
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
-window/stretch/scale_mode="integer"
 window/main_scene="uid://cu3lk2hnyq8it"
 
 [input]

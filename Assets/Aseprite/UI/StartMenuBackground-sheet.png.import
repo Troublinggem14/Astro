@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bauu3ne230p21"
-path="res://.godot/imported/StartMenuBackground2.png-39a1c56b7d73a2ca77a6f291e20c274b.ctex"
+uid="uid://b1ql4qxwssgx"
+path="res://.godot/imported/StartMenuBackground-sheet.png-eaaffc90bcb17bd30511f06b0d49d684.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Aseprite/UI/StartMenuBackground2.png"
-dest_files=["res://.godot/imported/StartMenuBackground2.png-39a1c56b7d73a2ca77a6f291e20c274b.ctex"]
+source_file="res://Assets/Aseprite/UI/StartMenuBackground-sheet.png"
+dest_files=["res://.godot/imported/StartMenuBackground-sheet.png-eaaffc90bcb17bd30511f06b0d49d684.ctex"]
 
 [params]
 
