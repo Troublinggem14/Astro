@@ -36,5 +36,7 @@ scale = Vector2(5.049867, 5.049867)
 [node name="SpawnPoint" parent="Doors/Door_OutsideShip" index="1" unique_id=1342361131]
 position = Vector2(0, 70.83045)
 
+[editable path="Y_sorted_objects/Astro"]
+[editable path="Y_sorted_objects/Astro/UI/PauseMenu"]
 [editable path="Y_sorted_objects/Level_base"]
 [editable path="Doors/Door_OutsideShip"]

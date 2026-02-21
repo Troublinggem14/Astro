@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://cu3lk2hnyq8it"]
 
 [ext_resource type="Script" uid="uid://dkixq0obbxtsy" path="res://Levels/Menus/StartMenu/start_menu.gd" id="1_0puwl"]
-[ext_resource type="Texture2D" uid="uid://bfnd1875jngnk" path="res://Aseprite/UI/StartMenuBackgroundStars.png" id="2_0puwl"]
-[ext_resource type="Texture2D" uid="uid://bauu3ne230p21" path="res://Aseprite/UI/StartMenuBackground2.png" id="2_0yjaa"]
-[ext_resource type="Texture2D" uid="uid://cx5236mci1r44" path="res://Aseprite/UI/UI_Buttons-sheet.png" id="3_0yjaa"]
+[ext_resource type="Texture2D" uid="uid://bfnd1875jngnk" path="res://Assets/Aseprite/UI/StartMenuBackgroundStars.png" id="2_0puwl"]
+[ext_resource type="Texture2D" uid="uid://bauu3ne230p21" path="res://Assets/Aseprite/UI/StartMenuBackground2.png" id="2_0yjaa"]
+[ext_resource type="Texture2D" uid="uid://cx5236mci1r44" path="res://Assets/Aseprite/UI/UI_Buttons-sheet.png" id="3_0yjaa"]
 [ext_resource type="LabelSettings" uid="uid://ctxbo8ckctbmp" path="res://Fonts/Base_label_setting.tres" id="5_0yjaa"]
 [ext_resource type="Script" uid="uid://bt7otas1qevt2" path="res://Components/OptionsComponent.gd" id="6_mor63"]
 
@@ -37,11 +37,11 @@ region = Rect2(1680, 272, 48, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yhkh6"]
 atlas = ExtResource("3_0yjaa")
-region = Rect2(1728, 240, 48, 16)
+region = Rect2(1728, 272, 48, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r33eb"]
 atlas = ExtResource("3_0yjaa")
-region = Rect2(1632, 240, 48, 16)
+region = Rect2(1632, 272, 48, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gfx3v"]
 atlas = ExtResource("3_0yjaa")
@@ -157,9 +157,9 @@ texture_pressed = SubResource("AtlasTexture_4wluh")
 texture_hover = SubResource("AtlasTexture_6cl6m")
 
 [node name="QuitButton" type="TextureButton" parent="Real_Buttons" unique_id=1126859710]
-offset_left = 770.0
+offset_left = 771.00006
 offset_top = 436.0
-offset_right = 818.0
+offset_right = 819.00006
 offset_bottom = 452.0
 scale = Vector2(3.8, 3.8)
 texture_normal = SubResource("AtlasTexture_0hxws")

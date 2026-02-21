@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Astro"
-run/main_scene="uid://cu3lk2hnyq8it"
+run/main_scene="uid://cxepto8pa7d1h"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,10 +22,10 @@ NavigationManager="*uid://cnyj65smhkkia"
 
 [display]
 
-window/size/mode=4
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
+window/main_scene="uid://cu3lk2hnyq8it"
 
 [input]
 

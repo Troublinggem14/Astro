@@ -3,8 +3,8 @@
 [ext_resource type="TileSet" uid="uid://dxrgwlt2gt2lr" path="res://TileSets/base_ground.tres" id="1_4uu8v"]
 [ext_resource type="TileSet" uid="uid://fn6f4nm2ydwd" path="res://TileSets/grass.tres" id="2_gb85k"]
 [ext_resource type="TileSet" uid="uid://dh5fhulsen0w8" path="res://TileSets/water.tres" id="3_7wcai"]
-[ext_resource type="Texture2D" uid="uid://p48sxdjn64if" path="res://Aseprite/TileSets/CrashedShip.png" id="3_vveh4"]
-[ext_resource type="Texture2D" uid="uid://cko8i48mtgyyq" path="res://Aseprite/TileSets/Plane wing.png" id="4_kld2j"]
+[ext_resource type="Texture2D" uid="uid://p48sxdjn64if" path="res://Assets/Aseprite/TileSets/CrashedShip.png" id="3_vveh4"]
+[ext_resource type="Texture2D" uid="uid://cko8i48mtgyyq" path="res://Assets/Aseprite/TileSets/Plane wing.png" id="4_kld2j"]
 
 [node name="Level_base" type="Node2D" unique_id=823952948]
 
