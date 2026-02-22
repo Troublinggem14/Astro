@@ -17,11 +17,11 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-AnimationsGlobal="*uid://2k4cxchxkiip"
 NavigationManager="*uid://cnyj65smhkkia"
 
 [display]
 
+window/size/mode=4
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/main_scene="uid://cu3lk2hnyq8it"

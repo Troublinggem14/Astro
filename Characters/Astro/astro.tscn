@@ -5,12 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://dn23xhnkwcadu" path="res://ControlNodes/UI/ui.tscn" id="6_4k583"]
 [ext_resource type="PackedScene" uid="uid://yglwqsap2xd3" path="res://ControlNodes/PauseMenu/pause_menu.tscn" id="7_1s7r3"]
 [ext_resource type="Script" uid="uid://bi1ecer4n1x0c" path="res://Components/StateMachine/node_state_machine.gd" id="7_vb1uq"]
+[ext_resource type="Script" uid="uid://dc54viwrm0kbq" path="res://Components/StateMachine/States/chopping_state.gd" id="8_2u5ed"]
 [ext_resource type="Script" uid="uid://bra203ar8nnx1" path="res://Components/StateMachine/States/idle_state.gd" id="8_qhrye"]
 [ext_resource type="Script" uid="uid://n1f3gglm31lq" path="res://Components/StateMachine/States/walk_state.gd" id="8_vb1uq"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vhqp"]
-radius = 7.0
-height = 14.0
+[ext_resource type="Script" uid="uid://d15najcuenan2" path="res://Components/StateMachine/States/tilling_state.gd" id="9_qhrye"]
+[ext_resource type="Script" uid="uid://dij00l87msadg" path="res://Components/StateMachine/States/mining_state.gd" id="10_2u5ed"]
+[ext_resource type="Script" uid="uid://c3jm4eq1kpap7" path="res://Components/StateMachine/States/watering_state.gd" id="11_mluxe"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0li4l"]
 atlas = ExtResource("6_1s7r3")
@@ -973,14 +973,14 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vhqp"]
+radius = 7.0
+height = 18.0
+
 [node name="Astro" type="CharacterBody2D" unique_id=605047117]
 collision_mask = 46
 motion_mode = 1
 script = ExtResource("1_vb1uq")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821428530]
-position = Vector2(0, -7)
-shape = SubResource("CapsuleShape2D_7vhqp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=21292110]
 position = Vector2(0, -1)
@@ -1003,11 +1003,16 @@ value = 3.0
 camera = NodePath("../../../../Camera2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1638938711]
-position = Vector2(0, 7)
+position = Vector2(0, 9)
+scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_mluxe")
-animation = &"Walk_North"
+animation = &"Till_East"
 autoplay = "Idle_South"
 offset = Vector2(0, -14)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821428530]
+position = Vector2(0, -9)
+shape = SubResource("CapsuleShape2D_7vhqp")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1777532335 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("7_vb1uq")
@@ -1023,6 +1028,20 @@ script = ExtResource("8_vb1uq")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 speed = 100
+
+[node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D")]
+script = ExtResource("8_2u5ed")
+player = NodePath("../..")
+animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+
+[node name="Tilling" type="Node" parent="StateMachine" unique_id=1153235607]
+script = ExtResource("9_qhrye")
+
+[node name="Mining" type="Node" parent="StateMachine" unique_id=78507408]
+script = ExtResource("10_2u5ed")
+
+[node name="Watering" type="Node" parent="StateMachine" unique_id=1950382755]
+script = ExtResource("11_mluxe")
 
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 

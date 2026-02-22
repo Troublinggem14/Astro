@@ -18,7 +18,7 @@ position = Vector2(860, 219)
 [node name="Level_base" parent="Y_sorted_objects" unique_id=823952948 instance=ExtResource("1_ig7tw")]
 y_sort_enabled = true
 
-[node name="BrokenFin" parent="Y_sorted_objects/Level_base" index="5" unique_id=1181083111]
+[node name="BrokenFin" parent="Y_sorted_objects/Level_base" index="4" unique_id=1181083111]
 z_as_relative = false
 
 [node name="Doors" type="Node" parent="." unique_id=276073244]

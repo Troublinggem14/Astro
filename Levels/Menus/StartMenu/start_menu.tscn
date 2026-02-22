@@ -571,8 +571,10 @@ z_index = -1
 position = Vector2(357, 94)
 scale = Vector2(0.6296297, 0.6296296)
 sprite_frames = SubResource("SpriteFrames_d6hdj")
-animation = &"Planet"
+animation = &"Explosion"
 autoplay = "Planet"
+frame = 8
+frame_progress = 1.0
 
 [connection signal="pressed" from="Real_Buttons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Real_Buttons/OptionsButton" to="." method="_on_options_button_pressed"]
