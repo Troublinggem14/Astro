@@ -370,13 +370,13 @@ texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
 texture_hover = SubResource("AtlasTexture_e6b34")
 
-[node name="TextureButton17" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1999248833]
+[node name="TextureButton17" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1340893271]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
 texture_hover = SubResource("AtlasTexture_e6b34")
 
-[node name="TextureButton18" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=1566438883]
+[node name="TextureButton18" type="TextureButton" parent="FakeButtons/VBoxContainer/HBoxContainer" unique_id=2140169344]
 layout_mode = 2
 texture_normal = SubResource("AtlasTexture_gfx3v")
 texture_pressed = SubResource("AtlasTexture_p5kg5")
