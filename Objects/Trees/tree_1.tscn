@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://tpj145axr7mp"]
+
+[ext_resource type="Texture2D" uid="uid://dh7pi7emo8dpu" path="res://Assets/Aseprite/Objects/Trees/tree2.png" id="1_usnwb"]
+[ext_resource type="Script" uid="uid://eh047w6il0u0" path="res://Objects/Trees/tree_1.gd" id="2_4t1g3"]
+[ext_resource type="Texture2D" uid="uid://6w6hw2fumm0e" path="res://Assets/Aseprite/Objects/Trees/Leaf Particle.png" id="2_qgcuw"]
+[ext_resource type="PackedScene" uid="uid://dpbxlpd500f8j" path="res://Components/hurtComponent/hurt_component.tscn" id="3_qgcuw"]
+[ext_resource type="PackedScene" uid="uid://cxug5hg00vm1o" path="res://Components/DamageComponent/damage_component.tscn" id="4_5gmce"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_usnwb"]
+size = Vector2(4, 0.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgcuw"]
+radius = 5.0
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4t1g3"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(10, 10, 0)
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, 1, 0)
+spread = 90.0
+initial_velocity_max = 5.0
+angular_velocity_min = -1.6093254e-05
+angular_velocity_max = 178.05998
+gravity = Vector3(0, 40, 0)
+
+[sub_resource type="Animation" id="Animation_4t1g3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_jqift"]
+resource_name = "Shake"
+length = 0.5
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.06981317007977318, 0.06981317007977318, 0.0, 0.06981317007977318, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dlcj5"]
+_data = {
+&"RESET": SubResource("Animation_4t1g3"),
+&"Shake": SubResource("Animation_jqift")
+}
+
+[node name="Tree1" type="Sprite2D" unique_id=1458786966]
+scale = Vector2(2, 2)
+texture = ExtResource("1_usnwb")
+offset = Vector2(0, -16.29)
+hframes = 3
+frame = 1
+script = ExtResource("2_4t1g3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=758716]
+collision_layer = 2
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=836740182]
+position = Vector2(0, -4.5)
+shape = SubResource("RectangleShape2D_usnwb")
+
+[node name="HurtComponent" parent="." unique_id=1534600360 instance=ExtResource("3_qgcuw")]
+
+[node name="HurtComponentCollisionShape" type="CollisionShape2D" parent="HurtComponent" unique_id=1609070201]
+position = Vector2(0, -4)
+shape = SubResource("CircleShape2D_qgcuw")
+debug_color = Color(0.89218587, 0.00024065375, 0.7895664, 0.41960785)
+
+[node name="DamageComponent" parent="." unique_id=1819995316 instance=ExtResource("4_5gmce")]
+max_damage = 3
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=694089195]
+position = Vector2(-1.5, -29)
+emitting = false
+amount = 5
+texture = ExtResource("2_qgcuw")
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_4t1g3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=461017984]
+libraries/ = SubResource("AnimationLibrary_dlcj5")

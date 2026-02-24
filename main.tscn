@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/OpenWorld/level_base.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://w68qxm8ifxfr" path="res://Objects/Door/door.tscn" id="3_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://tpj145axr7mp" path="res://Objects/Trees/tree_2.tscn" id="6_272bh"]
 
 [node name="Main" type="Node2D" unique_id=122740768]
 script = ExtResource("1_1bvp3")
@@ -23,6 +22,9 @@ y_sort_enabled = true
 [node name="BrokenFin" parent="Y_sorted_objects/Level_base" index="5" unique_id=1181083111]
 z_as_relative = false
 
+[node name="Trees" parent="Y_sorted_objects/Level_base" index="6" unique_id=1051650423]
+y_sort_enabled = true
+
 [node name="Doors" type="Node" parent="." unique_id=276073244]
 
 [node name="Door_OutsideShip" parent="Doors" unique_id=884870198 instance=ExtResource("3_1bvp3")]
@@ -37,29 +39,6 @@ scale = Vector2(5.049867, 5.049867)
 
 [node name="SpawnPoint" parent="Doors/Door_OutsideShip" index="1" unique_id=1342361131]
 position = Vector2(0, 70.83045)
-
-[node name="Tree 2s" type="Node" parent="." unique_id=1553729514]
-
-[node name="Tree3" parent="Tree 2s" unique_id=254862569 instance=ExtResource("6_272bh")]
-position = Vector2(738, 340)
-
-[node name="Tree4" parent="Tree 2s" unique_id=675743964 instance=ExtResource("6_272bh")]
-position = Vector2(843, 260)
-
-[node name="Tree5" parent="Tree 2s" unique_id=1562141885 instance=ExtResource("6_272bh")]
-position = Vector2(930, 372)
-
-[node name="Tree6" parent="Tree 2s" unique_id=736295030 instance=ExtResource("6_272bh")]
-position = Vector2(866, 193)
-
-[node name="Tree7" parent="Tree 2s" unique_id=691454639 instance=ExtResource("6_272bh")]
-position = Vector2(723, 181)
-
-[node name="Tree8" parent="Tree 2s" unique_id=343267304 instance=ExtResource("6_272bh")]
-position = Vector2(615, 227)
-
-[node name="Tree9" parent="Tree 2s" unique_id=1119409626 instance=ExtResource("6_272bh")]
-position = Vector2(702, 252)
 
 [editable path="Y_sorted_objects/Astro"]
 [editable path="Y_sorted_objects/Astro/UI/PauseMenu"]

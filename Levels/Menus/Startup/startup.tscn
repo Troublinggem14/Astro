@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://baaxk1n5slqnf" path="res://Assets/Krita/WantedGamesKritaFile #1 Transparent.png" id="1_hrar2"]
 [ext_resource type="Script" uid="uid://mktitr4ly43d" path="res://Levels/Menus/Startup/startup.gd" id="1_lgyad"]
 [ext_resource type="Texture2D" uid="uid://dlu0gdyj58r3h" path="res://icon.svg" id="2_gnbxs"]
-[ext_resource type="AudioStream" uid="uid://bvvh6k83tw5uw" path="res://Assets/Audio/StartupAudio.mp3" id="4_hj748"]
+[ext_resource type="AudioStream" uid="uid://bvvh6k83tw5uw" path="res://Assets/Audio/Sound Effects/StartupAudio.mp3" id="4_hj748"]
 
 [sub_resource type="Animation" id="Animation_gnbxs"]
 resource_name = "Fade"

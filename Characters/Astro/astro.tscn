@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://d15najcuenan2" path="res://Components/StateMachine/States/tilling_state.gd" id="9_qhrye"]
 [ext_resource type="Script" uid="uid://dij00l87msadg" path="res://Components/StateMachine/States/mining_state.gd" id="10_2u5ed"]
 [ext_resource type="Script" uid="uid://c3jm4eq1kpap7" path="res://Components/StateMachine/States/watering_state.gd" id="11_mluxe"]
+[ext_resource type="PackedScene" uid="uid://c4o7avbro4imy" path="res://Components/hitComponent/hit_component.tscn" id="12_2dfdk"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0li4l"]
 atlas = ExtResource("6_1s7r3")
@@ -617,7 +618,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Chop_East",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -646,7 +647,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Chop_North",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -675,7 +676,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Chop_South",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -704,7 +705,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Chop_West",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -825,7 +826,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Mine_East",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -854,7 +855,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Mine_North",
-"speed": 10.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -883,7 +884,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Mine_South",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -912,7 +913,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Mine_West",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -941,7 +942,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Till_East",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -970,7 +971,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Till_North",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -999,7 +1000,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Till_South",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1028,7 +1029,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Till_West",
-"speed": 10.0
+"speed": 20.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1239,9 +1240,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7vhqp"]
-radius = 7.0
-height = 18.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_mluxe"]
+radius = 5.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0em08"]
+radius = 8.0
 
 [node name="Astro" type="CharacterBody2D" unique_id=605047117]
 collision_mask = 46
@@ -1272,13 +1275,14 @@ camera = NodePath("../../../../Camera2D")
 position = Vector2(0, 9)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_mluxe")
-animation = &"Till_West"
+animation = &"Water_East"
 autoplay = "Idle_South"
+frame_progress = 0.39632612
 offset = Vector2(0, -14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821428530]
-position = Vector2(0, -9)
-shape = SubResource("CapsuleShape2D_7vhqp")
+position = Vector2(0, -5)
+shape = SubResource("CircleShape2D_mluxe")
 
 [node name="StateMachine" type="Node" parent="." unique_id=1777532335 node_paths=PackedStringArray("initial_node_state")]
 script = ExtResource("7_vb1uq")
@@ -1295,10 +1299,11 @@ player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 speed = 100
 
-[node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D")]
+[node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape")]
 script = ExtResource("8_2u5ed")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
 
 [node name="Tilling" type="Node" parent="StateMachine" unique_id=1153235607 node_paths=PackedStringArray("player", "animated_sprite_2D")]
 script = ExtResource("9_qhrye")
@@ -1314,6 +1319,13 @@ animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 script = ExtResource("11_mluxe")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+
+[node name="HitComponent" parent="." unique_id=1606229966 instance=ExtResource("12_2dfdk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitComponent" unique_id=1834644331]
+position = Vector2(0, 2)
+shape = SubResource("CircleShape2D_0em08")
+debug_color = Color(0.9470549, 3.85046e-06, 0.58722115, 0.41960785)
 
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 
