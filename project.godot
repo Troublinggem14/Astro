@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 NavigationManager="*uid://cnyj65smhkkia"
 data_types="*uid://ceg4jbkp36b8u"
+EventBus="*uid://cwmuledar3qs6"
 
 [display]
 
@@ -83,6 +84,7 @@ pause={
 2d_physics/layer_5="Breakables"
 2d_physics/layer_6="Doors"
 2d_physics/layer_7="Tool"
+2d_physics/layer_8="Collectible"
 
 [physics]
 

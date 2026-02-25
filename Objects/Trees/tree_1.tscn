@@ -9,8 +9,14 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_usnwb"]
 size = Vector2(4, 0.5)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_qgcuw"]
-radius = 5.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4t1g3"]
+size = Vector2(4, 4.5)
+
+[sub_resource type="Gradient" id="Gradient_4t1g3"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jqift"]
+gradient = SubResource("Gradient_4t1g3")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4t1g3"]
 particle_flag_disable_z = true
@@ -23,6 +29,7 @@ initial_velocity_max = 5.0
 angular_velocity_min = -1.6093254e-05
 angular_velocity_max = 178.05998
 gravity = Vector3(0, 40, 0)
+color_ramp = SubResource("GradientTexture1D_jqift")
 
 [sub_resource type="Animation" id="Animation_4t1g3"]
 length = 0.001
@@ -81,8 +88,8 @@ shape = SubResource("RectangleShape2D_usnwb")
 [node name="HurtComponent" parent="." unique_id=1534600360 instance=ExtResource("3_qgcuw")]
 
 [node name="HurtComponentCollisionShape" type="CollisionShape2D" parent="HurtComponent" unique_id=1609070201]
-position = Vector2(0, -4)
-shape = SubResource("CircleShape2D_qgcuw")
+position = Vector2(0, -2.75)
+shape = SubResource("RectangleShape2D_4t1g3")
 debug_color = Color(0.89218587, 0.00024065375, 0.7895664, 0.41960785)
 
 [node name="DamageComponent" parent="." unique_id=1819995316 instance=ExtResource("4_5gmce")]
@@ -93,6 +100,7 @@ position = Vector2(-1.5, -29)
 emitting = false
 amount = 5
 texture = ExtResource("2_qgcuw")
+lifetime = 2.0
 one_shot = true
 explosiveness = 0.8
 process_material = SubResource("ParticleProcessMaterial_4t1g3")

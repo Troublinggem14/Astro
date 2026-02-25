@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://muarfi8bnf7w"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hj0sy"]
+load_path = "res://.godot/imported/Astro_Rocks.png-c0136b029b0fc861f61ebbe3b8eaa3f7.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hj0sy"]
+radius = 9.0
+
+[node name="ShipRock" type="Sprite2D" unique_id=1594764753]
+texture = SubResource("CompressedTexture2D_hj0sy")
+offset = Vector2(0, -8.595)
+hframes = 3
+frame = 2
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=482261887]
+collision_layer = 2
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1789615961]
+position = Vector2(-1, -8)
+shape = SubResource("CircleShape2D_hj0sy")

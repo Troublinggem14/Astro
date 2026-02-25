@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqxiw1bieaq5p"
+path="res://.godot/imported/Mineral Mining - 3 (with Gemstone).mp3-35f45742691bdb9a013203d69419b087.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 3 (with Gemstone).mp3"
+dest_files=["res://.godot/imported/Mineral Mining - 3 (with Gemstone).mp3-35f45742691bdb9a013203d69419b087.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

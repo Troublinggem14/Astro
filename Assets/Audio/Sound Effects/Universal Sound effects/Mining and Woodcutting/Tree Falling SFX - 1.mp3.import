@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0jptnqqxk42v"
+path="res://.godot/imported/Tree Falling SFX - 1.mp3-0a041dc414e915602f43c5ed4a1dd9df.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Falling SFX - 1.mp3"
+dest_files=["res://.godot/imported/Tree Falling SFX - 1.mp3-0a041dc414e915602f43c5ed4a1dd9df.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

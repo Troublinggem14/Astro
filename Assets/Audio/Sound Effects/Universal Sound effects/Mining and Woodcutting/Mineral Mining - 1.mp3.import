@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgh5s3ay3vas1"
+path="res://.godot/imported/Mineral Mining - 1.mp3-92fc9b424f01567e237a5b6eb0ac6d7b.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 1.mp3"
+dest_files=["res://.godot/imported/Mineral Mining - 1.mp3-92fc9b424f01567e237a5b6eb0ac6d7b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

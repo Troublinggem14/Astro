@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c4qpv3u5s4n74"
+path="res://.godot/imported/Tree Branch Break - 3.mp3-c4a93017a0df19a51fd1ae70e205c9fb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Branch Break - 3.mp3"
+dest_files=["res://.godot/imported/Tree Branch Break - 3.mp3-c4a93017a0df19a51fd1ae70e205c9fb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cq1obd1lb7lr0"
+path="res://.godot/imported/Tree Hit - 1.mp3-859fe1045155dbd2966442a6ffefcb9a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 1.mp3"
+dest_files=["res://.godot/imported/Tree Hit - 1.mp3-859fe1045155dbd2966442a6ffefcb9a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://clvnmx1pc41tr"]
+
+[ext_resource type="Script" uid="uid://caspn1h4nnbxg" path="res://Objects/Rocks/rocks1.gd" id="1_7qwg2"]
+[ext_resource type="PackedScene" uid="uid://dpbxlpd500f8j" path="res://Components/hurtComponent/hurt_component.tscn" id="1_o68yd"]
+[ext_resource type="PackedScene" uid="uid://cxug5hg00vm1o" path="res://Components/DamageComponent/damage_component.tscn" id="2_7qwg2"]
+[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="3_mwdfp"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d5hw3"]
+load_path = "res://.godot/imported/Astro_Rocks.png-c0136b029b0fc861f61ebbe3b8eaa3f7.ctex"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_egi4m"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qgcuw"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6rwi"]
+atlas = ExtResource("3_mwdfp")
+region = Rect2(10, 81, 5, 6)
+
+[sub_resource type="Gradient" id="Gradient_egi4m"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o6rwi"]
+gradient = SubResource("Gradient_egi4m")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_4t1g3"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(10, 10, 0)
+emission_shape = 1
+emission_sphere_radius = 0.01
+direction = Vector3(0, 10, 0)
+spread = 60.0
+initial_velocity_min = 80.0
+initial_velocity_max = 80.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.5
+scale_max = 0.5
+color_ramp = SubResource("GradientTexture1D_o6rwi")
+
+[sub_resource type="Animation" id="Animation_4t1g3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jqift"]
+resource_name = "Shake"
+length = 0.1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:skew")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.95), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7qwg2"]
+_data = {
+&"RESET": SubResource("Animation_4t1g3"),
+&"Shake": SubResource("Animation_jqift")
+}
+
+[node name="Rocks3" type="Sprite2D" unique_id=1458786966]
+texture = SubResource("CompressedTexture2D_d5hw3")
+offset = Vector2(0, -6.975)
+hframes = 3
+frame = 2
+script = ExtResource("1_7qwg2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=758716]
+collision_layer = 2
+collision_mask = 13
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=836740182]
+position = Vector2(1, -6)
+shape = SubResource("CircleShape2D_egi4m")
+
+[node name="HurtComponent" parent="." unique_id=1534600360 instance=ExtResource("1_o68yd")]
+
+[node name="HurtComponentCollisionShape" type="CollisionShape2D" parent="HurtComponent" unique_id=1609070201]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_qgcuw")
+debug_color = Color(0.89218587, 0.00024065375, 0.7895664, 0.41960785)
+
+[node name="DamageComponent" parent="." unique_id=1819995316 instance=ExtResource("2_7qwg2")]
+max_damage = 30
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=694089195]
+position = Vector2(0, -14)
+emitting = false
+amount = 3
+texture = SubResource("AtlasTexture_o6rwi")
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_4t1g3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=350697908]
+libraries/ = SubResource("AnimationLibrary_7qwg2")
