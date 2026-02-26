@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c76gdwn8y1ewg"
+path="res://.godot/imported/Crossbow - 1.mp3-92e5644fd2133bf4e4a854370dfe9d05.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 3/Crossbow - 1.mp3"
+dest_files=["res://.godot/imported/Crossbow - 1.mp3-92e5644fd2133bf4e4a854370dfe9d05.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

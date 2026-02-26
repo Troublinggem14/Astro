@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgkwh1jry5uml"
+path="res://.godot/imported/GS2_Land.mp3-279d226661683aaa1276194611dc8130.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 2/GS2_Land.mp3"
+dest_files=["res://.godot/imported/GS2_Land.mp3-279d226661683aaa1276194611dc8130.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

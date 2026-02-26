@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ihvp2t7ov74h"
+path="res://.godot/imported/Sword Swing - 2.mp3-bf480cf7ad2cf0fdb44d7d214940e6f7.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 3/Sword Swing - 2.mp3"
+dest_files=["res://.godot/imported/Sword Swing - 2.mp3-bf480cf7ad2cf0fdb44d7d214940e6f7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

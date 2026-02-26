@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cxge3tt4hju5n"
+path="res://.godot/imported/Sword Block - 6.mp3-6c93d2a3629157e85dce48bf3683b4d6.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 4/Sword Block - 6.mp3"
+dest_files=["res://.godot/imported/Sword Block - 6.mp3-6c93d2a3629157e85dce48bf3683b4d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

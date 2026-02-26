@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://whu3w5lp022j"
+path="res://.godot/imported/Punch - 2.mp3-05b53c6237ebe31c41f1af54c69bfd7c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 3/Punch - 2.mp3"
+dest_files=["res://.godot/imported/Punch - 2.mp3-05b53c6237ebe31c41f1af54c69bfd7c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7d66cjn6gcph"
+path="res://.godot/imported/GS1_Hit_1.mp3-277a51c3083ef35f3b5cac0e3b6b9519.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 1/GS1_Hit_1.mp3"
+dest_files=["res://.godot/imported/GS1_Hit_1.mp3-277a51c3083ef35f3b5cac0e3b6b9519.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

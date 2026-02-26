@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fur5m6g2rcev"
+path="res://.godot/imported/GS2_Bag_Open_2.mp3-b6286704eaf2345ed8d3e00408fc089a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 2/GS2_Bag_Open_2.mp3"
+dest_files=["res://.godot/imported/GS2_Bag_Open_2.mp3-b6286704eaf2345ed8d3e00408fc089a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

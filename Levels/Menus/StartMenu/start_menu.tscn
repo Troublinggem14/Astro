@@ -7,6 +7,7 @@
 [ext_resource type="LabelSettings" uid="uid://ctxbo8ckctbmp" path="res://Fonts/Base_label_setting.tres" id="5_0yjaa"]
 [ext_resource type="Script" uid="uid://bt7otas1qevt2" path="res://Components/OptionsComponent.gd" id="6_mor63"]
 [ext_resource type="Texture2D" uid="uid://b1ql4qxwssgx" path="res://Assets/Aseprite/UI/StartMenuBackground-sheet.png" id="7_kt4xk"]
+[ext_resource type="PackedScene" uid="uid://bh4wov0gh68c5" path="res://Components/LevelTransitions/fading_component.tscn" id="8_uu7i1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f5nps"]
 atlas = ExtResource("3_0yjaa")
@@ -508,10 +509,10 @@ texture_hover = SubResource("AtlasTexture_e6b34")
 [node name="TextLabels" type="Node" parent="." unique_id=1076241410]
 
 [node name="Screen_Press_Play" type="Label" parent="TextLabels" unique_id=201037215]
-offset_left = 496.0
+offset_left = 459.0
 offset_top = 251.0
-offset_right = 642.0
-offset_bottom = 274.0
+offset_right = 749.0
+offset_bottom = 285.0
 text = "Press Play"
 label_settings = ExtResource("5_0yjaa")
 
@@ -575,6 +576,8 @@ animation = &"Explosion"
 autoplay = "Planet"
 frame = 8
 frame_progress = 1.0
+
+[node name="FadingComponent" parent="." unique_id=1814035684 instance=ExtResource("8_uu7i1")]
 
 [connection signal="pressed" from="Real_Buttons/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Real_Buttons/OptionsButton" to="." method="_on_options_button_pressed"]

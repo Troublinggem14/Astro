@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2gfsbp03vie2"
+path="res://.godot/imported/Player Grunt - 1.mp3-988f7ec9cd11e9c9e8a730977c73fb73.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 3/Player Grunt - 1.mp3"
+dest_files=["res://.godot/imported/Player Grunt - 1.mp3-988f7ec9cd11e9c9e8a730977c73fb73.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

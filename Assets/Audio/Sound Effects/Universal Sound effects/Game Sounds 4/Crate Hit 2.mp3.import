@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0cqfilqg740e"
+path="res://.godot/imported/Crate Hit 2.mp3-8545a4b28d548edeecda898a134e99e9.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 4/Crate Hit 2.mp3"
+dest_files=["res://.godot/imported/Crate Hit 2.mp3-8545a4b28d548edeecda898a134e99e9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

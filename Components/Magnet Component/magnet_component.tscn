@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cllp82ye8ff57"]
+
+[ext_resource type="Script" uid="uid://5t3k7imdfnas" path="res://Components/Magnet Component/magnet_component.gd" id="1_ohkmh"]
+
+[node name="Magnet Component" type="Area2D" unique_id=343404314]
+collision_mask = 128
+script = ExtResource("1_ohkmh")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

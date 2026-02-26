@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b10xwjvmy7a1w"
+path="res://.godot/imported/Player Hit - 5.mp3-83a328db9542c516094a9cd4941a4a59.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 3/Player Hit - 5.mp3"
+dest_files=["res://.godot/imported/Player Hit - 5.mp3-83a328db9542c516094a9cd4941a4a59.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dduvmlnp1gtr"
+path="res://.godot/imported/Slime Hit - 3.mp3-dab297f7b30f4a29b29928e461aec246.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 4/Slime Hit - 3.mp3"
+dest_files=["res://.godot/imported/Slime Hit - 3.mp3-dab297f7b30f4a29b29928e461aec246.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

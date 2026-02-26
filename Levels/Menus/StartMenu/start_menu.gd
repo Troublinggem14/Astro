@@ -1,9 +1,14 @@
 extends Control
+const START_NEW_GAME = preload("uid://dolqsr83qfet2")
 
 var shoot: int = 0
 
+func _ready() -> void:
+	$FadingComponent.FadeIn()
+
 func _on_play_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://main.tscn")
+	$FadingComponent.FadeOut()
+	get_tree().change_scene_to_packed(START_NEW_GAME)
 
 func _on_options_button_pressed() -> void:
 	$TextLabels/AnimationPlayer.stop() #stops the animatino, as it turns the visibility back on every second

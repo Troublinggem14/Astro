@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dupiela4c4bco"
+path="res://.godot/imported/Mouse Click 4.mp3-4f4b5b92b1f5da646777c47f231cc555.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 4/Mouse Click 4.mp3"
+dest_files=["res://.godot/imported/Mouse Click 4.mp3-4f4b5b92b1f5da646777c47f231cc555.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

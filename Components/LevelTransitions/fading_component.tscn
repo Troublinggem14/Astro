@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://bh4wov0gh68c5"]
+
+[ext_resource type="Script" uid="uid://bfu802i7yoa2j" path="res://Components/LevelTransitions/fading_component.gd" id="1_rj1dh"]
+
+[sub_resource type="Animation" id="Animation_hhncn"]
+resource_name = "FadeIn"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rj1dh"]
+resource_name = "FadeOut"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_livhl"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fade Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_livhl"]
+_data = {
+&"FadeIn": SubResource("Animation_hhncn"),
+&"FadeOut": SubResource("Animation_rj1dh"),
+&"RESET": SubResource("Animation_livhl")
+}
+
+[node name="FadingComponent" type="CanvasLayer" unique_id=556620514]
+scale = Vector2(56.120007, 56.120007)
+transform = Transform2D(56.120007, 0, 0, 56.120007, 0, 0)
+script = ExtResource("1_rj1dh")
+
+[node name="Fading" type="AnimationPlayer" parent="." unique_id=1802345149]
+libraries/ = SubResource("AnimationLibrary_livhl")
+
+[node name="Fade Background" type="ColorRect" parent="." unique_id=642001852]
+offset_left = -7.305773
+offset_top = -8.178902
+offset_right = 32.69423
+offset_bottom = 31.821098
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

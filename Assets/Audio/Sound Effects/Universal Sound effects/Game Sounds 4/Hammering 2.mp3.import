@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c75bxl2r6cvjm"
+path="res://.godot/imported/Hammering 2.mp3-6996d1285a7d0d904371bfd2f9c4365a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 4/Hammering 2.mp3"
+dest_files=["res://.godot/imported/Hammering 2.mp3-6996d1285a7d0d904371bfd2f9c4365a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

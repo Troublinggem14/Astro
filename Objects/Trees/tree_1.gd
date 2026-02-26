@@ -14,6 +14,5 @@ func on_hurt(hit_damage: int) -> void:
 	$AnimationPlayer.play("Shake")
 
 func on_max_damage_reached() -> void:
-	print("Max damage reached")
 	EventBus.spawn_log.emit(position)
 	queue_free()

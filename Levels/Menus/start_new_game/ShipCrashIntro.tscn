@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dolqsr83qfet2"]
+
+[ext_resource type="Script" uid="uid://b2t8girkg6c34" path="res://Levels/Menus/start_new_game/ShipCrashIntro.gd" id="1_ybdlt"]
+[ext_resource type="AudioStream" uid="uid://b2ly4twm4h4hq" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 1/GS1_Spell_Fireball.mp3" id="2_nocie"]
+
+[node name="Start_new_game" type="Control" unique_id=936158534]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ybdlt")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1136636669]
+stream = ExtResource("2_nocie")
+autoplay = true
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=415841632]
+layout_mode = 0
+offset_left = -349.0
+offset_top = -469.0
+offset_right = -309.0
+offset_bottom = -429.0
+scale = Vector2(50.04, 50.04)
+color = Color(0, 0, 0, 1)
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

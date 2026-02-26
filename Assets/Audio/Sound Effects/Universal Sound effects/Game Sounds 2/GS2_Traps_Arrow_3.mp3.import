@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://mkpcyd820dg1"
+path="res://.godot/imported/GS2_Traps_Arrow_3.mp3-6145f7e04e2f8912ddbbdac0baa4ac1f.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 2/GS2_Traps_Arrow_3.mp3"
+dest_files=["res://.godot/imported/GS2_Traps_Arrow_3.mp3-6145f7e04e2f8912ddbbdac0baa4ac1f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

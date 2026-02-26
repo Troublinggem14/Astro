@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://y0lqb6cb7cs7"
+path="res://.godot/imported/GS2_Item_Acquire_1.mp3-7a290923d5f0a5c0721acfd8c421fe20.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 2/GS2_Item_Acquire_1.mp3"
+dest_files=["res://.godot/imported/GS2_Item_Acquire_1.mp3-7a290923d5f0a5c0721acfd8c421fe20.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -23,6 +23,7 @@ EventBus="*uid://cwmuledar3qs6"
 
 [display]
 
+window/size/mode=4
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/main_scene="uid://cu3lk2hnyq8it"

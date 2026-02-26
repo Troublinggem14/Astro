@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dy8nvd62fvmmg"
+path="res://.godot/imported/GS1_Spell_Thunder.mp3-27a31e0177e5e6c421135c049b61e674.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 1/GS1_Spell_Thunder.mp3"
+dest_files=["res://.godot/imported/GS1_Spell_Thunder.mp3-27a31e0177e5e6c421135c049b61e674.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
