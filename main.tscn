@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cy08xdbgpwo0b"]
 
 [ext_resource type="Script" uid="uid://2hnsxuosuj07" path="res://Levels/level.gd" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/OpenWorld/level_base.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/OpenWorld/HUB.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://w68qxm8ifxfr" path="res://Objects/Door/door.tscn" id="3_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://c5p108fex7447" path="res://Objects/Collectibles/log.tscn" id="5_getpj"]
@@ -50,22 +50,33 @@ script = ExtResource("1_1bvp3")
 y_sort_enabled = true
 
 [node name="Astro" parent="Y_sorted_objects" unique_id=605047117 instance=ExtResource("2_0xm2m")]
+z_index = 1
 y_sort_enabled = true
-position = Vector2(809, 222)
+position = Vector2(30, 22)
 current_tool = 1
 
 [node name="Level_base" parent="Y_sorted_objects" unique_id=823952948 instance=ExtResource("1_ig7tw")]
 y_sort_enabled = true
 
+[node name="Ground" parent="Y_sorted_objects/Level_base" index="0" unique_id=722334136]
+z_index = -1
+
+[node name="CrashedShip" parent="Y_sorted_objects/Level_base" index="3" unique_id=1666164328]
+z_index = 1
+
 [node name="BrokenFin" parent="Y_sorted_objects/Level_base" index="5" unique_id=1181083111]
 z_as_relative = false
 
-[node name="Trees" parent="Y_sorted_objects/Level_base" index="6" unique_id=1051650423]
+[node name="Trees_Rocks" parent="Y_sorted_objects/Level_base" index="6" unique_id=1051650423]
 y_sort_enabled = true
 
-[node name="ShipRock" parent="Y_sorted_objects/Level_base" index="8" unique_id=1594764753]
+[node name="ShipRock" parent="Y_sorted_objects/Level_base" index="7" unique_id=1594764753]
+z_index = 1
 position = Vector2(1040, 198.00002)
 scale = Vector2(4.6800003, 4.6800003)
+
+[node name="Walls" parent="Y_sorted_objects/Level_base" index="8" unique_id=933360526]
+y_sort_enabled = true
 
 [node name="Doors" type="Node" parent="." unique_id=276073244]
 
@@ -108,6 +119,7 @@ stream = SubResource("AudioStreamRandomizer_dg77c")
 stream = ExtResource("20_82xsv")
 
 [node name="FadingComponent" parent="." unique_id=1814035684 instance=ExtResource("22_ryguw")]
+visible = false
 
 [editable path="Y_sorted_objects/Astro"]
 [editable path="Y_sorted_objects/Astro/UI/PauseMenu"]

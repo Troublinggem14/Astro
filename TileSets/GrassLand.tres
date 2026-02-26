@@ -147,6 +147,12 @@ texture = ExtResource("2_s61ma")
 13:9/0 = 0
 14:9/0 = 0
 15:9/0 = 0
+4:11/0 = 0
+5:11/0 = 0
+6:11/0 = 0
+6:12/0 = 0
+5:12/0 = 0
+4:12/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jddr7"]
 texture = ExtResource("3_ke14i")

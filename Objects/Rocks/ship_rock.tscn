@@ -1,16 +1,41 @@
 [gd_scene format=3 uid="uid://muarfi8bnf7w"]
 
+[ext_resource type="PackedScene" uid="uid://dpbxlpd500f8j" path="res://Components/hurtComponent/hurt_component.tscn" id="2_27yg7"]
+[ext_resource type="PackedScene" uid="uid://cxug5hg00vm1o" path="res://Components/DamageComponent/damage_component.tscn" id="3_ohll0"]
+
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hj0sy"]
 load_path = "res://.godot/imported/Astro_Rocks.png-c0136b029b0fc861f61ebbe3b8eaa3f7.ctex"
 
+[sub_resource type="GDScript" id="GDScript_31i6q"]
+resource_name = "Big Rock Break"
+script/source = "extends Sprite2D
+@onready var hurt_component: HurtComponent = $HurtComponent
+@onready var damage_component: DamageComponent = $DamageComponent
+
+func _ready() -> void:
+	hurt_component.hurt.connect(on_hurt)
+	damage_component.max_damaged_reached.connect(on_max_damage_reached)
+	
+func on_hurt(hit_damage: int) -> void:
+	damage_component.apply_damage(hit_damage)
+	EventBus.rock_hit.emit()
+
+func on_max_damage_reached() -> void:
+	EventBus.spawn_rock.emit(position)
+	queue_free()
+"
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_hj0sy"]
 radius = 9.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ehg1c"]
 
 [node name="ShipRock" type="Sprite2D" unique_id=1594764753]
 texture = SubResource("CompressedTexture2D_hj0sy")
 offset = Vector2(0, -8.595)
 hframes = 3
 frame = 2
+script = SubResource("GDScript_31i6q")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=482261887]
 collision_layer = 2
@@ -19,3 +44,13 @@ collision_mask = 13
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1789615961]
 position = Vector2(-1, -8)
 shape = SubResource("CircleShape2D_hj0sy")
+
+[node name="HurtComponent" parent="." unique_id=1534600360 instance=ExtResource("2_27yg7")]
+
+[node name="HurtComponentCollisionShape" type="CollisionShape2D" parent="HurtComponent" unique_id=619072420]
+position = Vector2(-1, -8)
+shape = SubResource("CircleShape2D_ehg1c")
+debug_color = Color(0.89218587, 0.00024065375, 0.7895664, 0.41960785)
+
+[node name="DamageComponent" parent="." unique_id=1819995316 instance=ExtResource("3_ohll0")]
+max_damage = 30

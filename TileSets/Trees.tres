@@ -1,9 +1,17 @@
 [gd_resource type="TileSet" format=3 uid="uid://dbyuscmlmr8yb"]
 
 [ext_resource type="PackedScene" uid="uid://tpj145axr7mp" path="res://Objects/Trees/tree_1.tscn" id="1_6ouw7"]
+[ext_resource type="PackedScene" uid="uid://d2rvc52fxnpcs" path="res://Objects/Trees/tree_2.tscn" id="2_ihrjh"]
+[ext_resource type="PackedScene" uid="uid://bwcjmoecdblvc" path="res://Objects/Rocks/rocks_1.tscn" id="3_5r1aw"]
+[ext_resource type="PackedScene" uid="uid://nk0orjb83l25" path="res://Objects/Rocks/rocks_2.tscn" id="4_iwdva"]
+[ext_resource type="PackedScene" uid="uid://clvnmx1pc41tr" path="res://Objects/Rocks/rocks_3.tscn" id="5_ddqv7"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_btou5"]
 scenes/1/scene = ExtResource("1_6ouw7")
+scenes/2/scene = ExtResource("2_ihrjh")
+scenes/3/scene = ExtResource("3_5r1aw")
+scenes/4/scene = ExtResource("4_iwdva")
+scenes/5/scene = ExtResource("5_ddqv7")
 
 [resource]
 sources/1 = SubResource("TileSetScenesCollectionSource_btou5")
