@@ -12,9 +12,10 @@ texture = SubResource("AtlasTexture_olx2u")
 
 [node name="InventorySlot" type="Control" unique_id=1839809364]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchor_right = 0.035
+anchor_bottom = 0.062000003
+offset_right = -0.3199997
+offset_bottom = -0.1760025
 script = ExtResource("1_olx2u")
 
 [node name="SlotBackground" type="Panel" parent="." unique_id=1909333435]

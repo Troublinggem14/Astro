@@ -142,5 +142,6 @@ visible = false
 
 [editable path="Y_sorted_objects/Astro"]
 [editable path="Y_sorted_objects/Astro/UI"]
+[editable path="Y_sorted_objects/Astro/UI/InventoryUI"]
 [editable path="Y_sorted_objects/Astro/UI/PauseMenu"]
 [editable path="Y_sorted_objects/Level_base"]

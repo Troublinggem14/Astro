@@ -18,3 +18,4 @@ func spawn_log(position: Vector2):
 	var new_log = LOG.instantiate()
 	$Logs.add_child.call_deferred(new_log)
 	new_log.global_position = position
+	

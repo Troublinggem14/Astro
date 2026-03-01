@@ -1167,13 +1167,35 @@ zoom = Vector2(3, 3)
 
 [node name="UI" parent="." unique_id=1314799245 instance=ExtResource("6_4k583")]
 
+[node name="UiControlNode" parent="UI" index="0" unique_id=1431772361]
+process_mode = 3
+
+[node name="OxygenBar" parent="UI/UiControlNode" index="0" unique_id=1794476886]
+process_mode = 3
+
 [node name="InventoryUI" parent="UI" index="1" unique_id=203741302 node_paths=PackedStringArray("inventory")]
 inventory = NodePath("../../Inventory")
 slot_scene = ExtResource("3_xaw78")
 
+[node name="PanelContainer" parent="UI/InventoryUI" index="0" unique_id=2070674817]
+process_mode = 3
+
+[node name="Label" parent="UI/InventoryUI/PanelContainer" index="0" unique_id=113470073]
+process_mode = 3
+
+[node name="GridContainer" parent="UI/InventoryUI" index="1" unique_id=544457304]
+process_mode = 3
+
+[node name="InventoryBackground" parent="UI/InventoryUI" index="2" unique_id=561043902]
+process_mode = 3
+
 [node name="HotbarUI" parent="UI" index="2" unique_id=1866847855 node_paths=PackedStringArray("inventory")]
+process_mode = 3
 inventory = NodePath("../../Inventory")
 slot_scene = ExtResource("3_xaw78")
+
+[node name="HBoxContainer" parent="UI/HotbarUI" index="0" unique_id=305918648]
+process_mode = 3
 
 [node name="PauseMenu" parent="UI" unique_id=710253817 instance=ExtResource("7_1s7r3")]
 visible = false
@@ -1261,4 +1283,5 @@ script = ExtResource("14_g0nao")
 [connection signal="area_exited" from="Magnet Component" to="Magnet Component" method="_on_area_exited"]
 
 [editable path="UI"]
+[editable path="UI/InventoryUI"]
 [editable path="UI/PauseMenu"]
