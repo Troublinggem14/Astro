@@ -123,7 +123,7 @@ shape = SubResource("CircleShape2D_qgcuw")
 debug_color = Color(0.89218587, 0.00024065375, 0.7895664, 0.41960785)
 
 [node name="DamageComponent" parent="." unique_id=1819995316 instance=ExtResource("2_7qwg2")]
-max_damage = 3
+max_damage = 5
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=694089195]
 position = Vector2(0, -14)

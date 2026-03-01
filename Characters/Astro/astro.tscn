@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dabu7exyrms0p"]
 
 [ext_resource type="Script" uid="uid://6oc0bttlk6r5" path="res://Characters/Astro/astro.gd" id="1_vb1uq"]
+[ext_resource type="PackedScene" uid="uid://dgl31f3446a1n" path="res://ControlNodes/UI/Inventory and Hotbar/inventory_slot.tscn" id="3_xaw78"]
 [ext_resource type="Texture2D" uid="uid://t8vqiq86f17m" path="res://Assets/Aseprite/Characters/Astro.png" id="4_2dfdk"]
 [ext_resource type="PackedScene" uid="uid://dn23xhnkwcadu" path="res://ControlNodes/UI/ui.tscn" id="6_4k583"]
 [ext_resource type="PackedScene" uid="uid://yglwqsap2xd3" path="res://ControlNodes/PauseMenu/pause_menu.tscn" id="7_1s7r3"]
@@ -13,6 +14,7 @@
 [ext_resource type="Script" uid="uid://c3jm4eq1kpap7" path="res://Components/StateMachine/States/watering_state.gd" id="11_mluxe"]
 [ext_resource type="PackedScene" uid="uid://c4o7avbro4imy" path="res://Components/hitComponent/hit_component.tscn" id="12_2dfdk"]
 [ext_resource type="PackedScene" uid="uid://cllp82ye8ff57" path="res://Components/Magnet Component/magnet_component.tscn" id="13_0em08"]
+[ext_resource type="Script" uid="uid://cdq6yia5oss6r" path="res://Characters/Astro/inventory.gd" id="14_g0nao"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12fn7"]
 atlas = ExtResource("4_2dfdk")
@@ -1165,6 +1167,14 @@ zoom = Vector2(3, 3)
 
 [node name="UI" parent="." unique_id=1314799245 instance=ExtResource("6_4k583")]
 
+[node name="InventoryUI" parent="UI" index="1" unique_id=203741302 node_paths=PackedStringArray("inventory")]
+inventory = NodePath("../../Inventory")
+slot_scene = ExtResource("3_xaw78")
+
+[node name="HotbarUI" parent="UI" index="2" unique_id=1866847855 node_paths=PackedStringArray("inventory")]
+inventory = NodePath("../../Inventory")
+slot_scene = ExtResource("3_xaw78")
+
 [node name="PauseMenu" parent="UI" unique_id=710253817 instance=ExtResource("7_1s7r3")]
 visible = false
 
@@ -1244,7 +1254,11 @@ position = Vector2(1, -8)
 shape = SubResource("CircleShape2D_g0nao")
 debug_color = Color(1.2995303e-06, 0.6311835, 0.4681505, 0.41960785)
 
+[node name="Inventory" type="Node" parent="." unique_id=1887588236]
+script = ExtResource("14_g0nao")
+
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 [connection signal="area_exited" from="Magnet Component" to="Magnet Component" method="_on_area_exited"]
 
+[editable path="UI"]
 [editable path="UI/PauseMenu"]

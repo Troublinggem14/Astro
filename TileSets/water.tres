@@ -1,0 +1,71 @@
+[gd_resource type="TileSet" format=3 uid="uid://dh5fhulsen0w8"]
+
+[ext_resource type="Texture2D" uid="uid://dx0i3l0mpl1lr" path="res://Assets/Aseprite/TileSets/Water/Fish_Animated_Tile.png" id="1_yirya"]
+[ext_resource type="Texture2D" uid="uid://chtwtimfj8u1l" path="res://Assets/Aseprite/TileSets/Water/Water_Decoration.png" id="2_1344n"]
+[ext_resource type="Texture2D" uid="uid://cb84i0oxq1yvq" path="res://Assets/Aseprite/TileSets/Water/Water_Foam_Animation.png" id="3_tqvak"]
+[ext_resource type="Texture2D" uid="uid://dbo81flxn658p" path="res://Assets/Aseprite/TileSets/Water/Water_Middle.png" id="4_5ao4o"]
+[ext_resource type="Texture2D" uid="uid://cyxe80hwa1unx" path="res://Assets/Aseprite/TileSets/Water/Water_Middle_Anim_1.png" id="5_puy7x"]
+[ext_resource type="Texture2D" uid="uid://7pcxi6t0qsq7" path="res://Assets/Aseprite/TileSets/Water/Water_Middle_Anim_2.png" id="6_3mvot"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gsr7h"]
+texture = ExtResource("1_yirya")
+0:0/animation_columns = 16
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/animation_frame_14/duration = 1.0
+0:0/animation_frame_15/duration = 1.0
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v1lfc"]
+texture = ExtResource("2_1344n")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7241"]
+texture = ExtResource("3_tqvak")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kb4y3"]
+texture = ExtResource("4_5ao4o")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j26lk"]
+texture = ExtResource("5_puy7x")
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1vqlq"]
+texture = ExtResource("6_3mvot")
+0:0/animation_columns = 15
+0:0/animation_mode = 1
+0:0/animation_frame_0/duration = 1.0
+0:0/animation_frame_1/duration = 1.0
+0:0/animation_frame_2/duration = 1.0
+0:0/animation_frame_3/duration = 1.0
+0:0/animation_frame_4/duration = 1.0
+0:0/animation_frame_5/duration = 1.0
+0:0/animation_frame_6/duration = 1.0
+0:0/animation_frame_7/duration = 1.0
+0:0/animation_frame_8/duration = 1.0
+0:0/animation_frame_9/duration = 1.0
+0:0/animation_frame_10/duration = 1.0
+0:0/animation_frame_11/duration = 1.0
+0:0/animation_frame_12/duration = 1.0
+0:0/animation_frame_13/duration = 1.0
+0:0/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_gsr7h")
+sources/1 = SubResource("TileSetAtlasSource_v1lfc")
+sources/2 = SubResource("TileSetAtlasSource_j7241")
+sources/3 = SubResource("TileSetAtlasSource_kb4y3")
+sources/4 = SubResource("TileSetAtlasSource_j26lk")
+sources/5 = SubResource("TileSetAtlasSource_1vqlq")

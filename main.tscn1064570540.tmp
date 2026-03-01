@@ -1,0 +1,112 @@
+[gd_scene format=3 uid="uid://cy08xdbgpwo0b"]
+
+[ext_resource type="Script" uid="uid://2hnsxuosuj07" path="res://Levels/level.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/OpenWorld/HUB.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://c5p108fex7447" path="res://Objects/Collectibles/log.tscn" id="5_getpj"]
+[ext_resource type="Script" uid="uid://cxlv6jsvfpiki" path="res://Levels/audios.gd" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://bgh5s3ay3vas1" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 1.mp3" id="6_7mycd"]
+[ext_resource type="AudioStream" uid="uid://c0nlvia80g34q" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 2.mp3" id="7_272bh"]
+[ext_resource type="AudioStream" uid="uid://b1pnllngtd8lt" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 3.mp3" id="8_kek77"]
+[ext_resource type="AudioStream" uid="uid://cfhvtekb4p885" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 4.mp3" id="9_4c57u"]
+[ext_resource type="AudioStream" uid="uid://d2fmrl1804m0q" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 5.mp3" id="10_4c57u"]
+[ext_resource type="AudioStream" uid="uid://prx8xo0w6iko" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 6.mp3" id="11_efxa6"]
+[ext_resource type="AudioStream" uid="uid://bjn63nd3prhfk" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 7.mp3" id="12_dg77c"]
+[ext_resource type="AudioStream" uid="uid://cq1obd1lb7lr0" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 1.mp3" id="13_ycdy4"]
+[ext_resource type="AudioStream" uid="uid://bt8pjqtc7234r" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 2.mp3" id="14_w48qg"]
+[ext_resource type="AudioStream" uid="uid://dti3k0jrsksm7" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 3.mp3" id="15_vivmo"]
+[ext_resource type="AudioStream" uid="uid://ckmai57q3h4lx" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 4.mp3" id="16_074og"]
+[ext_resource type="AudioStream" uid="uid://dnlio0xv4syap" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 5.mp3" id="17_cegan"]
+[ext_resource type="AudioStream" uid="uid://ywomkpl4b74d" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 6.mp3" id="18_82xsv"]
+[ext_resource type="AudioStream" uid="uid://bwdwbs7dujvmb" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 7.mp3" id="19_cegan"]
+[ext_resource type="AudioStream" uid="uid://lj3r6fm0tnwm" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 1/GS1_Beast_Scream.mp3" id="20_82xsv"]
+[ext_resource type="PackedScene" uid="uid://bh4wov0gh68c5" path="res://Components/LevelTransitions/fading_component.tscn" id="22_ryguw"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lquwl"]
+streams_count = 7
+stream_0/stream = ExtResource("6_7mycd")
+stream_1/stream = ExtResource("7_272bh")
+stream_2/stream = ExtResource("8_kek77")
+stream_3/stream = ExtResource("9_4c57u")
+stream_4/stream = ExtResource("10_4c57u")
+stream_5/stream = ExtResource("11_efxa6")
+stream_6/stream = ExtResource("12_dg77c")
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_dg77c"]
+streams_count = 7
+stream_0/stream = ExtResource("13_ycdy4")
+stream_1/stream = ExtResource("14_w48qg")
+stream_2/stream = ExtResource("15_vivmo")
+stream_3/stream = ExtResource("16_074og")
+stream_4/stream = ExtResource("17_cegan")
+stream_5/stream = ExtResource("18_82xsv")
+stream_6/stream = ExtResource("19_cegan")
+
+[node name="Main" type="Node2D" unique_id=122740768]
+script = ExtResource("1_1bvp3")
+
+[node name="Y_sorted_objects" type="Node2D" parent="." unique_id=290903617]
+y_sort_enabled = true
+
+[node name="Astro" parent="Y_sorted_objects" unique_id=605047117 instance=ExtResource("2_0xm2m")]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(30, 22)
+current_tool = 1
+
+[node name="Level_base" parent="Y_sorted_objects" unique_id=823952948 instance=ExtResource("1_ig7tw")]
+y_sort_enabled = true
+
+[node name="Ground" parent="Y_sorted_objects/Level_base" index="0" unique_id=722334136]
+z_index = -1
+
+[node name="CrashedShip" parent="Y_sorted_objects/Level_base" index="3" unique_id=1666164328]
+z_index = 1
+
+[node name="BrokenFin" parent="Y_sorted_objects/Level_base" index="5" unique_id=1181083111]
+z_as_relative = false
+
+[node name="Trees_Rocks" parent="Y_sorted_objects/Level_base" index="6" unique_id=1051650423]
+y_sort_enabled = true
+
+[node name="ShipRock" parent="Y_sorted_objects/Level_base" index="7" unique_id=1594764753]
+z_index = 1
+position = Vector2(1040, 198.00002)
+scale = Vector2(4.6800003, 4.6800003)
+
+[node name="Walls" parent="Y_sorted_objects/Level_base" index="8" unique_id=933360526]
+y_sort_enabled = true
+
+[node name="Doors" type="Node" parent="." unique_id=276073244]
+
+[node name="Logs" type="Node" parent="." unique_id=1352211914]
+
+[node name="Log" parent="Logs" unique_id=324850649 instance=ExtResource("5_getpj")]
+position = Vector2(685, 265)
+
+[node name="Log2" parent="Logs" unique_id=516730140 instance=ExtResource("5_getpj")]
+position = Vector2(693, 274)
+
+[node name="Log3" parent="Logs" unique_id=2137518378 instance=ExtResource("5_getpj")]
+position = Vector2(680, 277)
+
+[node name="Rocks" type="Node" parent="." unique_id=1145403129]
+
+[node name="Audios" type="Node" parent="." unique_id=1041939269]
+script = ExtResource("5_lquwl")
+
+[node name="RockHit" type="AudioStreamPlayer2D" parent="Audios" unique_id=482637190]
+stream = SubResource("AudioStreamRandomizer_lquwl")
+
+[node name="LogHit" type="AudioStreamPlayer2D" parent="Audios" unique_id=1410163682]
+stream = SubResource("AudioStreamRandomizer_dg77c")
+
+[node name="Collected Item" type="AudioStreamPlayer2D" parent="Audios" unique_id=2146402904]
+stream = ExtResource("20_82xsv")
+
+[node name="FadingComponent" parent="." unique_id=1814035684 instance=ExtResource("22_ryguw")]
+
+[editable path="Y_sorted_objects/Astro"]
+[editable path="Y_sorted_objects/Astro/UI"]
+[editable path="Y_sorted_objects/Astro/UI/PauseMenu"]
+[editable path="Y_sorted_objects/Level_base"]

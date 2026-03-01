@@ -3,10 +3,8 @@ extends Node2D
 func _ready() -> void:
 	visible = false
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
-		get_tree().paused = !get_tree().paused
-		visible = !visible
+func _process(delta: float) -> void:
+	visible = PausedState.show_pause_menu
 
 
 func _on_button_pressed() -> void:

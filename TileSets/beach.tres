@@ -1,0 +1,50 @@
+[gd_resource type="TileSet" format=3 uid="uid://dp5pmqkn56fu1"]
+
+[ext_resource type="Texture2D" uid="uid://cu8uj83qi6gt5" path="res://Assets/Aseprite/TileSets/Beach/Beach_Tiles.png" id="1_gfmq5"]
+[ext_resource type="Texture2D" uid="uid://7irf2ghw5jxo" path="res://Assets/Aseprite/TileSets/Beach/Beach_Decor_Tiles.png" id="2_jvfya"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jvfya"]
+texture = ExtResource("1_gfmq5")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 8, 0, 8, 8, 0, 8, 4, 4, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0, 8, 0, 8, 4, -8, 4)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4, 8, -8, 4, -8, 0, 0, 8)
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 8, 0, 8)
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0, 8, -8, 8)
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, -8, 8, -8, 8, 0, 0, 0)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 0, -8, 0)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 0, -8, 0, 0, -8, 0)
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pd7ya"]
+texture = ExtResource("2_jvfya")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[resource]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 13
+sources/0 = SubResource("TileSetAtlasSource_jvfya")
+sources/1 = SubResource("TileSetAtlasSource_pd7ya")

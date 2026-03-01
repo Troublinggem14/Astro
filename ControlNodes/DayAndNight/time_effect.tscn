@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cmoc3gkbp7c1y"]
+
+[ext_resource type="Script" uid="uid://b8v1ijg3fmcdv" path="res://ControlNodes/DayAndNight/time_effect.gd" id="1_q513q"]
+
+[node name="TimeEffect" type="CanvasModulate" unique_id=523365719]
+script = ExtResource("1_q513q")

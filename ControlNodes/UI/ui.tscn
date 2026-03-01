@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://dn23xhnkwcadu"]
 
+[ext_resource type="Script" uid="uid://5sf8bdo0micg" path="res://ControlNodes/UI/ui.gd" id="1_405j2"]
 [ext_resource type="Texture2D" uid="uid://cvv7c2lo64qrj" path="res://Assets/Aseprite/UI/UI_Bars.png" id="1_xcysr"]
+[ext_resource type="PackedScene" uid="uid://damsao8dwn7tm" path="res://ControlNodes/UI/Inventory and Hotbar/inventory_ui.tscn" id="2_u8m25"]
+[ext_resource type="Texture2D" uid="uid://bku0u0p72pgbk" path="res://Assets/Aseprite/UI/UI_Premade.png" id="4_8gutm"]
+[ext_resource type="Script" uid="uid://b40slgojklc51" path="res://ControlNodes/UI/hotbar_ui.gd" id="4_qtnum"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8m25"]
 atlas = ExtResource("1_xcysr")
@@ -10,9 +14,15 @@ region = Rect2(0, 0, 16, 32)
 atlas = ExtResource("1_xcysr")
 region = Rect2(16, 0, 16, 32)
 
-[node name="UI" type="CanvasLayer" unique_id=1314799245]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxyp8"]
+atlas = ExtResource("4_8gutm")
+region = Rect2(104, 16, 120, 120)
 
-[node name="UiContronNode" type="Control" parent="." unique_id=1431772361]
+[node name="UI" type="CanvasLayer" unique_id=1314799245]
+process_mode = 3
+script = ExtResource("1_405j2")
+
+[node name="UiControlNode" type="Control" parent="." unique_id=1431772361]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -20,7 +30,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="OxygenBar" type="TextureProgressBar" parent="UiContronNode" unique_id=1794476886]
+[node name="OxygenBar" type="TextureProgressBar" parent="UiControlNode" unique_id=1794476886]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -37,7 +47,41 @@ fill_mode = 3
 texture_under = SubResource("AtlasTexture_u8m25")
 texture_progress = SubResource("AtlasTexture_xcysr")
 
-[node name="TextureButton" type="TextureButton" parent="UiContronNode" unique_id=683237353]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="InventoryUI" parent="." unique_id=203741302 instance=ExtResource("2_u8m25")]
+process_mode = 3
+offset_left = 302.0
+offset_top = 101.0
+offset_right = 342.0
+offset_bottom = 141.0
+scale = Vector2(2.3199983, 2.3199983)
+
+[node name="InventoryBackground" type="Sprite2D" parent="InventoryUI" unique_id=561043902]
+z_index = -1
+position = Vector2(111.206985, 86.638)
+scale = Vector2(2.2198293, 1.8462658)
+texture = SubResource("AtlasTexture_hxyp8")
+
+[node name="HotbarUI" type="Control" parent="." unique_id=1866847855]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_qtnum")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HotbarUI" unique_id=305918648]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -79.0
+offset_right = -95.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.76, 1.76)
+theme_override_constants/separation = 45

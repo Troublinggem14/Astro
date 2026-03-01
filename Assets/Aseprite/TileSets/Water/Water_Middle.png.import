@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://vrtwhre6kvqv"
-path="res://.godot/imported/InsidePlane.png-f7fae0afbb848331e349e5c1553e34d5.ctex"
+uid="uid://dbo81flxn658p"
+path="res://.godot/imported/Water_Middle.png-a9c3e767a00a34e2b46412633501e197.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Aseprite/TileSets/Ship/InsidePlane.png"
-dest_files=["res://.godot/imported/InsidePlane.png-f7fae0afbb848331e349e5c1553e34d5.ctex"]
+source_file="res://Assets/Aseprite/TileSets/Water/Water_Middle.png"
+dest_files=["res://.godot/imported/Water_Middle.png-a9c3e767a00a34e2b46412633501e197.ctex"]
 
 [params]
 

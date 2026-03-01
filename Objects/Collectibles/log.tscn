@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="1_l6p1u"]
 [ext_resource type="PackedScene" uid="uid://d35ktearndha8" path="res://Components/Collectible/collectible_component.tscn" id="2_jql4l"]
+[ext_resource type="Resource" uid="uid://ewcc28qb6yb6" path="res://Items/Logs.tres" id="3_v567i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l6p1u"]
 atlas = ExtResource("1_l6p1u")
@@ -15,7 +16,7 @@ scale = Vector2(0.75, 0.75)
 texture = SubResource("AtlasTexture_l6p1u")
 
 [node name="Collectible Component" parent="." unique_id=217310174 instance=ExtResource("2_jql4l")]
-collectable_name = "log"
+item = ExtResource("3_v567i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collectible Component" unique_id=1559168979]
 shape = SubResource("CircleShape2D_jql4l")

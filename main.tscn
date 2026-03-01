@@ -3,7 +3,8 @@
 [ext_resource type="Script" uid="uid://2hnsxuosuj07" path="res://Levels/level.gd" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://de4wst1jnnvyn" path="res://Levels/OpenWorld/HUB.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_0xm2m"]
-[ext_resource type="PackedScene" uid="uid://w68qxm8ifxfr" path="res://Objects/Door/door.tscn" id="3_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dvgqios0micgk" path="res://Objects/DoorTypes/door.tscn" id="4_d13ii"]
+[ext_resource type="PackedScene" uid="uid://c5iqryglfd3nu" path="res://Objects/DoorTypes/no_door.tscn" id="5_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://c5p108fex7447" path="res://Objects/Collectibles/log.tscn" id="5_getpj"]
 [ext_resource type="Script" uid="uid://cxlv6jsvfpiki" path="res://Levels/audios.gd" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://bgh5s3ay3vas1" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 1.mp3" id="6_7mycd"]
@@ -21,7 +22,14 @@
 [ext_resource type="AudioStream" uid="uid://ywomkpl4b74d" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 6.mp3" id="18_82xsv"]
 [ext_resource type="AudioStream" uid="uid://bwdwbs7dujvmb" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Tree Hit - 7.mp3" id="19_cegan"]
 [ext_resource type="AudioStream" uid="uid://lj3r6fm0tnwm" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 1/GS1_Beast_Scream.mp3" id="20_82xsv"]
+[ext_resource type="PackedScene" uid="uid://cmoc3gkbp7c1y" path="res://ControlNodes/DayAndNight/time_effect.tscn" id="22_d13ii"]
 [ext_resource type="PackedScene" uid="uid://bh4wov0gh68c5" path="res://Components/LevelTransitions/fading_component.tscn" id="22_ryguw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d13ii"]
+size = Vector2(51, 29)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0odxb"]
+size = Vector2(48, 20)
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_lquwl"]
 streams_count = 7
@@ -52,8 +60,11 @@ y_sort_enabled = true
 [node name="Astro" parent="Y_sorted_objects" unique_id=605047117 instance=ExtResource("2_0xm2m")]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(30, 22)
+position = Vector2(982, 232)
 current_tool = 1
+
+[node name="UI" parent="Y_sorted_objects/Astro" index="1" unique_id=1314799245]
+visible = false
 
 [node name="Level_base" parent="Y_sorted_objects" unique_id=823952948 instance=ExtResource("1_ig7tw")]
 y_sort_enabled = true
@@ -78,20 +89,26 @@ scale = Vector2(4.6800003, 4.6800003)
 [node name="Walls" parent="Y_sorted_objects/Level_base" index="8" unique_id=933360526]
 y_sort_enabled = true
 
+[node name="Water" parent="Y_sorted_objects/Level_base" index="10" unique_id=1936565528]
+z_index = -2
+
 [node name="Doors" type="Node" parent="." unique_id=276073244]
 
-[node name="Door_OutsideShip" parent="Doors" unique_id=884870198 instance=ExtResource("3_1bvp3")]
-position = Vector2(961, 183)
-scale = Vector2(0.4800195, 0.4800195)
-desitnation_level_name = "inside_ship"
-desination_door_name = "InsideShip"
-spawn_direction = "South"
+[node name="ToInsideShip" parent="Doors" unique_id=89164605 instance=ExtResource("4_d13ii")]
+position = Vector2(953, 205)
+target_scene = "res://Levels/InsideWorld/inside_ship.tscn"
 
-[node name="CollisionShape2D" parent="Doors/Door_OutsideShip" index="0" unique_id=1671389555]
-scale = Vector2(5.049867, 5.049867)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/ToInsideShip" unique_id=600640249]
+position = Vector2(9.5, -4.5)
+shape = SubResource("RectangleShape2D_d13ii")
 
-[node name="SpawnPoint" parent="Doors/Door_OutsideShip" index="1" unique_id=1342361131]
-position = Vector2(0, 70.83045)
+[node name="ToBeach" parent="Doors" unique_id=134145230 instance=ExtResource("5_1u8w0")]
+position = Vector2(662, -67)
+target_scene = "res://Levels/OpenWorld/beach.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/ToBeach" unique_id=160222594]
+position = Vector2(-14, 0)
+shape = SubResource("RectangleShape2D_0odxb")
 
 [node name="Logs" type="Node" parent="." unique_id=1352211914]
 
@@ -121,7 +138,9 @@ stream = ExtResource("20_82xsv")
 [node name="FadingComponent" parent="." unique_id=1814035684 instance=ExtResource("22_ryguw")]
 visible = false
 
+[node name="TimeEffect" parent="." unique_id=523365719 instance=ExtResource("22_d13ii")]
+
 [editable path="Y_sorted_objects/Astro"]
+[editable path="Y_sorted_objects/Astro/UI"]
 [editable path="Y_sorted_objects/Astro/UI/PauseMenu"]
 [editable path="Y_sorted_objects/Level_base"]
-[editable path="Doors/Door_OutsideShip"]

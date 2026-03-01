@@ -24,6 +24,6 @@ static func is_movement_input() -> bool:
 	return direction != Vector2.ZERO
 		
 static func use_tool() -> bool:
-	var use_tool_value: bool = Input.is_action_just_pressed("action")
+	var use_tool_value: bool = Input.is_action_pressed("action")
 	
 	return use_tool_value

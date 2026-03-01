@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://damsao8dwn7tm"]
+
+[ext_resource type="Script" uid="uid://cg4evuo6wskwx" path="res://ControlNodes/UI/Inventory and Hotbar/inventory_ui.gd" id="1_fc5hc"]
+[ext_resource type="Texture2D" uid="uid://bku0u0p72pgbk" path="res://Assets/Aseprite/UI/UI_Premade.png" id="2_4pq8w"]
+[ext_resource type="FontFile" uid="uid://byr5m74fgh60p" path="res://Fonts/SPACEBOY.TTF" id="3_b3if1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3if1"]
+atlas = ExtResource("2_4pq8w")
+region = Rect2(105, 142, 119, 28)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_35dxx"]
+texture = SubResource("AtlasTexture_b3if1")
+
+[sub_resource type="LabelSettings" id="LabelSettings_35dxx"]
+font = ExtResource("3_b3if1")
+
+[node name="InventoryUI" type="Control" unique_id=203741302]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fc5hc")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2070674817]
+layout_mode = 0
+offset_left = 245.00002
+offset_top = -23.0
+offset_right = 309.36
+scale = Vector2(1.398385, 1.398385)
+theme_override_styles/panel = SubResource("StyleBoxTexture_35dxx")
+
+[node name="Label" type="Label" parent="PanelContainer" unique_id=113470073]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_35dxx")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=544457304]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/h_separation = 45
+theme_override_constants/v_separation = 45
+columns = 5

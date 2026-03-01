@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://dn23xhnkwcadu"]
+
+[ext_resource type="Texture2D" uid="uid://cvv7c2lo64qrj" path="res://Assets/Aseprite/UI/UI_Bars.png" id="1_xcysr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8m25"]
+atlas = ExtResource("1_xcysr")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcysr"]
+atlas = ExtResource("1_xcysr")
+region = Rect2(16, 0, 16, 32)
+
+[node name="UI" type="CanvasLayer" unique_id=1314799245]
+
+[node name="UiControlNode" type="Control" parent="." unique_id=1431772361]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OxygenBar" type="TextureProgressBar" parent="UiControlNode" unique_id=1794476886]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -64.0
+offset_right = 42.0
+offset_bottom = -30.0
+grow_vertical = 0
+scale = Vector2(2.5, 5)
+pivot_offset = Vector2(0.0607996, 32.182396)
+value = 100.0
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_u8m25")
+texture_progress = SubResource("AtlasTexture_xcysr")
+
+[node name="Inventory" type="GridContainer" parent="UiControlNode" unique_id=32539034]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -56.0
+offset_right = 356.0
+offset_bottom = 176.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 45
+theme_override_constants/v_separation = 45
+columns = 5
+
+[node name="InventorySlot" parent="UiControlNode/Inventory" unique_id=2020162343]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="UiControlNode/Inventory" unique_id=192221345]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="UiControlNode/Inventory" unique_id=1589486010]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="UiControlNode/Inventory" unique_id=2140868366]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="UiControlNode/Inventory" unique_id=743770512]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="UiControlNode/Inventory" unique_id=1173429275]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="UiControlNode/Inventory" unique_id=2079220232]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="UiControlNode/Inventory" unique_id=1645501314]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="UiControlNode/Inventory" unique_id=739702776]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="UiControlNode/Inventory" unique_id=973951984]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="UiControlNode/Inventory" unique_id=121525100]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="UiControlNode/Inventory" unique_id=548657276]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="UiControlNode/Inventory" unique_id=46668395]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="UiControlNode/Inventory" unique_id=1656793338]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="UiControlNode/Inventory" unique_id=1228863179]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="UiControlNode/Inventory" unique_id=2091387162]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="UiControlNode/Inventory" unique_id=643212578]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="UiControlNode/Inventory" unique_id=1449722230]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="UiControlNode/Inventory" unique_id=1658307219]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="UiControlNode/Inventory" unique_id=1186815829]
+layout_mode = 2

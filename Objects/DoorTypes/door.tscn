@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dvgqios0micgk"]
+
+[ext_resource type="Script" uid="uid://lqaflmgmo8w3" path="res://Objects/DoorTypes/door.gd" id="1_jf5qk"]
+[ext_resource type="PackedScene" uid="uid://bh4wov0gh68c5" path="res://Components/LevelTransitions/fading_component.tscn" id="2_hbvgn"]
+
+[node name="Door" type="Area2D" unique_id=89164605]
+collision_layer = 32
+script = ExtResource("1_jf5qk")
+
+[node name="FadingComponent" parent="." unique_id=556620514 instance=ExtResource("2_hbvgn")]
+
+[node name="Fade Background" parent="FadingComponent" index="1" unique_id=642001852]
+visible = false
+
+[connection signal="animation_finished" from="FadingComponent/Fading" to="." method="_on_fading_animation_finished"]
+
+[editable path="FadingComponent"]

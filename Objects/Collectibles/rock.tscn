@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c77vidh2jcj03"]
 
 [ext_resource type="PackedScene" uid="uid://d35ktearndha8" path="res://Components/Collectible/collectible_component.tscn" id="1_hos0o"]
+[ext_resource type="Resource" uid="uid://b7eceor3g4l7o" path="res://Items/Stone.tres" id="2_n38ar"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qq1qs"]
 load_path = "res://.godot/imported/Resources.png-3448fab5aa3ffe5898ec186b7ff61925.ctex"
@@ -17,7 +18,7 @@ scale = Vector2(0.75, 0.75)
 texture = SubResource("AtlasTexture_hos0o")
 
 [node name="Collectible Component" parent="." unique_id=217310174 instance=ExtResource("1_hos0o")]
-collectable_name = "rock"
+item = ExtResource("2_n38ar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Collectible Component" unique_id=1751023790]
 shape = SubResource("CircleShape2D_n38ar")

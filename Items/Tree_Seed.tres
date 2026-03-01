@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Item" format=3 uid="uid://bh10urbt1nmad"]
+
+[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="1_hwnij"]
+[ext_resource type="Script" uid="uid://cjss6lqn0xdfk" path="res://ControlNodes/UI/Inventory and Hotbar/item.gd" id="2_g70qv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwnij"]
+atlas = ExtResource("1_hwnij")
+region = Rect2(48, 80, 16, 16)
+
+[resource]
+script = ExtResource("2_g70qv")
+name = "Tree Seed"
+icon = SubResource("AtlasTexture_hwnij")
+metadata/_custom_type_script = "uid://cjss6lqn0xdfk"
