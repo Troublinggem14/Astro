@@ -55,3 +55,5 @@ func _gui_input(event):
 			# Emit signal upward instead of handling logic here.
 			# This keeps the slot reusable and logic-agnostic.
 			emit_signal("slot_clicked", item, amount)
+		else:
+			print("Null")

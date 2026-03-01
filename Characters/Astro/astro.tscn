@@ -1185,9 +1185,11 @@ process_mode = 3
 
 [node name="GridContainer" parent="UI/InventoryUI" index="1" unique_id=544457304]
 process_mode = 3
+z_index = 2
 
 [node name="InventoryBackground" parent="UI/InventoryUI" index="2" unique_id=561043902]
 process_mode = 3
+z_index = -3
 
 [node name="HotbarUI" parent="UI" index="2" unique_id=1866847855 node_paths=PackedStringArray("inventory")]
 process_mode = 3
