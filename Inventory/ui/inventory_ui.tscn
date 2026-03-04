@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://edlq80b7obha"]
+
+[ext_resource type="Script" uid="uid://b37pupw74jgap" path="res://Inventory/ui/inventory_ui.gd" id="1_wwyjw"]
+[ext_resource type="Texture2D" uid="uid://bku0u0p72pgbk" path="res://Assets/Aseprite/UI/UI_Premade.png" id="2_0seef"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xf1bf"]
+atlas = ExtResource("2_0seef")
+region = Rect2(104, 16, 120, 120)
+
+[node name="InventoryUI" type="Control" unique_id=1791450498]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wwyjw")
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=880750053]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 50
+columns = 5
+
+[node name="InfoPanel" type="VBoxContainer" parent="." unique_id=345221136]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Name" type="Label" parent="InfoPanel" unique_id=1789672406]
+layout_mode = 2
+
+[node name="Description" type="Label" parent="InfoPanel" unique_id=903223735]
+layout_mode = 2
+
+[node name="InventoryBackground" type="Sprite2D" parent="." unique_id=1251360339]
+z_index = -1
+position = Vector2(548.99994, 301)
+scale = Vector2(5.9904137, 3.48)
+texture = SubResource("AtlasTexture_xf1bf")

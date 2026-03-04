@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5sf8bdo0micg" path="res://ControlNodes/UI/ui.gd" id="1_405j2"]
 [ext_resource type="Texture2D" uid="uid://cvv7c2lo64qrj" path="res://Assets/Aseprite/UI/UI_Bars.png" id="1_xcysr"]
+[ext_resource type="PackedScene" uid="uid://edlq80b7obha" path="res://Inventory/ui/inventory_ui.tscn" id="3_405j2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8m25"]
 atlas = ExtResource("1_xcysr")
@@ -39,3 +40,5 @@ value = 100.0
 fill_mode = 3
 texture_under = SubResource("AtlasTexture_u8m25")
 texture_progress = SubResource("AtlasTexture_xcysr")
+
+[node name="InventoryUI" parent="." unique_id=1791450498 instance=ExtResource("3_405j2")]

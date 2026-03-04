@@ -1,18 +1,26 @@
 [gd_scene format=3 uid="uid://c5p108fex7447"]
 
-[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="1_l6p1u"]
 [ext_resource type="PackedScene" uid="uid://d35ktearndha8" path="res://Components/Collectible/collectible_component.tscn" id="2_jql4l"]
+[ext_resource type="Script" uid="uid://bf181lunwgkn8" path="res://Objects/Collectibles/Collectible_Item.gd" id="2_v567i"]
+[ext_resource type="Resource" uid="uid://1flbeiifby3n" path="res://Inventory/resources/log.tres" id="3_c6ena"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l6p1u"]
-atlas = ExtResource("1_l6p1u")
-region = Rect2(0, 64, 16, 16)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_v567i"]
+load_path = "res://.godot/imported/Resources.png-3448fab5aa3ffe5898ec186b7ff61925.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v567i"]
+atlas = SubResource("CompressedTexture2D_v567i")
+region = Rect2(1, 65, 15, 14)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jql4l"]
 radius = 8.0
 
-[node name="Log" type="Sprite2D" unique_id=324850649]
+[node name="Log" type="Node2D" unique_id=442052079]
 scale = Vector2(0.75, 0.75)
-texture = SubResource("AtlasTexture_l6p1u")
+script = ExtResource("2_v567i")
+item_data = ExtResource("3_c6ena")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=938155606]
+texture = SubResource("AtlasTexture_v567i")
 
 [node name="Collectible Component" parent="." unique_id=217310174 instance=ExtResource("2_jql4l")]
 

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c77vidh2jcj03"]
+
+[ext_resource type="PackedScene" uid="uid://d35ktearndha8" path="res://Components/Collectible/collectible_component.tscn" id="1_j50w2"]
+[ext_resource type="Script" uid="uid://bf181lunwgkn8" path="res://Objects/Collectibles/Collectible_Item.gd" id="1_poldc"]
+[ext_resource type="Resource" uid="uid://r3vpp37umbiy" path="res://Inventory/resources/stone.tres" id="2_8ct63"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_jql4l"]
+load_path = "res://.godot/imported/Resources.png-3448fab5aa3ffe5898ec186b7ff61925.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed3ar"]
+atlas = SubResource("CompressedTexture2D_jql4l")
+region = Rect2(1, 81, 14, 14)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n38ar"]
+radius = 8.0
+
+[node name="Rock" type="Node2D" unique_id=1599693610]
+scale = Vector2(0.75, 0.75)
+script = ExtResource("1_poldc")
+item_data = ExtResource("2_8ct63")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=865275595]
+texture = SubResource("AtlasTexture_ed3ar")
+
+[node name="Collectible Component" parent="." unique_id=217310174 instance=ExtResource("1_j50w2")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectible Component" unique_id=1751023790]
+shape = SubResource("CircleShape2D_n38ar")

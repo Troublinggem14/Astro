@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://1flbeiifby3n"]
+
+[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="1_ahw2a"]
+[ext_resource type="Script" uid="uid://k22jafsk0spn" path="res://Inventory/item_data/item_data.gd" id="1_kwmew"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y5xo1"]
+atlas = ExtResource("1_ahw2a")
+region = Rect2(1, 65, 15, 14)
+
+[resource]
+script = ExtResource("1_kwmew")
+id = "log"
+display_name = "Log"
+description = "A sturdy log"
+icon = SubResource("AtlasTexture_y5xo1")
+metadata/_custom_type_script = "uid://k22jafsk0spn"

@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://c3jm4eq1kpap7" path="res://Components/StateMachine/States/watering_state.gd" id="11_mluxe"]
 [ext_resource type="PackedScene" uid="uid://c4o7avbro4imy" path="res://Components/hitComponent/hit_component.tscn" id="12_2dfdk"]
 [ext_resource type="PackedScene" uid="uid://cllp82ye8ff57" path="res://Components/Magnet Component/magnet_component.tscn" id="13_0em08"]
+[ext_resource type="Script" uid="uid://80gr8bf0fdtd" path="res://Inventory/inventory_data.gd" id="14_g0nao"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12fn7"]
 atlas = ExtResource("4_2dfdk")
@@ -1171,6 +1172,9 @@ process_mode = 3
 [node name="OxygenBar" parent="UI/UiControlNode" index="0" unique_id=1794476886]
 process_mode = 3
 
+[node name="InventoryUI" parent="UI" index="1" unique_id=1791450498 node_paths=PackedStringArray("inventory")]
+inventory = NodePath("../../InventoryData")
+
 [node name="PauseMenu" parent="UI" unique_id=710253817 instance=ExtResource("7_1s7r3")]
 visible = false
 
@@ -1249,6 +1253,9 @@ magnet_speed = 100
 position = Vector2(1, -8)
 shape = SubResource("CircleShape2D_g0nao")
 debug_color = Color(1.2995303e-06, 0.6311835, 0.4681505, 0.41960785)
+
+[node name="InventoryData" type="Node" parent="." unique_id=1274719628]
+script = ExtResource("14_g0nao")
 
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 [connection signal="area_exited" from="Magnet Component" to="Magnet Component" method="_on_area_exited"]
