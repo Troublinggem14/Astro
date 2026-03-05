@@ -2,8 +2,25 @@
 
 [ext_resource type="Script" uid="uid://b37pupw74jgap" path="res://Inventory/ui/inventory_ui.gd" id="1_wwyjw"]
 [ext_resource type="Texture2D" uid="uid://bku0u0p72pgbk" path="res://Assets/Aseprite/UI/UI_Premade.png" id="2_0seef"]
+[ext_resource type="FontFile" uid="uid://byr5m74fgh60p" path="res://Fonts/SPACEBOY.TTF" id="2_pc7uk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_y4l0i"]
+font = ExtResource("2_pc7uk")
+font_size = 24
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xf1bf"]
+font = ExtResource("2_pc7uk")
+font_size = 24
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xf1bf"]
+atlas = ExtResource("2_0seef")
+region = Rect2(104, 16, 120, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0seef"]
 atlas = ExtResource("2_0seef")
 region = Rect2(104, 16, 120, 120)
 
@@ -12,6 +29,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -53.0
+offset_top = -4.0
+offset_right = -53.0
+offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wwyjw")
@@ -23,29 +44,44 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -204.0
+offset_top = -140.0
+offset_right = -164.0
+offset_bottom = -100.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/h_separation = 50
-theme_override_constants/v_separation = 50
+scale = Vector2(2, 2)
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 10
 columns = 5
 
 [node name="InfoPanel" type="VBoxContainer" parent="." unique_id=345221136]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 929.0
+offset_top = 128.0
+offset_right = 1189.0
+offset_bottom = 464.0
+theme_override_constants/separation = 50
 
 [node name="Name" type="Label" parent="InfoPanel" unique_id=1789672406]
 layout_mode = 2
+label_settings = SubResource("LabelSettings_y4l0i")
+horizontal_alignment = 1
 
 [node name="Description" type="Label" parent="InfoPanel" unique_id=903223735]
 layout_mode = 2
+label_settings = SubResource("LabelSettings_xf1bf")
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="InventoryBackground" type="Sprite2D" parent="." unique_id=1251360339]
 z_index = -1
 position = Vector2(548.99994, 301)
 scale = Vector2(5.9904137, 3.48)
 texture = SubResource("AtlasTexture_xf1bf")
+
+[node name="PanelBackground" type="Sprite2D" parent="." unique_id=944281416]
+z_index = -1
+position = Vector2(1057, 297)
+scale = Vector2(2.2749994, 2.975)
+texture = SubResource("AtlasTexture_0seef")

@@ -3,20 +3,26 @@
 [ext_resource type="Script" uid="uid://cprx2y1ty5nu8" path="res://Inventory/ui/inventory_slot.gd" id="1_dwetg"]
 [ext_resource type="Texture2D" uid="uid://bku0u0p72pgbk" path="res://Assets/Aseprite/UI/UI_Premade.png" id="1_uynwj"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dwetg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyoyq"]
 atlas = ExtResource("1_uynwj")
 region = Rect2(285, 154, 18, 18)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tb3gf"]
+texture = SubResource("AtlasTexture_wyoyq")
+
 [node name="Inventory_slot" type="Panel" unique_id=522163881]
+custom_minimum_size = Vector2(40, 40)
 offset_right = 40.0
 offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_tb3gf")
 script = ExtResource("1_dwetg")
 
 [node name="Icon" type="TextureRect" parent="." unique_id=1718053425]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-texture = SubResource("AtlasTexture_dwetg")
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 38.0
+offset_bottom = 38.0
 
 [node name="Quantity" type="Label" parent="." unique_id=1099127769]
 layout_mode = 0

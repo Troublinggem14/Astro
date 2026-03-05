@@ -121,6 +121,72 @@ position = Vector2(693, 274)
 [node name="Log3" parent="Logs" unique_id=2137518378 instance=ExtResource("5_getpj")]
 position = Vector2(680, 277)
 
+[node name="Log4" parent="Logs" unique_id=442052079 instance=ExtResource("5_getpj")]
+position = Vector2(683, 291)
+
+[node name="Log5" parent="Logs" unique_id=1012338150 instance=ExtResource("5_getpj")]
+position = Vector2(660, 292)
+
+[node name="Log6" parent="Logs" unique_id=789823868 instance=ExtResource("5_getpj")]
+position = Vector2(664, 280)
+
+[node name="Log7" parent="Logs" unique_id=2105814612 instance=ExtResource("5_getpj")]
+position = Vector2(660, 270)
+
+[node name="Log8" parent="Logs" unique_id=1113369264 instance=ExtResource("5_getpj")]
+position = Vector2(656, 253)
+
+[node name="Log9" parent="Logs" unique_id=1996756064 instance=ExtResource("5_getpj")]
+position = Vector2(671, 246)
+
+[node name="Log10" parent="Logs" unique_id=857058384 instance=ExtResource("5_getpj")]
+position = Vector2(647, 234)
+
+[node name="Log11" parent="Logs" unique_id=193613520 instance=ExtResource("5_getpj")]
+position = Vector2(637, 246)
+
+[node name="Log12" parent="Logs" unique_id=1464616044 instance=ExtResource("5_getpj")]
+position = Vector2(621, 251)
+
+[node name="Log13" parent="Logs" unique_id=499907562 instance=ExtResource("5_getpj")]
+position = Vector2(635, 261)
+
+[node name="Log14" parent="Logs" unique_id=919993133 instance=ExtResource("5_getpj")]
+position = Vector2(647, 269)
+
+[node name="Log15" parent="Logs" unique_id=483783643 instance=ExtResource("5_getpj")]
+position = Vector2(647, 283)
+
+[node name="Log16" parent="Logs" unique_id=768287657 instance=ExtResource("5_getpj")]
+position = Vector2(634, 294)
+
+[node name="Log17" parent="Logs" unique_id=2052463413 instance=ExtResource("5_getpj")]
+position = Vector2(623, 298)
+
+[node name="Log18" parent="Logs" unique_id=942697859 instance=ExtResource("5_getpj")]
+position = Vector2(640, 305)
+
+[node name="Log19" parent="Logs" unique_id=494582600 instance=ExtResource("5_getpj")]
+position = Vector2(654, 296)
+
+[node name="Log20" parent="Logs" unique_id=381206221 instance=ExtResource("5_getpj")]
+position = Vector2(667, 314)
+
+[node name="Log21" parent="Logs" unique_id=820131764 instance=ExtResource("5_getpj")]
+position = Vector2(649, 314)
+
+[node name="Log22" parent="Logs" unique_id=1433194425 instance=ExtResource("5_getpj")]
+position = Vector2(627, 316)
+
+[node name="Log23" parent="Logs" unique_id=2017874275 instance=ExtResource("5_getpj")]
+position = Vector2(660, 308)
+
+[node name="Log24" parent="Logs" unique_id=761641663 instance=ExtResource("5_getpj")]
+position = Vector2(678, 303)
+
+[node name="Log25" parent="Logs" unique_id=447286022 instance=ExtResource("5_getpj")]
+position = Vector2(678, 303)
+
 [node name="Rocks" type="Node" parent="." unique_id=1145403129]
 
 [node name="Audios" type="Node" parent="." unique_id=1041939269]

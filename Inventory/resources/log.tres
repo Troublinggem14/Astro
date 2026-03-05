@@ -11,6 +11,6 @@ region = Rect2(1, 65, 15, 14)
 script = ExtResource("1_kwmew")
 id = "log"
 display_name = "Log"
-description = "A sturdy log"
+description = "A Very strudy log used for simple crafting recipes"
 icon = SubResource("AtlasTexture_y5xo1")
 metadata/_custom_type_script = "uid://k22jafsk0spn"

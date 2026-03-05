@@ -11,6 +11,6 @@ region = Rect2(1, 81, 14, 14)
 script = ExtResource("2_xkgee")
 id = "stone"
 display_name = "Stone"
-description = "A hardened Stone"
+description = "A Very hard stone used for simple crafting recipes"
 icon = SubResource("AtlasTexture_y5xo1")
 metadata/_custom_type_script = "uid://k22jafsk0spn"
