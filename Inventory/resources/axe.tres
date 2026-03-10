@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://brv68ls8ujgax"]
+
+[ext_resource type="Texture2D" uid="uid://b7st6lfr7sg0t" path="res://Assets/Aseprite/Objects/Tools/Tools2.png" id="1_3l42v"]
+[ext_resource type="Script" uid="uid://k22jafsk0spn" path="res://Inventory/item_data/item_data.gd" id="2_3rrsc"]
+
+[resource]
+script = ExtResource("2_3rrsc")
+id = "axe"
+display_name = "Axe"
+description = "A tool used to chop trees"
+icon = ExtResource("1_3l42v")
+max_stack = 1
+tool_type = 1
+metadata/_custom_type_script = "uid://k22jafsk0spn"

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://chge1b4idi648"]
+
+[ext_resource type="Script" uid="uid://db24n6snnlwne" path="res://Inventory/ui/hotbar_ui.gd" id="1_sek71"]
+[ext_resource type="Texture2D" uid="uid://bku0u0p72pgbk" path="res://Assets/Aseprite/UI/UI_Premade.png" id="2_pnxky"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owwa0"]
+atlas = ExtResource("2_pnxky")
+region = Rect2(285, 154, 18, 18)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cxnud"]
+texture = SubResource("AtlasTexture_owwa0")
+
+[node name="HotbarUI" type="Control" unique_id=186678816]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_sek71")
+
+[node name="Panel" type="Panel" parent="." unique_id=1765880680]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_cxnud")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=906886366]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 4
+alignment = 1

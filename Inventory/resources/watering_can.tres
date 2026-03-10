@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dtyih83mwhkh5"]
+
+[ext_resource type="Texture2D" uid="uid://c81ojvquv1lrr" path="res://Assets/Aseprite/Objects/Tools/Tools4.png" id="1_nl4fg"]
+[ext_resource type="Script" uid="uid://k22jafsk0spn" path="res://Inventory/item_data/item_data.gd" id="2_4wvvx"]
+
+[resource]
+script = ExtResource("2_4wvvx")
+id = "watering_can"
+display_name = "Watering Can"
+description = "A tool used to pour water"
+icon = ExtResource("1_nl4fg")
+max_stack = 1
+tool_type = 4
+metadata/_custom_type_script = "uid://k22jafsk0spn"

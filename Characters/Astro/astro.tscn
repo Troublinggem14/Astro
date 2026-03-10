@@ -1175,6 +1175,9 @@ process_mode = 3
 [node name="InventoryUI" parent="UI" index="1" unique_id=1791450498 node_paths=PackedStringArray("inventory")]
 inventory = NodePath("../../InventoryData")
 
+[node name="HotbarUI" parent="UI" index="2" unique_id=186678816 node_paths=PackedStringArray("inventory")]
+inventory = NodePath("../../InventoryData")
+
 [node name="PauseMenu" parent="UI" unique_id=710253817 instance=ExtResource("7_1s7r3")]
 visible = false
 
