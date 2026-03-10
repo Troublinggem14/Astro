@@ -1,0 +1,24 @@
+extends NodeState
+
+@export var player: AstroClassName
+@export var animated_sprite_2D: AnimatedSprite2D
+
+func _on_process(_delta : float) -> void:
+	pass
+
+
+func _on_physics_process(_delta : float) -> void:
+	pass
+
+
+func _on_next_transitions() -> void:
+	pass
+
+
+func _on_enter() -> void:
+	player.velocity = Vector2.ZERO
+	animated_sprite_2D.play("Die")
+
+
+func _on_exit() -> void:
+	pass

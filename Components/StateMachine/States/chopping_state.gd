@@ -3,6 +3,7 @@ extends NodeState
 @export var player: AstroClassName
 @export var animated_sprite_2D: AnimatedSprite2D
 @export var hit_component_collision_shape: CollisionShape2D
+@export var oxygen_bar: TextureProgressBar
 
 func _ready() -> void:
 	hit_component_collision_shape.disabled = true
@@ -19,9 +20,12 @@ func _on_physics_process(_delta : float) -> void:
 func _on_next_transitions() -> void:
 	if !animated_sprite_2D.is_playing():
 		transition.emit("Idle")
+	elif oxygen_bar.value == 0:
+		transition.emit("Die")
 
 
 func _on_enter() -> void:
+	oxygen_bar.value -= 1
 	if player.player_direction == Vector2.UP:
 		animated_sprite_2D.play("Chop_North")
 		hit_component_collision_shape.position = Vector2(0,-11)

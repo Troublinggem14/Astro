@@ -12,6 +12,7 @@
 [ext_resource type="Script" uid="uid://dij00l87msadg" path="res://Components/StateMachine/States/mining_state.gd" id="10_2u5ed"]
 [ext_resource type="Script" uid="uid://c3jm4eq1kpap7" path="res://Components/StateMachine/States/watering_state.gd" id="11_mluxe"]
 [ext_resource type="PackedScene" uid="uid://c4o7avbro4imy" path="res://Components/hitComponent/hit_component.tscn" id="12_2dfdk"]
+[ext_resource type="Script" uid="uid://bpo74oju3srfb" path="res://Characters/Astro/die_state.gd" id="12_g0nao"]
 [ext_resource type="PackedScene" uid="uid://cllp82ye8ff57" path="res://Components/Magnet Component/magnet_component.tscn" id="13_0em08"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12fn7"]
@@ -109,6 +110,22 @@ region = Rect2(256, 2304, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_vtviw"]
 atlas = ExtResource("4_2dfdk")
 region = Rect2(320, 2304, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh05u"]
+atlas = ExtResource("4_2dfdk")
+region = Rect2(0, 1088, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwayi"]
+atlas = ExtResource("4_2dfdk")
+region = Rect2(64, 1088, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcc2i"]
+atlas = ExtResource("4_2dfdk")
+region = Rect2(128, 1088, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymsxo"]
+atlas = ExtResource("4_2dfdk")
+region = Rect2(192, 1088, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2dfdk"]
 atlas = ExtResource("4_2dfdk")
@@ -686,6 +703,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_mh05u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cwayi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcc2i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymsxo")
+}],
+"loop": false,
+"name": &"Die",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_2dfdk")
 }, {
 "duration": 1.0,
@@ -1189,7 +1223,7 @@ camera = NodePath("../../../../Camera2D")
 position = Vector2(0, 9)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_mluxe")
-animation = &"Chop_West"
+animation = &"Die"
 autoplay = "Idle_South"
 offset = Vector2(0, -14)
 
@@ -1212,25 +1246,34 @@ player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 speed = 100
 
-[node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape")]
+[node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar")]
 script = ExtResource("8_2u5ed")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
+oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
 
-[node name="Tilling" type="Node" parent="StateMachine" unique_id=1153235607 node_paths=PackedStringArray("player", "animated_sprite_2D")]
+[node name="Tilling" type="Node" parent="StateMachine" unique_id=1153235607 node_paths=PackedStringArray("player", "animated_sprite_2D", "oxygen_bar")]
 script = ExtResource("9_qhrye")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
 
-[node name="Mining" type="Node" parent="StateMachine" unique_id=78507408 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape")]
+[node name="Mining" type="Node" parent="StateMachine" unique_id=78507408 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar")]
 script = ExtResource("10_2u5ed")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
+oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
 
-[node name="Watering" type="Node" parent="StateMachine" unique_id=1950382755 node_paths=PackedStringArray("player", "animated_sprite_2D")]
+[node name="Watering" type="Node" parent="StateMachine" unique_id=1950382755 node_paths=PackedStringArray("player", "animated_sprite_2D", "oxygen_bar")]
 script = ExtResource("11_mluxe")
+player = NodePath("../..")
+animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+
+[node name="Die" type="Node" parent="StateMachine" unique_id=1141630388 node_paths=PackedStringArray("player", "animated_sprite_2D")]
+script = ExtResource("12_g0nao")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 
