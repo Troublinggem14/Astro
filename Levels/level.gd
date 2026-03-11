@@ -1,6 +1,6 @@
 extends Node
-const LOG = preload("uid://c5p108fex7447")
-const ROCK = preload("uid://c77vidh2jcj03")
+const LOG = preload("res://Objects/Collectibles/log.tscn")
+const ROCK = preload("res://Objects/Collectibles/stone.tscn")
 
 func _ready() -> void:
 	

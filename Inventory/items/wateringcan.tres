@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://berfvd3vcrhdd"]
+
+[ext_resource type="Texture2D" uid="uid://drdgs4eqaac85" path="res://Assets/Aseprite/Objects/Resources/ToolsIcons.png" id="1_1d8xk"]
+[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://Inventory/items/item_data.gd" id="1_vnnb3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1d8xk"]
+atlas = ExtResource("1_1d8xk")
+region = Rect2(96, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_vnnb3")
+name = "Watering Can"
+icon = SubResource("AtlasTexture_1d8xk")
+max_stack = 1
+metadata/_custom_type_script = "uid://cn23km1h6syxf"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://eiam4qsiouc5"]
+
+[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://Inventory/items/item_data.gd" id="1_2m5le"]
+[ext_resource type="Texture2D" uid="uid://drdgs4eqaac85" path="res://Assets/Aseprite/Objects/Resources/ToolsIcons.png" id="1_xrh8o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrh8o"]
+atlas = ExtResource("1_xrh8o")
+region = Rect2(80, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_2m5le")
+name = "Hoe"
+icon = SubResource("AtlasTexture_xrh8o")
+max_stack = 1
+metadata/_custom_type_script = "uid://cn23km1h6syxf"

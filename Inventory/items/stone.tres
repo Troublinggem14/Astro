@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dyelga37qe52s"]
+
+[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="1_2oypn"]
+[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://Inventory/items/item_data.gd" id="2_uj5p3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s88a"]
+atlas = ExtResource("1_2oypn")
+region = Rect2(0, 80, 16, 16)
+
+[resource]
+script = ExtResource("2_uj5p3")
+name = "Stone"
+icon = SubResource("AtlasTexture_8s88a")
+max_stack = 10
+metadata/_custom_type_script = "uid://cn23km1h6syxf"

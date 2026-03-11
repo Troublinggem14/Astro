@@ -1,20 +1,18 @@
 [gd_scene format=3 uid="uid://c5p108fex7447"]
 
-[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="1_l6p1u"]
-[ext_resource type="PackedScene" uid="uid://d35ktearndha8" path="res://Components/Collectible/collectible_component.tscn" id="2_jql4l"]
+[ext_resource type="PackedScene" uid="uid://jg17ftjf3afl" path="res://Objects/Collectibles/item_Default.tscn" id="1_l6p1u"]
+[ext_resource type="Resource" uid="uid://c4rkt65prhvpg" path="res://Inventory/items/log.tres" id="2_jql4l"]
+[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="2_v567i"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l6p1u"]
-atlas = ExtResource("1_l6p1u")
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6ena"]
+atlas = ExtResource("2_v567i")
 region = Rect2(0, 64, 16, 16)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_jql4l"]
-radius = 8.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_v567i"]
 
-[node name="Log" type="Sprite2D" unique_id=324850649]
-scale = Vector2(0.75, 0.75)
-texture = SubResource("AtlasTexture_l6p1u")
+[node name="Sprite2D" unique_id=1015817555 instance=ExtResource("1_l6p1u")]
+texture = SubResource("AtlasTexture_c6ena")
+item_data = ExtResource("2_jql4l")
 
-[node name="Collectible Component" parent="." unique_id=217310174 instance=ExtResource("2_jql4l")]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Collectible Component" unique_id=1559168979]
-shape = SubResource("CircleShape2D_jql4l")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(368155123) index="0" unique_id=168998781]
+shape = SubResource("CircleShape2D_v567i")

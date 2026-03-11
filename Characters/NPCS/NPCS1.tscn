@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cfnau86765dlv"]
+
+[ext_resource type="PackedScene" uid="uid://dmrcbpithc6pj" path="res://Characters/NPCS/npc_template.tscn" id="1_rd2hp"]
+[ext_resource type="Texture2D" uid="uid://bephddq4e4rvp" path="res://Assets/Aseprite/Characters/NPCS/NPC 1.png" id="2_6tk5p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrhvc"]
+atlas = ExtResource("2_6tk5p")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjowo"]
+atlas = ExtResource("2_6tk5p")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05o56"]
+atlas = ExtResource("2_6tk5p")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1it0o"]
+atlas = ExtResource("2_6tk5p")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gwdg"]
+atlas = ExtResource("2_6tk5p")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqsjy"]
+atlas = ExtResource("2_6tk5p")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vv0al"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrhvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjowo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05o56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1it0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gwdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqsjy")
+}],
+"loop": true,
+"name": &"Idle_South",
+"speed": 5.0
+}]
+
+[node name="NPC TEMPLATE" unique_id=738938077 instance=ExtResource("1_rd2hp")]
+
+[node name="SPRITE" parent="." index="0" unique_id=953815279]
+sprite_frames = SubResource("SpriteFrames_vv0al")
+animation = &"Idle_South"
+frame = 1
+frame_progress = 0.3695838

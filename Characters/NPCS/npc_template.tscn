@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dmrcbpithc6pj"]
+
+[node name="NPC TEMPLATE" type="CharacterBody2D" unique_id=738938077]
+
+[node name="SPRITE" type="AnimatedSprite2D" parent="." unique_id=953815279]
+scale = Vector2(1.25, 1.25)

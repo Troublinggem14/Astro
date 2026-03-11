@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b5yqxjjmyok8h"]
+
+[ext_resource type="Script" uid="uid://c5lxq0xim2gvh" path="res://Globals/inventory_manager.gd" id="1_dfrkd"]
+[ext_resource type="Resource" uid="uid://dtg8ampdodw13" path="res://Inventory/player_inventory.tres" id="2_g6ri8"]
+
+[node name="InventoryManager" type="Node" unique_id=1590984377]
+script = ExtResource("1_dfrkd")
+inventory = ExtResource("2_g6ri8")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b2ba101rhf7kr"]
+
+[ext_resource type="Texture2D" uid="uid://drdgs4eqaac85" path="res://Assets/Aseprite/Objects/Resources/ToolsIcons.png" id="1_1vheb"]
+[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://Inventory/items/item_data.gd" id="1_taxtu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1vheb"]
+atlas = ExtResource("1_1vheb")
+region = Rect2(32, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_taxtu")
+name = "Pickaxe"
+icon = SubResource("AtlasTexture_1vheb")
+max_stack = 1
+metadata/_custom_type_script = "uid://cn23km1h6syxf"

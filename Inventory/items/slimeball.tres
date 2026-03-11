@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b18arq343yurl"]
+
+[ext_resource type="Texture2D" uid="uid://cm4mfl552m05l" path="res://pngs/Resources_Icons_NO_Outline.png" id="1_bph7x"]
+[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://inventory/items/item_data.gd" id="2_ktqsi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8s88a"]
+atlas = ExtResource("1_bph7x")
+region = Rect2(80, 64, 16, 16)
+
+[resource]
+script = ExtResource("2_ktqsi")
+name = "Slimeball"
+icon = SubResource("AtlasTexture_8s88a")
+max_stack = 10
+metadata/_custom_type_script = "uid://cn23km1h6syxf"

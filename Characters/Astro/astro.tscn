@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://c4o7avbro4imy" path="res://Components/hitComponent/hit_component.tscn" id="12_2dfdk"]
 [ext_resource type="Script" uid="uid://bpo74oju3srfb" path="res://Characters/Astro/die_state.gd" id="12_g0nao"]
 [ext_resource type="PackedScene" uid="uid://cllp82ye8ff57" path="res://Components/Magnet Component/magnet_component.tscn" id="13_0em08"]
+[ext_resource type="PackedScene" uid="uid://kwu8fv5ccmtd" path="res://Inventory/inventory_ui.tscn" id="15_xaw78"]
+[ext_resource type="PackedScene" uid="uid://b5yqxjjmyok8h" path="res://Globals/inventory_manager.tscn" id="16_ntsrp"]
+[ext_resource type="PackedScene" uid="uid://ks8q0s5iw5ok" path="res://Inventory/Hotbar/hotbar.tscn" id="17_u3ith"]
+[ext_resource type="Script" uid="uid://0bow4uh8rhkh" path="res://Globals/paused_state.gd" id="18_xfm6e"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12fn7"]
 atlas = ExtResource("4_2dfdk")
@@ -1186,7 +1190,7 @@ radius = 5.0
 radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g0nao"]
-radius = 41.0
+radius = 85.0
 
 [node name="Astro" type="CharacterBody2D" unique_id=605047117]
 collision_mask = 174
@@ -1246,31 +1250,41 @@ player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 speed = 100
 
-[node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar")]
+[node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar", "hitcomponent")]
 script = ExtResource("8_2u5ed")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
 oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+hitcomponent = NodePath("../../HitComponent")
+oxygen_drain = 2
 
-[node name="Tilling" type="Node" parent="StateMachine" unique_id=1153235607 node_paths=PackedStringArray("player", "animated_sprite_2D", "oxygen_bar")]
+[node name="Tilling" type="Node" parent="StateMachine" unique_id=1153235607 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar", "hitcomponent")]
 script = ExtResource("9_qhrye")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
 oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+hitcomponent = NodePath("../../HitComponent")
+oxygen_drain = 1
 
-[node name="Mining" type="Node" parent="StateMachine" unique_id=78507408 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar")]
+[node name="Mining" type="Node" parent="StateMachine" unique_id=78507408 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar", "hitcomponent")]
 script = ExtResource("10_2u5ed")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
 oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+hitcomponent = NodePath("../../HitComponent")
+oxygen_drain = 2
 
-[node name="Watering" type="Node" parent="StateMachine" unique_id=1950382755 node_paths=PackedStringArray("player", "animated_sprite_2D", "oxygen_bar")]
+[node name="Watering" type="Node" parent="StateMachine" unique_id=1950382755 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar", "hitcomponent")]
 script = ExtResource("11_mluxe")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
 oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+hitcomponent = NodePath("../../HitComponent")
+oxygen_drain = 1
 
 [node name="Die" type="Node" parent="StateMachine" unique_id=1141630388 node_paths=PackedStringArray("player", "animated_sprite_2D")]
 script = ExtResource("12_g0nao")
@@ -1292,6 +1306,28 @@ magnet_speed = 100
 position = Vector2(1, -8)
 shape = SubResource("CircleShape2D_g0nao")
 debug_color = Color(1.2995303e-06, 0.6311835, 0.4681505, 0.41960785)
+
+[node name="InventoryUI" type="CanvasLayer" parent="." unique_id=499236790]
+visible = false
+
+[node name="InventoryUI" parent="InventoryUI" unique_id=89486932 instance=ExtResource("15_xaw78")]
+
+[node name="InventoryManager" parent="InventoryUI" unique_id=1590984377 instance=ExtResource("16_ntsrp")]
+
+[node name="HotbarUI" type="CanvasLayer" parent="." unique_id=2078288945]
+
+[node name="Hotbar" parent="HotbarUI" unique_id=1814672881 node_paths=PackedStringArray("player") instance=ExtResource("17_u3ith")]
+offset_left = 325.0
+offset_top = 201.0
+offset_right = 365.0
+offset_bottom = 241.0
+player = NodePath("../..")
+
+[node name="PauseState" type="Node" parent="." unique_id=900794084 node_paths=PackedStringArray("inventory", "pause_menu")]
+process_mode = 3
+script = ExtResource("18_xfm6e")
+inventory = NodePath("../InventoryUI")
+pause_menu = NodePath("../UI/PauseMenu")
 
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 [connection signal="area_exited" from="Magnet Component" to="Magnet Component" method="_on_area_exited"]

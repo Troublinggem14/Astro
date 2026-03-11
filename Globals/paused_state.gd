@@ -1,28 +1,39 @@
 extends Node
-var show_inventory_menu: bool
-var show_pause_menu: bool
+
+var toggle_inventory_func: bool = true
+var toggle_pausemenu_func: bool = true
 
 
-func _ready() -> void:
-	self.process_mode = Node.PROCESS_MODE_ALWAYS
+@export var inventory: CanvasLayer
+@export var pause_menu: Node2D
+
+
 
 func _input(event: InputEvent) -> void:
+
 	if event.is_action_pressed("inventory"):
-		inventory_menu_pressed()
-	elif event.is_action_pressed("pause"):
-		pause_menu_pressed()
-	else:
-		return
-func pause_menu_pressed():
-	get_tree().paused = !get_tree().paused
-	show_pause_menu = get_tree().paused
-	show_inventory_menu = false
-	
-	
-	
-func inventory_menu_pressed():
-	get_tree().paused = !get_tree().paused
-	show_inventory_menu = get_tree().paused
-	show_pause_menu = false
-	
-	
+		toggle_inventory()
+
+	if event.is_action_pressed("pause"):
+		toggle_pause()
+
+
+func toggle_pause():
+	if toggle_pausemenu_func == true:
+		if pause_menu == null:
+			return
+
+		pause_menu.visible = !pause_menu.visible
+		toggle_inventory_func = !toggle_inventory_func
+		get_tree().paused = pause_menu.visible
+
+
+func toggle_inventory():
+	if toggle_inventory_func == true:
+		if inventory == null:
+			return
+
+		inventory.visible = !inventory.visible
+		toggle_pausemenu_func = !toggle_pausemenu_func
+		get_tree().paused = inventory.visible
+		

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://jg17ftjf3afl"]
+
+[ext_resource type="Script" uid="uid://cfwlk3yh85ajx" path="res://Objects/Collectibles/item_type.gd" id="1_56nhe"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=1015817555]
+script = ExtResource("1_56nhe")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=368155123]
+collision_layer = 128
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_body_entered"]

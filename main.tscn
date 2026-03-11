@@ -24,6 +24,7 @@
 [ext_resource type="AudioStream" uid="uid://lj3r6fm0tnwm" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 1/GS1_Beast_Scream.mp3" id="20_82xsv"]
 [ext_resource type="PackedScene" uid="uid://cmoc3gkbp7c1y" path="res://ControlNodes/DayAndNight/time_effect.tscn" id="22_d13ii"]
 [ext_resource type="PackedScene" uid="uid://bh4wov0gh68c5" path="res://Components/LevelTransitions/fading_component.tscn" id="22_ryguw"]
+[ext_resource type="PackedScene" uid="uid://cfnau86765dlv" path="res://Characters/NPCS/NPCS1.tscn" id="25_0odxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d13ii"]
 size = Vector2(51, 29)
@@ -139,6 +140,11 @@ stream = ExtResource("20_82xsv")
 visible = false
 
 [node name="TimeEffect" parent="." unique_id=523365719 instance=ExtResource("22_d13ii")]
+
+[node name="NPCS" type="Node" parent="." unique_id=546529724]
+
+[node name="NPC TEMPLATE" parent="NPCS" unique_id=738938077 instance=ExtResource("25_0odxb")]
+position = Vector2(889, 259)
 
 [editable path="Y_sorted_objects/Astro"]
 [editable path="Y_sorted_objects/Astro/UI"]
