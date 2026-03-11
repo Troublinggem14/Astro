@@ -12,4 +12,5 @@ script = ExtResource("1_taxtu")
 name = "Pickaxe"
 icon = SubResource("AtlasTexture_1vheb")
 max_stack = 1
+description = "This is a pickaxe used to mine rocks for stone"
 metadata/_custom_type_script = "uid://cn23km1h6syxf"

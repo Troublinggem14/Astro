@@ -1,4 +1,5 @@
 extends Node
+@warning_ignore_start("unused_signal") #⬇️ removes the debug to all of these signals ⬇️
 
 
 signal spawn_log(position: Vector2)

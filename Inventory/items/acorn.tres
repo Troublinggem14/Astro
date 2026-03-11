@@ -1,15 +1,16 @@
 [gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b5sm8rwrvpoyn"]
 
-[ext_resource type="Texture2D" uid="uid://cm4mfl552m05l" path="res://pngs/Resources_Icons_NO_Outline.png" id="1_jmuf1"]
-[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://inventory/items/item_data.gd" id="1_n0kp6"]
+[ext_resource type="Texture2D" uid="uid://clk23cwgrp4k6" path="res://Assets/Aseprite/Objects/Resources/Resources.png" id="1_m1m40"]
+[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://Inventory/items/item_data.gd" id="1_n0kp6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rmhh4"]
-atlas = ExtResource("1_jmuf1")
+atlas = ExtResource("1_m1m40")
 region = Rect2(48, 80, 16, 16)
 
 [resource]
 script = ExtResource("1_n0kp6")
 name = "Acorn"
 icon = SubResource("AtlasTexture_rmhh4")
-max_stack = 5
+max_stack = 10
+description = "Acorns can be used to grow trees back!"
 metadata/_custom_type_script = "uid://cn23km1h6syxf"

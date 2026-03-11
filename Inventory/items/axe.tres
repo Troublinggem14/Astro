@@ -12,4 +12,5 @@ script = ExtResource("1_472hn")
 name = "Axe"
 icon = SubResource("AtlasTexture_taxtu")
 max_stack = 1
+description = "The Axe is used to chop trees for wood."
 metadata/_custom_type_script = "uid://cn23km1h6syxf"

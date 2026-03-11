@@ -12,4 +12,5 @@ script = ExtResource("2_uj5p3")
 name = "Stone"
 icon = SubResource("AtlasTexture_8s88a")
 max_stack = 10
+description = "Stone is used for crafting recipes."
 metadata/_custom_type_script = "uid://cn23km1h6syxf"

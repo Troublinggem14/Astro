@@ -18,6 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://b5yqxjjmyok8h" path="res://Globals/inventory_manager.tscn" id="16_ntsrp"]
 [ext_resource type="PackedScene" uid="uid://ks8q0s5iw5ok" path="res://Inventory/Hotbar/hotbar.tscn" id="17_u3ith"]
 [ext_resource type="Script" uid="uid://0bow4uh8rhkh" path="res://Globals/paused_state.gd" id="18_xfm6e"]
+[ext_resource type="Script" uid="uid://h0xmy5dfxiyc" path="res://ControlNodes/Cheats/dev_tools.gd" id="19_5fib1"]
+[ext_resource type="PackedScene" uid="uid://ci41iwb6j8l1i" path="res://ControlNodes/Cheats/dev_panel.tscn" id="19_aildc"]
+[ext_resource type="FontFile" uid="uid://byr5m74fgh60p" path="res://Fonts/SPACEBOY.TTF" id="20_2v41y"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12fn7"]
 atlas = ExtResource("4_2dfdk")
@@ -1192,6 +1195,10 @@ radius = 8.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_g0nao"]
 radius = 85.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_5fib1"]
+font = ExtResource("20_2v41y")
+font_size = 25
+
 [node name="Astro" type="CharacterBody2D" unique_id=605047117]
 collision_mask = 174
 motion_mode = 1
@@ -1206,7 +1213,7 @@ zoom = Vector2(3, 3)
 [node name="UiControlNode" parent="UI" index="0" unique_id=1431772361]
 process_mode = 3
 
-[node name="OxygenBar" parent="UI/UiControlNode" index="0" unique_id=1794476886]
+[node name="OxygenBar" parent="UI/UiControlNode/Node2D" parent_id_path=PackedInt32Array(1314799245, 58401522) index="0" unique_id=1794476886]
 process_mode = 3
 
 [node name="PauseMenu" parent="UI" unique_id=710253817 instance=ExtResource("7_1s7r3")]
@@ -1255,7 +1262,7 @@ script = ExtResource("8_2u5ed")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
-oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+oxygen_bar = NodePath("../../UI/UiControlNode/Node2D/OxygenBar")
 hitcomponent = NodePath("../../HitComponent")
 oxygen_drain = 2
 
@@ -1264,7 +1271,7 @@ script = ExtResource("9_qhrye")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
-oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+oxygen_bar = NodePath("../../UI/UiControlNode/Node2D/OxygenBar")
 hitcomponent = NodePath("../../HitComponent")
 oxygen_drain = 1
 
@@ -1273,7 +1280,7 @@ script = ExtResource("10_2u5ed")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
-oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+oxygen_bar = NodePath("../../UI/UiControlNode/Node2D/OxygenBar")
 hitcomponent = NodePath("../../HitComponent")
 oxygen_drain = 2
 
@@ -1282,7 +1289,7 @@ script = ExtResource("11_mluxe")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 hit_component_collision_shape = NodePath("../../HitComponent/CollisionShape2D")
-oxygen_bar = NodePath("../../UI/UiControlNode/OxygenBar")
+oxygen_bar = NodePath("../../UI/UiControlNode/Node2D/OxygenBar")
 hitcomponent = NodePath("../../HitComponent")
 oxygen_drain = 1
 
@@ -1308,29 +1315,118 @@ shape = SubResource("CircleShape2D_g0nao")
 debug_color = Color(1.2995303e-06, 0.6311835, 0.4681505, 0.41960785)
 
 [node name="InventoryUI" type="CanvasLayer" parent="." unique_id=499236790]
-visible = false
 
 [node name="InventoryUI" parent="InventoryUI" unique_id=89486932 instance=ExtResource("15_xaw78")]
+visible = false
 
 [node name="InventoryManager" parent="InventoryUI" unique_id=1590984377 instance=ExtResource("16_ntsrp")]
 
-[node name="HotbarUI" type="CanvasLayer" parent="." unique_id=2078288945]
-
-[node name="Hotbar" parent="HotbarUI" unique_id=1814672881 node_paths=PackedStringArray("player") instance=ExtResource("17_u3ith")]
+[node name="Hotbar" parent="InventoryUI" unique_id=1814672881 node_paths=PackedStringArray("player") instance=ExtResource("17_u3ith")]
 offset_left = 325.0
 offset_top = 201.0
 offset_right = 365.0
 offset_bottom = 241.0
 player = NodePath("../..")
 
-[node name="PauseState" type="Node" parent="." unique_id=900794084 node_paths=PackedStringArray("inventory", "pause_menu")]
+[node name="HotbarSlot" parent="InventoryUI/Hotbar/HBoxContainer" parent_id_path=PackedInt32Array(1814672881, 1082665080) index="0" unique_id=1629272495 node_paths=PackedStringArray("description", "item_icon")]
+description = NodePath("../../../InventoryUI/Item_description_panel/Item_Desc")
+item_icon = NodePath("../../../InventoryUI/Item_description_panel/item_icon")
+
+[node name="HotbarSlot2" parent="InventoryUI/Hotbar/HBoxContainer" parent_id_path=PackedInt32Array(1814672881, 1082665080) index="1" unique_id=322653559 node_paths=PackedStringArray("description", "item_icon")]
+description = NodePath("../../../InventoryUI/Item_description_panel/Item_Desc")
+item_icon = NodePath("../../../InventoryUI/Item_description_panel/item_icon")
+
+[node name="HotbarSlot3" parent="InventoryUI/Hotbar/HBoxContainer" parent_id_path=PackedInt32Array(1814672881, 1082665080) index="2" unique_id=751574826 node_paths=PackedStringArray("description", "item_icon")]
+description = NodePath("../../../InventoryUI/Item_description_panel/Item_Desc")
+item_icon = NodePath("../../../InventoryUI/Item_description_panel/item_icon")
+
+[node name="HotbarSlot4" parent="InventoryUI/Hotbar/HBoxContainer" parent_id_path=PackedInt32Array(1814672881, 1082665080) index="3" unique_id=667013906 node_paths=PackedStringArray("description", "item_icon")]
+description = NodePath("../../../InventoryUI/Item_description_panel/Item_Desc")
+item_icon = NodePath("../../../InventoryUI/Item_description_panel/item_icon")
+
+[node name="HotbarSlot5" parent="InventoryUI/Hotbar/HBoxContainer" parent_id_path=PackedInt32Array(1814672881, 1082665080) index="4" unique_id=698605262 node_paths=PackedStringArray("description", "item_icon")]
+description = NodePath("../../../InventoryUI/Item_description_panel/Item_Desc")
+item_icon = NodePath("../../../InventoryUI/Item_description_panel/item_icon")
+
+[node name="HotbarSlot6" parent="InventoryUI/Hotbar/HBoxContainer" parent_id_path=PackedInt32Array(1814672881, 1082665080) index="5" unique_id=440005787 node_paths=PackedStringArray("description", "item_icon")]
+description = NodePath("../../../InventoryUI/Item_description_panel/Item_Desc")
+item_icon = NodePath("../../../InventoryUI/Item_description_panel/item_icon")
+
+[node name="PauseState" type="Node" parent="." unique_id=900794084 node_paths=PackedStringArray("inventory", "pause_menu", "dev_tool")]
 process_mode = 3
 script = ExtResource("18_xfm6e")
-inventory = NodePath("../InventoryUI")
+inventory = NodePath("../InventoryUI/InventoryUI")
 pause_menu = NodePath("../UI/PauseMenu")
+dev_tool = NodePath("../DevTools")
+
+[node name="DevTools" type="CanvasLayer" parent="." unique_id=1961998067 node_paths=PackedStringArray("oxygen_bar", "walk_state", "player_collision")]
+process_mode = 3
+visible = false
+script = ExtResource("19_5fib1")
+oxygen_bar = NodePath("../UI/UiControlNode/Node2D/OxygenBar")
+walk_state = NodePath("../StateMachine/Walk")
+player_collision = NodePath("../CollisionShape2D")
+
+[node name="DevPanel" parent="DevTools" unique_id=1331131316 instance=ExtResource("19_aildc")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OxygenBarToggle" type="CheckButton" parent="DevTools" unique_id=1666911842]
+offset_left = 335.0
+offset_top = 88.0
+offset_right = 583.0
+offset_bottom = 122.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("20_2v41y")
+theme_override_font_sizes/font_size = 13
+text = "Toggle Oxygen Bar"
+
+[node name="CollisionToggle" type="CheckButton" parent="DevTools" unique_id=1932091711]
+offset_left = 333.0
+offset_top = 198.0
+offset_right = 584.0
+offset_bottom = 232.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("20_2v41y")
+theme_override_font_sizes/font_size = 10
+text = "Toggle player collision"
+
+[node name="Label" type="Label" parent="DevTools" unique_id=355878413]
+offset_left = 351.0
+offset_top = 160.0
+offset_right = 736.0
+offset_bottom = 186.0
+text = "Speed Multiplier: "
+label_settings = SubResource("LabelSettings_5fib1")
+
+[node name="HScrollBar" type="HScrollBar" parent="DevTools/Label" unique_id=510329101]
+layout_mode = 0
+offset_left = 363.0
+offset_top = 1.0
+offset_right = 471.0
+offset_bottom = 27.0
+min_value = 100.0
+max_value = 500.0
+value = 100.0
+rounded = true
 
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 [connection signal="area_exited" from="Magnet Component" to="Magnet Component" method="_on_area_exited"]
+[connection signal="toggled" from="DevTools/OxygenBarToggle" to="DevTools" method="_on_oxygen_bar_toggle_toggled"]
+[connection signal="toggled" from="DevTools/CollisionToggle" to="DevTools" method="_on_collision_toggle_toggled"]
+[connection signal="value_changed" from="DevTools/Label/HScrollBar" to="DevTools" method="_on_h_scroll_bar_value_changed"]
 
 [editable path="UI"]
 [editable path="UI/PauseMenu"]
+[editable path="InventoryUI/InventoryUI"]
+[editable path="InventoryUI/Hotbar"]

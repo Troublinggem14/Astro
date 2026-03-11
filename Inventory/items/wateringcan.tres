@@ -12,4 +12,5 @@ script = ExtResource("1_vnnb3")
 name = "Watering Can"
 icon = SubResource("AtlasTexture_1d8xk")
 max_stack = 1
+description = "The Watering Can i used to water your crops."
 metadata/_custom_type_script = "uid://cn23km1h6syxf"

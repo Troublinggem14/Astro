@@ -12,4 +12,5 @@ script = ExtResource("1_2m5le")
 name = "Hoe"
 icon = SubResource("AtlasTexture_xrh8o")
 max_stack = 1
+description = "The Hoe is used to till ground for crops, or find hidden treasure in the soil!"
 metadata/_custom_type_script = "uid://cn23km1h6syxf"

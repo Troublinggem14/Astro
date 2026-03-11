@@ -12,4 +12,5 @@ script = ExtResource("1_i4ema")
 name = "Log"
 icon = SubResource("AtlasTexture_8s88a")
 max_stack = 10
+description = "Logs are used for crafting recipes."
 metadata/_custom_type_script = "uid://cn23km1h6syxf"

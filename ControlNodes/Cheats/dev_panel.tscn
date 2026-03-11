@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ci41iwb6j8l1i"]
+
+[ext_resource type="Texture2D" uid="uid://b1r5nxfn6uks7" path="res://Assets/Aseprite/UI/InventorySlot.png" id="1_rpeaf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdmft"]
+atlas = ExtResource("1_rpeaf")
+
+[node name="DevPanel" type="Control" unique_id=1331131316]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(14.12, 14.12)
+pivot_offset = Vector2(20, 20)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1720742261]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_wdmft")

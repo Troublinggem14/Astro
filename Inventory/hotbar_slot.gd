@@ -2,6 +2,8 @@ extends Panel
 
 @onready var icon: TextureRect = $"item icon"
 @onready var quantity_label: Label = $quantity
+@export var description: Label
+@export var item_icon: TextureRect
 
 var slot_data: InventorySlotData
 
@@ -70,3 +72,12 @@ func swap_slots(other_slot):
 	other_slot.slot_data.quantity = temp_quantity
 
 	InventoryManager.inventory_updated.emit()
+
+
+func _on_gui_input(event: InputEvent) -> void:
+	if event.is_action_pressed("action"):
+		if slot_data.item != null:
+			description.text = slot_data.item.description
+			item_icon.texture = slot_data.item.icon
+			
+	return

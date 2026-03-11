@@ -1,11 +1,17 @@
 [gd_scene format=3 uid="uid://depmou06mvd8b"]
 
-[ext_resource type="Script" uid="uid://cdj8bm8y53opo" path="res://inventory/hotbar_slot.gd" id="1_hcqaq"]
+[ext_resource type="Script" uid="uid://cdj8bm8y53opo" path="res://Inventory/hotbar_slot.gd" id="1_hcqaq"]
+[ext_resource type="Texture2D" uid="uid://b1r5nxfn6uks7" path="res://Assets/Aseprite/UI/InventorySlot.png" id="1_he6na"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a17ou"]
+texture = ExtResource("1_he6na")
 
 [node name="HotbarSlot" type="Panel" unique_id=1629272495]
+process_mode = 3
 custom_minimum_size = Vector2(80, 80)
 offset_right = 80.0
 offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_a17ou")
 script = ExtResource("1_hcqaq")
 
 [node name="item icon" type="TextureRect" parent="." unique_id=400624280]
@@ -17,3 +23,5 @@ offset_bottom = 80.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
