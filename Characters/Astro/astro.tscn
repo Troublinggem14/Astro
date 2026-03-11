@@ -21,6 +21,7 @@
 [ext_resource type="Script" uid="uid://h0xmy5dfxiyc" path="res://ControlNodes/Cheats/dev_tools.gd" id="19_5fib1"]
 [ext_resource type="PackedScene" uid="uid://ci41iwb6j8l1i" path="res://ControlNodes/Cheats/dev_panel.tscn" id="19_aildc"]
 [ext_resource type="FontFile" uid="uid://byr5m74fgh60p" path="res://Fonts/SPACEBOY.TTF" id="20_2v41y"]
+[ext_resource type="Script" uid="uid://wlxkjptpmifw" path="res://Characters/Astro/dialog_activation.gd" id="22_r23j1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12fn7"]
 atlas = ExtResource("4_2dfdk")
@@ -1251,10 +1252,11 @@ script = ExtResource("8_qhrye")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
 
-[node name="Walk" type="Node" parent="StateMachine" unique_id=1896178333 node_paths=PackedStringArray("player", "animated_sprite_2D")]
+[node name="Walk" type="Node" parent="StateMachine" unique_id=1896178333 node_paths=PackedStringArray("player", "animated_sprite_2D", "Dialog_Raycast")]
 script = ExtResource("8_vb1uq")
 player = NodePath("../..")
 animated_sprite_2D = NodePath("../../AnimatedSprite2D")
+Dialog_Raycast = NodePath("../../Dialog_RayCast")
 speed = 100
 
 [node name="Chopping" type="Node" parent="StateMachine" unique_id=166985544 node_paths=PackedStringArray("player", "animated_sprite_2D", "hit_component_collision_shape", "oxygen_bar", "hitcomponent")]
@@ -1420,11 +1422,23 @@ max_value = 500.0
 value = 100.0
 rounded = true
 
+[node name="Dialog_RayCast" type="RayCast2D" parent="." unique_id=679459957]
+modulate = Color(16.937159, 0, 8.345998, 1)
+rotation = 3.1415927
+target_position = Vector2(0, 30)
+collision_mask = 8
+collide_with_areas = true
+collide_with_bodies = false
+
+[node name="Dialog Activation" type="Node2D" parent="." unique_id=1223980842]
+script = ExtResource("22_r23j1")
+
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 [connection signal="area_exited" from="Magnet Component" to="Magnet Component" method="_on_area_exited"]
 [connection signal="toggled" from="DevTools/OxygenBarToggle" to="DevTools" method="_on_oxygen_bar_toggle_toggled"]
 [connection signal="toggled" from="DevTools/CollisionToggle" to="DevTools" method="_on_collision_toggle_toggled"]
 [connection signal="value_changed" from="DevTools/Label/HScrollBar" to="DevTools" method="_on_h_scroll_bar_value_changed"]
+[connection signal="draw" from="Dialog_RayCast" to="Dialog Activation" method="_on_dialog_ray_cast_draw"]
 
 [editable path="UI"]
 [editable path="UI/PauseMenu"]

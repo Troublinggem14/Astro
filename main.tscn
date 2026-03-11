@@ -67,6 +67,9 @@ current_tool = 1
 [node name="UI" parent="Y_sorted_objects/Astro" index="1" unique_id=1314799245]
 visible = false
 
+[node name="Dialog Activation" parent="Y_sorted_objects/Astro" index="11" unique_id=1223980842 node_paths=PackedStringArray("NPCDialog")]
+NPCDialog = NodePath("../../NPCS/NPC TEMPLATE")
+
 [node name="Level_base" parent="Y_sorted_objects" unique_id=823952948 instance=ExtResource("1_ig7tw")]
 y_sort_enabled = true
 
@@ -92,6 +95,12 @@ y_sort_enabled = true
 
 [node name="Water" parent="Y_sorted_objects/Level_base" index="10" unique_id=1936565528]
 z_index = -2
+
+[node name="NPCS" type="Node2D" parent="Y_sorted_objects" unique_id=2033112201]
+y_sort_enabled = true
+
+[node name="NPC TEMPLATE" parent="Y_sorted_objects/NPCS" unique_id=738938077 instance=ExtResource("25_0odxb")]
+position = Vector2(898, 278)
 
 [node name="Doors" type="Node" parent="." unique_id=276073244]
 
@@ -141,12 +150,9 @@ visible = false
 
 [node name="TimeEffect" parent="." unique_id=523365719 instance=ExtResource("22_d13ii")]
 
-[node name="NPCS" type="Node" parent="." unique_id=546529724]
-
-[node name="NPC TEMPLATE" parent="NPCS" unique_id=738938077 instance=ExtResource("25_0odxb")]
-position = Vector2(889, 259)
-
 [editable path="Y_sorted_objects/Astro"]
 [editable path="Y_sorted_objects/Astro/UI"]
 [editable path="Y_sorted_objects/Astro/UI/PauseMenu"]
+[editable path="Y_sorted_objects/Astro/InventoryUI/InventoryUI"]
+[editable path="Y_sorted_objects/Astro/InventoryUI/Hotbar"]
 [editable path="Y_sorted_objects/Level_base"]

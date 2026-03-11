@@ -1,6 +1,21 @@
 [gd_scene format=3 uid="uid://dmrcbpithc6pj"]
 
+[ext_resource type="Script" uid="uid://fqlgm8ugsho4" path="res://Characters/NPCS/npc_template.gd" id="1_hhmuu"]
+[ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="1_tlg0w"]
+
 [node name="NPC TEMPLATE" type="CharacterBody2D" unique_id=738938077]
+collision_layer = 8
+collision_mask = 3
+script = ExtResource("1_hhmuu")
 
 [node name="SPRITE" type="AnimatedSprite2D" parent="." unique_id=953815279]
 scale = Vector2(1.25, 1.25)
+
+[node name="DialogDection" type="Area2D" parent="." unique_id=1531558135]
+collision_layer = 8
+collision_mask = 0
+
+[node name="DialogPlayer" type="Node" parent="." unique_id=377740873]
+script = ExtResource("1_tlg0w")
+_dialog_data = null
+metadata/_custom_type_script = "uid://1mxdpoyob13n"
