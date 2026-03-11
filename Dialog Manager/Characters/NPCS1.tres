@@ -5,3 +5,8 @@
 [resource]
 script = ExtResource("1_8l0vv")
 key_name = "NPCS1"
+display_name = {
+"default": "NPC 1",
+"en": ""
+}
+description = "This is the first NPC"

@@ -14,14 +14,14 @@ graph_data = {
 "node_type": "dialogue_node",
 "offset": Vector2(32.479725, -145.3707),
 "portrait": "",
-"size": Vector2(250.00006, 394.00015),
+"size": Vector2(250.00015, 394),
 "to_node": ["END"]
 },
 "start_node_1": {
 "node_index": 1,
 "node_type": "start_node",
 "offset": Vector2(-263.51898, -213.45502),
-"size": Vector2(190, 97),
+"size": Vector2(190, 75),
 "start_id": "TEST",
 "to_node": ["dialogue_node_1"]
 }
@@ -29,7 +29,7 @@ graph_data = {
 }
 dialogs = {
 "TEST_DIALOG_1": {
-"default": "Test Dialog 2
+"default": "This is a test dialog
 ",
 "en": ""
 }
