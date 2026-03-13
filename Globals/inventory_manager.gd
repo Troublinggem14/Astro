@@ -3,6 +3,7 @@ const AXE = preload("uid://dh6odjv0umx0a")
 const HOE = preload("uid://eiam4qsiouc5")
 const PICKAXE = preload("uid://b2ba101rhf7kr")
 const WATERINGCAN = preload("uid://berfvd3vcrhdd")
+const FISHINGROD = preload("uid://bmsy4hsgu04go")
 
 signal inventory_updated
 
@@ -13,6 +14,7 @@ func _ready() -> void:
 	add_item(HOE, 0)
 	add_item(PICKAXE, 0)
 	add_item(WATERINGCAN, 0)
+	add_item(FISHINGROD, 0)
 
 
 func add_item(item: ItemData, amount: int = 1):

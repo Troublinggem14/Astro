@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dmrcbpithc6pj" path="res://Characters/NPCS/npc_template.tscn" id="1_rd2hp"]
 [ext_resource type="Texture2D" uid="uid://bephddq4e4rvp" path="res://Assets/Aseprite/Characters/NPCS/NPC 1.png" id="2_6tk5p"]
-[ext_resource type="Resource" uid="uid://lv6x3181cfij" path="res://Dialog Manager/Dialogs/testdialog.tres" id="3_nrhvc"]
+[ext_resource type="Resource" uid="uid://lv6x3181cfij" path="res://Dialog Manager/Dialogs/NPC1.tres" id="3_nrhvc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nrhvc"]
 atlas = ExtResource("2_6tk5p")
@@ -59,7 +59,7 @@ radius = 7.0
 height = 14.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6tk5p"]
-radius = 14.0
+radius = 20.0
 
 [node name="NPC TEMPLATE" unique_id=738938077 node_paths=PackedStringArray("dialog_player") instance=ExtResource("1_rd2hp")]
 dialog_player = NodePath("DialogPlayer")
@@ -81,9 +81,9 @@ shape = SubResource("CircleShape2D_6tk5p")
 
 [node name="DialogPlayer" parent="." index="3" unique_id=377740873]
 _dialog_data_uid = 817354025242101757
-_dialog_file_name = "testdialog"
+_dialog_file_name = "NPC1"
 _dialog_data = ExtResource("3_nrhvc")
-_start_id = "TEST"
+_start_id = "NPC1"
 _play_on_ready = false
 _destroy_on_end = true
 _print_debug = false

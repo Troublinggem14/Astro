@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dm15tkofyedm1"
+path="res://.godot/imported/Dirt Footstep 8.mp3-8b7966ab43b359f57059d4051a7694a8.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Footsteps/Dirt and Sand/Dirt Footstep 8.mp3"
+dest_files=["res://.godot/imported/Dirt Footstep 8.mp3-8b7966ab43b359f57059d4051a7694a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

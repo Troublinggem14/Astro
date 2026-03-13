@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b7nnajcwjq3y6"]
 
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="1_8uh7m"]
-[ext_resource type="Resource" uid="uid://lv6x3181cfij" path="res://Dialog Manager/Dialogs/testdialog.tres" id="2_6uqi0"]
+[ext_resource type="Resource" uid="uid://lv6x3181cfij" path="res://Dialog Manager/Dialogs/NPC1.tres" id="2_6uqi0"]
 
 [node name="Test" type="Node2D" unique_id=1421372287]
 

@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bo0r2j7vkqcdl"]
+
+[ext_resource type="Script" uid="uid://cabvt6rsoty3s" path="res://ControlNodes/Minigames/fishing_minigame.gd" id="1_lrhh1"]
+[ext_resource type="Texture2D" uid="uid://cmfo6rwmlgumq" path="res://Assets/Aseprite/Minigames/Fish/FishMinigame Background.png" id="1_qgmoh"]
+[ext_resource type="Texture2D" uid="uid://2dnu6ei2x7s8" path="res://Assets/Aseprite/Minigames/Fish/FishOutline Minigame.png" id="2_8spvc"]
+[ext_resource type="Texture2D" uid="uid://cvv7c2lo64qrj" path="res://Assets/Aseprite/UI/UI_Bars.png" id="4_7amyc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrhh1"]
+size = Vector2(748, 405)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lrhh1"]
+radius = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mtg0d"]
+atlas = ExtResource("4_7amyc")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rovun"]
+atlas = ExtResource("4_7amyc")
+region = Rect2(16, 0, 16, 32)
+
+[node name="Fishing Minigame" type="Control" unique_id=1895380837]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_lrhh1")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=745912729]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_qgmoh")
+
+[node name="get_random_direction" type="Timer" parent="." unique_id=868095168]
+wait_time = 2.0
+
+[node name="Border" type="Area2D" parent="." unique_id=781670189]
+collision_layer = 256
+collision_mask = 512
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Border" unique_id=4337005]
+position = Vector2(594, 326.5)
+shape = SubResource("RectangleShape2D_lrhh1")
+
+[node name="FishOutlineArea2D" type="Area2D" parent="." unique_id=888982651]
+position = Vector2(588, 346)
+scale = Vector2(2, 2)
+collision_layer = 512
+collision_mask = 256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FishOutlineArea2D" unique_id=140688686]
+shape = SubResource("CircleShape2D_lrhh1")
+debug_color = Color(0.91567373, 0.12973905, 0.6372578, 0.41960785)
+
+[node name="FishOutine" type="Sprite2D" parent="FishOutlineArea2D" unique_id=1414671171]
+texture = ExtResource("2_8spvc")
+
+[node name="FishingProgressBar" type="TextureProgressBar" parent="." unique_id=185289258]
+modulate = Color(0.9999953, 0.12735313, 0.23981798, 1)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -320.99997
+offset_right = 46.0
+offset_bottom = -288.99997
+grow_vertical = 0
+scale = Vector2(4, 9)
+fill_mode = 3
+texture_under = SubResource("AtlasTexture_mtg0d")
+texture_progress = SubResource("AtlasTexture_rovun")
+
+[connection signal="timeout" from="get_random_direction" to="." method="_on_get_random_direction_timeout"]
+[connection signal="area_exited" from="Border" to="." method="_on_border_area_exited"]
+[connection signal="mouse_entered" from="FishOutlineArea2D" to="." method="_on_fish_outline_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="FishOutlineArea2D" to="." method="_on_fish_outline_area_2d_mouse_exited"]

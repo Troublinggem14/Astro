@@ -61,9 +61,16 @@ translation/characters/use_csv_for_character_names=false
 translation/characters/character_names_csv=-1
 translation/localization/default_locale="en"
 translation/localization/locales=["en"]
-variables/variables={}
-internal/play_dialog_path="res://Dialog Manager/Dialogs/testdialog.tres"
-internal/play_start_id="TEST"
+variables/variables={
+"Position": {
+"index": 0,
+"metadata": {},
+"type": 5,
+"value": Vector2(275, 350)
+}
+}
+internal/play_dialog_path="res://Dialog Manager/Dialogs/NPC2.tres"
+internal/play_start_id="NPC2"
 
 [input]
 
@@ -181,6 +188,8 @@ dialogs_continue_action={
 2d_physics/layer_6="Doors"
 2d_physics/layer_7="Tool"
 2d_physics/layer_8="Collectible"
+2d_physics/layer_9="FishingBorder"
+2d_physics/layer_10="FishingOutline"
 
 [physics]
 

@@ -20,23 +20,27 @@ func _on_physics_process(_delta : float) -> void:
 		animated_sprite_2D.play("Idle_North")
 
 func _on_next_transitions() -> void:
-	GameInputEvent.movement_input()
-	
-	if GameInputEvent.movement_input():
-		transition.emit("Walk")
+	if EventBus.can_idle_transition:
+		GameInputEvent.movement_input()
 		
-	if player.current_tool == data_types.Tools.AxeWood and GameInputEvent.use_tool():
-		transition.emit("Chopping")
-	if player.current_tool == data_types.Tools.MineStone and GameInputEvent.use_tool():
-		transition.emit("Mining")
-	if player.current_tool == data_types.Tools.TillGround and GameInputEvent.use_tool():
-		transition.emit("Tilling")
-	if player.current_tool == data_types.Tools.WaterCrops and GameInputEvent.use_tool():
-		transition.emit("Watering")
+		if GameInputEvent.movement_input():
+			transition.emit("Walk")
+			
+		if player.current_tool == data_types.Tools.AxeWood and GameInputEvent.use_tool():
+			transition.emit("Chopping")
+		if player.current_tool == data_types.Tools.MineStone and GameInputEvent.use_tool():
+			transition.emit("Mining")
+		if player.current_tool == data_types.Tools.TillGround and GameInputEvent.use_tool():
+			transition.emit("Tilling")
+		if player.current_tool == data_types.Tools.WaterCrops and GameInputEvent.use_tool():
+			transition.emit("Watering")
+		if player.current_tool == data_types.Tools.Fishing and GameInputEvent.use_tool():
+			transition.emit("Fishing")
 
 
 func _on_enter() -> void:
-	pass
+	EventBus.can_idle_transition = true
+	EventBus.can_start_dialog = true
 
 
 func _on_exit() -> void:

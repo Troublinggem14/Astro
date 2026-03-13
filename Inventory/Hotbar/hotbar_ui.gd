@@ -97,5 +97,7 @@ func held_item():
 		player.current_tool = data_types.Tools.MineStone
 	elif slot.item.name == "Watering Can":
 		player.current_tool = data_types.Tools.WaterCrops
+	elif slot.item.name == "Fishing Rod":
+		player.current_tool = data_types.Tools.Fishing
 	else:
 		player.current_tool = data_types.Tools.None

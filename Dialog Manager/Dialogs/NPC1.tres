@@ -1,0 +1,82 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://lv6x3181cfij"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_y1iru"]
+
+[resource]
+script = ExtResource("1_y1iru")
+graph_data = {
+"NPC1": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "",
+"dialog_key": "NPC1_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(30, -274),
+"portrait": "",
+"size": Vector2(250.00012, 394),
+"to_dialog": "",
+"to_node": ["wait_node_1"]
+},
+"dialogue_node_2": {
+"char_expand": true,
+"character": "",
+"dialog_key": "NPC1_DIALOG_2",
+"node_index": 2,
+"node_type": "dialogue_node",
+"offset": Vector2(662.00006, -24),
+"portrait": "",
+"size": Vector2(250, 394),
+"to_dialog": "",
+"to_node": ["dialogue_node_3"]
+},
+"dialogue_node_3": {
+"char_expand": true,
+"character": "",
+"dialog_key": "NPC1_DIALOG_3",
+"node_index": 3,
+"node_type": "dialogue_node",
+"offset": Vector2(1012.00037, 226),
+"portrait": "",
+"size": Vector2(250, 394.00003),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(-260, -220),
+"size": Vector2(190, 75),
+"start_id": "NPC1",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+},
+"wait_node_1": {
+"node_index": 1,
+"node_type": "wait_node",
+"offset": Vector2(380.00003, 32),
+"size": Vector2(182, 73.00003),
+"to_dialog": "",
+"to_node": ["dialogue_node_2"],
+"wait_time": 0.0
+}
+}
+}
+dialogs = {
+"NPC1_DIALOG_1": {
+"default": "So I didnt think...
+",
+"en": ""
+},
+"NPC1_DIALOG_2": {
+"default": "I am passing a new bill, called.",
+"en": ""
+},
+"NPC1_DIALOG_3": {
+"default": "The eat shit and die",
+"en": ""
+}
+}
+characters = {
+"NPC1": {}
+}

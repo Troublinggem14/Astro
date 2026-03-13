@@ -1,0 +1,4 @@
+Sound effects to add:
+	Footsteps
+	Pickups
+	Fishing

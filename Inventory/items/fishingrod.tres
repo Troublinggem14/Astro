@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bmsy4hsgu04go"]
+
+[ext_resource type="Texture2D" uid="uid://drdgs4eqaac85" path="res://Assets/Aseprite/Objects/Resources/ToolsIcons.png" id="1_pmilg"]
+[ext_resource type="Script" uid="uid://cn23km1h6syxf" path="res://Inventory/items/item_data.gd" id="2_xjm8m"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmilg"]
+atlas = ExtResource("1_pmilg")
+region = Rect2(112, 0, 16, 16)
+
+[resource]
+script = ExtResource("2_xjm8m")
+name = "Fishing Rod"
+icon = SubResource("AtlasTexture_pmilg")
+max_stack = 1
+description = "This is a Fishing Rod used to Fish"
+metadata/_custom_type_script = "uid://cn23km1h6syxf"

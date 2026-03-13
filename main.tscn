@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c5iqryglfd3nu" path="res://Objects/DoorTypes/no_door.tscn" id="5_1u8w0"]
 [ext_resource type="PackedScene" uid="uid://c5p108fex7447" path="res://Objects/Collectibles/log.tscn" id="5_getpj"]
 [ext_resource type="Script" uid="uid://cxlv6jsvfpiki" path="res://Levels/audios.gd" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://c377ftto753mi" path="res://Characters/NPCS/NPC2.tscn" id="5_lswn8"]
 [ext_resource type="AudioStream" uid="uid://bgh5s3ay3vas1" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 1.mp3" id="6_7mycd"]
 [ext_resource type="AudioStream" uid="uid://c0nlvia80g34q" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 2.mp3" id="7_272bh"]
 [ext_resource type="AudioStream" uid="uid://b1pnllngtd8lt" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Mining and Woodcutting/Mineral Mining - 3.mp3" id="8_kek77"]
@@ -67,9 +68,6 @@ current_tool = 1
 [node name="UI" parent="Y_sorted_objects/Astro" index="1" unique_id=1314799245]
 visible = false
 
-[node name="Dialog Activation" parent="Y_sorted_objects/Astro" index="11" unique_id=1223980842 node_paths=PackedStringArray("NPCDialog")]
-NPCDialog = NodePath("../../NPCS/NPC TEMPLATE")
-
 [node name="Level_base" parent="Y_sorted_objects" unique_id=823952948 instance=ExtResource("1_ig7tw")]
 y_sort_enabled = true
 
@@ -99,8 +97,13 @@ z_index = -2
 [node name="NPCS" type="Node2D" parent="Y_sorted_objects" unique_id=2033112201]
 y_sort_enabled = true
 
-[node name="NPC TEMPLATE" parent="Y_sorted_objects/NPCS" unique_id=738938077 instance=ExtResource("25_0odxb")]
+[node name="NPC TEMPLATE" parent="Y_sorted_objects/NPCS" unique_id=738938077 node_paths=PackedStringArray("Astro_State_Machine") instance=ExtResource("25_0odxb")]
 position = Vector2(898, 278)
+Astro_State_Machine = NodePath("../../Astro/StateMachine")
+
+[node name="NPC TEMPLATE3" parent="Y_sorted_objects/NPCS" unique_id=1667632337 node_paths=PackedStringArray("Astro_State_Machine") instance=ExtResource("5_lswn8")]
+position = Vector2(958, 318)
+Astro_State_Machine = NodePath("../../Astro/StateMachine")
 
 [node name="Doors" type="Node" parent="." unique_id=276073244]
 

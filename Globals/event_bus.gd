@@ -9,3 +9,8 @@ signal tree_hit
 
 signal Deplete_oxygen_signal(amount:int)
 signal die()
+
+var can_idle_transition: bool
+var can_start_dialog: bool
+
+var can_fish: bool

@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="SproutyDialogsDialogueData" format=3 uid="uid://dpuramelrcwgn"]
+
+[ext_resource type="Script" uid="uid://cbjdca3iwlx36" path="res://addons/sprouty_dialogs/resources/dialogue_data.gd" id="1_m47ib"]
+
+[resource]
+script = ExtResource("1_m47ib")
+graph_data = {
+"NPC2": {
+"dialogue_node_1": {
+"char_expand": true,
+"character": "",
+"dialog_key": "NPC2_DIALOG_1",
+"node_index": 1,
+"node_type": "dialogue_node",
+"offset": Vector2(506, 277),
+"portrait": "",
+"size": Vector2(250, 394),
+"to_dialog": "",
+"to_node": ["END"]
+},
+"start_node_1": {
+"node_index": 1,
+"node_type": "start_node",
+"offset": Vector2(214, 167),
+"size": Vector2(190, 97),
+"start_id": "NPC2",
+"to_dialog": "",
+"to_node": ["dialogue_node_1"]
+}
+}
+}
+dialogs = {
+"NPC2_DIALOG_1": {
+"default": "Hello, im NPC#2",
+"en": ""
+}
+}
+characters = {
+"NPC2": {}
+}

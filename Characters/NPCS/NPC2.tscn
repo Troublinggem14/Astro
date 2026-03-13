@@ -1,5 +1,89 @@
 [gd_scene format=3 uid="uid://c377ftto753mi"]
 
 [ext_resource type="PackedScene" uid="uid://dmrcbpithc6pj" path="res://Characters/NPCS/npc_template.tscn" id="1_cdtpk"]
+[ext_resource type="Texture2D" uid="uid://bephddq4e4rvp" path="res://Assets/Aseprite/Characters/NPCS/NPC 1.png" id="2_t17rh"]
+[ext_resource type="Resource" uid="uid://dpuramelrcwgn" path="res://Dialog Manager/Dialogs/NPC2.tres" id="3_t17rh"]
 
-[node name="NPC TEMPLATE" unique_id=738938077 instance=ExtResource("1_cdtpk")]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrhvc"]
+atlas = ExtResource("2_t17rh")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjowo"]
+atlas = ExtResource("2_t17rh")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_05o56"]
+atlas = ExtResource("2_t17rh")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1it0o"]
+atlas = ExtResource("2_t17rh")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gwdg"]
+atlas = ExtResource("2_t17rh")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqsjy"]
+atlas = ExtResource("2_t17rh")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vv0al"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrhvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjowo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_05o56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1it0o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gwdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqsjy")
+}],
+"loop": true,
+"name": &"Idle_South",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6tk5p"]
+radius = 7.0
+height = 14.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6tk5p"]
+radius = 23.0
+
+[node name="NPC TEMPLATE" unique_id=738938077 node_paths=PackedStringArray("dialog_player") instance=ExtResource("1_cdtpk")]
+dialog_player = NodePath("DialogPlayer")
+
+[node name="SPRITE" parent="." index="0" unique_id=953815279]
+sprite_frames = SubResource("SpriteFrames_vv0al")
+animation = &"Idle_South"
+autoplay = "Idle_South"
+frame_progress = 0.64915305
+offset = Vector2(0, -7.24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=1889524880]
+position = Vector2(-1, -9)
+shape = SubResource("CapsuleShape2D_6tk5p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogDection" parent_id_path=PackedInt32Array(1531558135) index="0" unique_id=1912767439]
+position = Vector2(-1, -9)
+shape = SubResource("CircleShape2D_6tk5p")
+
+[node name="DialogPlayer" parent="." index="3" unique_id=377740873]
+_dialog_data_uid = 8254415086590045361
+_dialog_file_name = "NPC2"
+_dialog_data = ExtResource("3_t17rh")
+_start_id = "NPC2"
+_play_on_ready = false
+_destroy_on_end = true
+_print_debug = false

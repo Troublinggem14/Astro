@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://1mxdpoyob13n" path="res://addons/sprouty_dialogs/nodes/dialog_player.gd" id="1_tlg0w"]
 
 [node name="NPC TEMPLATE" type="CharacterBody2D" unique_id=738938077]
+z_index = 1
+y_sort_enabled = true
 collision_layer = 8
 collision_mask = 3
 script = ExtResource("1_hhmuu")
@@ -19,3 +21,6 @@ collision_mask = 0
 script = ExtResource("1_tlg0w")
 _dialog_data = null
 metadata/_custom_type_script = "uid://1mxdpoyob13n"
+
+[connection signal="dialog_ended" from="DialogPlayer" to="." method="_on_dialog_player_dialog_ended"]
+[connection signal="dialog_started" from="DialogPlayer" to="." method="_on_dialog_player_dialog_started"]
