@@ -8,6 +8,10 @@
 
 config_version=5
 
+[addons]
+
+expand-collapse-node-plugin/shortcut="res://addons/expand-collapse-node/default_shortcut.tres"
+
 [application]
 
 config/name="Astro"
@@ -23,6 +27,9 @@ PausedState="*uid://0bow4uh8rhkh"
 TimeManager="*uid://d15vihtr624tj"
 InventoryManager="*uid://b5yqxjjmyok8h"
 SproutyDialogs="*uid://c8gxm75j80u8c"
+footstep_manager="*uid://cgum6wurcq1jv"
+FishingManager="*uid://ciro4efewux6s"
+AudioManager="*uid://u75jekcjqa5y"
 
 [display]
 

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dp2g56u17drvx"
+path="res://.godot/imported/Line Break - 1.mp3-49079706dd092cede03dde0a7d0ad232.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Line Break - 1.mp3"
+dest_files=["res://.godot/imported/Line Break - 1.mp3-49079706dd092cede03dde0a7d0ad232.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

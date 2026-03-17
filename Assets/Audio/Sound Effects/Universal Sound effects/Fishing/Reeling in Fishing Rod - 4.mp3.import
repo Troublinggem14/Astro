@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckwwljvkwfbo2"
+path="res://.godot/imported/Reeling in Fishing Rod - 4.mp3-eb8046dd7518c333fa2b06456ee6b4ce.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Reeling in Fishing Rod - 4.mp3"
+dest_files=["res://.godot/imported/Reeling in Fishing Rod - 4.mp3-eb8046dd7518c333fa2b06456ee6b4ce.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

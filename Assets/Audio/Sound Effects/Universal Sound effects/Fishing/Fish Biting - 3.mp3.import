@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ce232x34tk5yt"
+path="res://.godot/imported/Fish Biting - 3.mp3-39833965e4a5fd23f0cbb3309795404a.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Fish Biting - 3.mp3"
+dest_files=["res://.godot/imported/Fish Biting - 3.mp3-39833965e4a5fd23f0cbb3309795404a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

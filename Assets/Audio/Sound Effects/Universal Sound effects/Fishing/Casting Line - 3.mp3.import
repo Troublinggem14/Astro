@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://si8as6qldf3q"
+path="res://.godot/imported/Casting Line - 3.mp3-af301f3b1df79f70ab5dc44b0294209e.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Casting Line - 3.mp3"
+dest_files=["res://.godot/imported/Casting Line - 3.mp3-af301f3b1df79f70ab5dc44b0294209e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -26,7 +26,9 @@ func _on_next_transitions() -> void:
 
 
 func _on_enter() -> void:
-	if EventBus.can_fish == true:
+	play_bobber_audio()
+	
+	if FishingManager.can_fish == true:
 		oxygen_bar.value -= oxygen_drain
 		hitcomponent.current_tool = data_types.Tools.Fishing
 
@@ -54,9 +56,11 @@ func _on_enter() -> void:
 			animated_sprite_2D.play("Fishing_Toss_North")
 			await get_tree().create_timer(1.3).timeout
 			idle_fishing("North")
+			
 
 
 func _on_exit() -> void:
+	FishingManager.is_fishing = false
 	animated_sprite_2D.stop()
 
 
@@ -64,35 +68,49 @@ func idle_fishing(direction: String):
 	match direction:
 		"North":
 			animated_sprite_2D.play("Fishing_Idle_North")
+			FishingManager.is_fishing = true
+			FishingManager.start_fishing()
 		"South":
 			animated_sprite_2D.play("Fishing_Idle_South")
+			FishingManager.is_fishing = true
+			FishingManager.start_fishing()
 		"East":
 			animated_sprite_2D.play("Fishing_Idle_East")
+			FishingManager.is_fishing = true
+			FishingManager.start_fishing()
 		"West":
 			animated_sprite_2D.play("Fishing_Idle_West")
+			FishingManager.is_fishing = true
+			FishingManager.start_fishing()
 			
 func stop_fishing():
-	if player.player_direction == Vector2.UP:
-		animated_sprite_2D.play_backwards("Fishing_Toss_North")
-		await get_tree().create_timer(1.3).timeout
-		_on_exit()
+	if FishingManager.can_stop_fishing == true:
+	
+		if player.player_direction == Vector2.UP:
+			animated_sprite_2D.play_backwards("Fishing_Toss_North")
+			await get_tree().create_timer(1.3).timeout
+			_on_exit()
 
-	elif player.player_direction == Vector2.DOWN:
-		animated_sprite_2D.play_backwards("Fishing_Toss_South")
-		await get_tree().create_timer(1.3).timeout
-		_on_exit()
+		elif player.player_direction == Vector2.DOWN:
+			animated_sprite_2D.play_backwards("Fishing_Toss_South")
+			await get_tree().create_timer(1.3).timeout
+			_on_exit()
 
-	elif player.player_direction == Vector2.RIGHT:
-		animated_sprite_2D.play_backwards("Fishing_Toss_East")
-		await get_tree().create_timer(1.3).timeout
-		_on_exit()
+		elif player.player_direction == Vector2.RIGHT:
+			animated_sprite_2D.play_backwards("Fishing_Toss_East")
+			await get_tree().create_timer(1.3).timeout
+			_on_exit()
 
-	elif player.player_direction == Vector2.LEFT:
-		animated_sprite_2D.play_backwards("Fishing_Toss_West")
-		await get_tree().create_timer(1.3).timeout
-		_on_exit()
+		elif player.player_direction == Vector2.LEFT:
+			animated_sprite_2D.play_backwards("Fishing_Toss_West")
+			await get_tree().create_timer(1.3).timeout
+			_on_exit()
 
-	else:
-		animated_sprite_2D.play_backwards("Fishing_Toss_North")
-		await get_tree().create_timer(1.3).timeout
-		_on_exit()
+		else:
+			animated_sprite_2D.play_backwards("Fishing_Toss_North")
+			await get_tree().create_timer(1.3).timeout
+			_on_exit()
+
+func play_bobber_audio():
+	await get_tree().create_timer(.5).timeout
+	AudioManager.play_casting_line()

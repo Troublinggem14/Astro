@@ -4,13 +4,9 @@ extends Node
 
 signal spawn_log(position: Vector2)
 signal spawn_rock(position: Vector2)
-signal rock_hit
-signal tree_hit
 
 signal Deplete_oxygen_signal(amount:int)
 signal die()
 
 var can_idle_transition: bool
 var can_start_dialog: bool
-
-var can_fish: bool

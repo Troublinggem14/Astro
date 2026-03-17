@@ -1,4 +1,7 @@
 Sound effects to add:
-	Footsteps
 	Pickups
 	Fishing
+
+World building:
+	Town
+	Forest

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cqy0uxv3hsb7x"]
+
+[ext_resource type="Script" uid="uid://cx1otk6mbmraf" path="res://TileSets/Footstep areas/FootstepSurfaces.gd" id="1_2lmko"]
+
+[node name="GrassArea" type="Area2D" unique_id=238307435]
+collision_layer = 2
+script = ExtResource("1_2lmko")

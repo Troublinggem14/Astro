@@ -24,6 +24,8 @@
 [ext_resource type="FontFile" uid="uid://byr5m74fgh60p" path="res://Fonts/SPACEBOY.TTF" id="20_2v41y"]
 [ext_resource type="Script" uid="uid://wlxkjptpmifw" path="res://Characters/Astro/dialog_activation.gd" id="22_r23j1"]
 [ext_resource type="Script" uid="uid://5k2o5t82bxf5" path="res://Characters/Astro/water_ray_cast.gd" id="23_dv70k"]
+[ext_resource type="Script" uid="uid://20l7kfgt8by5" path="res://Characters/Astro/footstep_detector.gd" id="25_2raa5"]
+[ext_resource type="PackedScene" uid="uid://u75jekcjqa5y" path="res://Globals/audio_manager.tscn" id="26_7cuxl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_12fn7"]
 atlas = ExtResource("4_2dfdk")
@@ -1544,11 +1546,14 @@ radius = 5.0
 radius = 8.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_g0nao"]
-radius = 85.0
+radius = 28.160255
 
 [sub_resource type="LabelSettings" id="LabelSettings_5fib1"]
 font = ExtResource("20_2v41y")
 font_size = 25
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dv70k"]
+radius = 3.0
 
 [node name="Astro" type="CharacterBody2D" unique_id=605047117]
 collision_mask = 174
@@ -1559,7 +1564,7 @@ script = ExtResource("1_vb1uq")
 position = Vector2(0, -1)
 zoom = Vector2(3, 3)
 
-[node name="UI" parent="." unique_id=1314799245 instance=ExtResource("6_4k583")]
+[node name="UI" parent="." unique_id=1314799245 groups=["ui"] instance=ExtResource("6_4k583")]
 
 [node name="UiControlNode" parent="UI" index="0" unique_id=1431772361]
 process_mode = 3
@@ -1585,8 +1590,9 @@ camera = NodePath("../../../../Camera2D")
 position = Vector2(0, 9)
 scale = Vector2(1.25, 1.25)
 sprite_frames = SubResource("SpriteFrames_mluxe")
-animation = &"Walk_West"
+animation = &"Walk_South"
 autoplay = "Idle_South"
+frame_progress = 0.7617939
 offset = Vector2(0, -14)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=821428530]
@@ -1795,7 +1801,6 @@ collide_with_bodies = false
 modulate = Color(16.937159, 0, 8.345998, 1)
 rotation = 3.1415927
 scale = Vector2(6, 1)
-exclude_parent = false
 target_position = Vector2(0, 30)
 collision_mask = 2
 hit_from_inside = true
@@ -1804,6 +1809,17 @@ script = ExtResource("23_dv70k")
 [node name="Dialog Activation" type="Node2D" parent="." unique_id=1223980842]
 script = ExtResource("22_r23j1")
 
+[node name="FootstepDetector" type="Area2D" parent="." unique_id=1883617673]
+collision_mask = 2
+script = ExtResource("25_2raa5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FootstepDetector" unique_id=774757558]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_dv70k")
+debug_color = Color(0, 0, 0, 0.41960785)
+
+[node name="AudioManager" parent="." unique_id=2066486854 instance=ExtResource("26_7cuxl")]
+
 [connection signal="value_changed" from="UI/PauseMenu/Control/FovSlider" to="UI/PauseMenu/Control/FovSlider" method="_on_value_changed"]
 [connection signal="frame_changed" from="AnimatedSprite2D" to="StateMachine/Walk" method="_on_animated_sprite_2d_frame_changed"]
 [connection signal="area_exited" from="Magnet Component" to="Magnet Component" method="_on_area_exited"]
@@ -1811,6 +1827,7 @@ script = ExtResource("22_r23j1")
 [connection signal="toggled" from="DevTools/CollisionToggle" to="DevTools" method="_on_collision_toggle_toggled"]
 [connection signal="value_changed" from="DevTools/Label/HScrollBar" to="DevTools" method="_on_h_scroll_bar_value_changed"]
 [connection signal="draw" from="Dialog_RayCast" to="Dialog Activation" method="_on_dialog_ray_cast_draw"]
+[connection signal="area_entered" from="FootstepDetector" to="FootstepDetector" method="_on_area_entered"]
 
 [editable path="UI"]
 [editable path="UI/PauseMenu"]

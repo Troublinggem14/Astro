@@ -38,7 +38,6 @@ func _on_physics_process(_delta : float) -> void:
 	player.move_and_slide()
 	
 
-
 func _on_next_transitions() -> void:
 	if !GameInputEvent.is_movement_input():
 		transition.emit("Idle")
@@ -55,6 +54,12 @@ func _on_next_transitions() -> void:
 
 func _on_enter() -> void:
 	EventBus.can_start_dialog = false
-
+ 
 func _on_exit() -> void:
 	animated_sprite_2D.stop()
+
+
+func _on_animated_sprite_2d_frame_changed() -> void:
+	if animated_sprite_2D.animation.begins_with("Walk"):
+		if animated_sprite_2D.frame == 2 or animated_sprite_2D.frame == 5:
+			footstep_manager.play_step(player.global_position)

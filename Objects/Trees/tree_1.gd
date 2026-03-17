@@ -9,7 +9,7 @@ func _ready() -> void:
 	
 func on_hurt(hit_damage: int) -> void:
 	damage_component.apply_damage(hit_damage)
-	EventBus.tree_hit.emit()
+	AudioManager.play_chopping_audio()
 	$GPUParticles2D.emitting = true
 	$AnimationPlayer.play("Shake")
 

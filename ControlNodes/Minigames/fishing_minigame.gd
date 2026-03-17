@@ -1,51 +1,45 @@
 extends Control
 
-@export var fish_speed: float = 200
+@export var indicator_speed: float = 300.0
 
-@onready var fishoutline: Area2D = $FishOutlineArea2D
-@onready var get_random_direction_timer: Timer = $get_random_direction
-@onready var fishing_progress_bar: TextureProgressBar = $FishingProgressBar
+@onready var bar = $Bar
+@onready var indicator = $Bar/Indicator
+@onready var target = $Bar/TargetZone
 
-var direction: Vector2 = Vector2.ZERO
-
-var is_catching: bool
-
-
-func _ready() -> void:
-	randomize()
-	get_random_direction_timer.start()
-	set_random_direction()
+var direction := 1
+var finished := false
 
 
-func _process(delta: float) -> void:
-	fishoutline.position += direction * fish_speed * delta
-	
-	if is_catching:
-		fishing_progress_bar.value += 1
+func _process(delta):
+
+	if finished:
+		return
+
+	move_indicator(delta)
+
+	if Input.is_action_just_pressed("action"):
+		check_success()
+
+
+func move_indicator(delta):
+
+	indicator.position.x += indicator_speed * direction * delta
+
+	if indicator.position.x + indicator.size.x >= bar.size.x:
+		direction = -1
+
+	if indicator.position.x <= 0:
+		direction = 1
+
+
+func check_success():
+
+	finished = true
+	FishingManager.can_stop_fishing = true
+
+	if indicator.get_rect().intersects(target.get_rect()):
+		AudioManager.play_reel_in_fish()
 	else:
-		fishing_progress_bar.value -= 1
+		AudioManager.play_line_break()
 
-
-func set_random_direction():
-	direction = Vector2(
-		randf_range(-1, 1),
-		randf_range(-1, 1)
-	).normalized()
-
-
-func _on_get_random_direction_timeout() -> void:
-	set_random_direction()
-
-
-func _on_border_area_exited(area: Area2D) -> void:
-	if area == fishoutline:
-		# bounce the fish by reversing direction
-		direction = -direction
-
-
-func _on_fish_outline_area_2d_mouse_exited() -> void:
-	is_catching = false
-
-
-func _on_fish_outline_area_2d_mouse_entered() -> void:
-	is_catching = true
+	queue_free()
