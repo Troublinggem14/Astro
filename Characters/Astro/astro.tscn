@@ -1555,7 +1555,7 @@ font_size = 25
 [sub_resource type="CircleShape2D" id="CircleShape2D_dv70k"]
 radius = 3.0
 
-[node name="Astro" type="CharacterBody2D" unique_id=605047117]
+[node name="Astro" type="CharacterBody2D" unique_id=605047117 groups=["Astro"]]
 collision_mask = 174
 motion_mode = 1
 script = ExtResource("1_vb1uq")

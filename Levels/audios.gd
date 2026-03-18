@@ -9,6 +9,9 @@ func play_chopping_audio():
 func play_casting_line():
 	$Casting_Line.play()
 
+func play_de_casting_line():
+	$DECasting_Line.play()
+
 func play_fish_bite():
 	$Fish_Bite.play()
 func _on_fish_bite_finished() -> void:

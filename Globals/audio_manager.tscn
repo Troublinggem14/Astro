@@ -18,6 +18,7 @@
 [ext_resource type="AudioStream" uid="uid://lj3r6fm0tnwm" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Game Sounds 1/GS1_Beast_Scream.mp3" id="15_xiee6"]
 [ext_resource type="AudioStream" uid="uid://2iwf0u36wkrg" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Casting Line - 2.mp3" id="17_fphjp"]
 [ext_resource type="AudioStream" uid="uid://c5e2yk7ae5r1p" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Fish Biting - 1.mp3" id="18_jukmn"]
+[ext_resource type="AudioStream" uid="uid://sip75vqsrn2h" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/DeCastLine.mp3" id="18_v1qht"]
 [ext_resource type="AudioStream" uid="uid://gb4x8meknrkk" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Fish Biting - 2.mp3" id="19_dsy6g"]
 [ext_resource type="AudioStream" uid="uid://ce232x34tk5yt" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Fish Biting - 3.mp3" id="20_wevdh"]
 [ext_resource type="AudioStream" uid="uid://cqo56kua4vqa3" path="res://Assets/Audio/Sound Effects/Universal Sound effects/Fishing/Fish Biting - 4.mp3" id="21_v1qht"]
@@ -65,6 +66,10 @@ stream = ExtResource("15_xiee6")
 
 [node name="Casting_Line" type="AudioStreamPlayer2D" parent="." unique_id=248188043]
 stream = ExtResource("17_fphjp")
+pitch_scale = 4.0
+
+[node name="DECasting_Line" type="AudioStreamPlayer2D" parent="." unique_id=589501347]
+stream = ExtResource("18_v1qht")
 pitch_scale = 4.0
 
 [node name="Fish_Bite" type="AudioStreamPlayer2D" parent="." unique_id=318740061]

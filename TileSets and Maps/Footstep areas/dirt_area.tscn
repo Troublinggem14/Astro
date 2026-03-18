@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfys2l6u87pf0"]
 
-[ext_resource type="PackedScene" uid="uid://cqy0uxv3hsb7x" path="res://TileSets/Footstep areas/grass_area.tscn" id="1_7ayhr"]
+[ext_resource type="PackedScene" uid="uid://cqy0uxv3hsb7x" path="res://TileSets and Maps/Footstep areas/grass_area.tscn" id="1_7ayhr"]
 
 [node name="DirtArea" unique_id=238307435 instance=ExtResource("1_7ayhr")]
 surface_type = "Dirt"

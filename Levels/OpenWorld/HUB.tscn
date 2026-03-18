@@ -1,11 +1,11 @@
 [gd_scene format=4 uid="uid://de4wst1jnnvyn"]
 
-[ext_resource type="TileSet" uid="uid://c1lobonb3g68f" path="res://TileSets/GrassLand.tres" id="1_rinr7"]
+[ext_resource type="TileSet" uid="uid://c1lobonb3g68f" path="res://TileSets and Maps/GrassLand.tres" id="1_rinr7"]
 [ext_resource type="Texture2D" uid="uid://cijxfs5l0iekn" path="res://Assets/Aseprite/TileSets/GrassLand/Puffy Grass/ExtraGrassPufssTiles.png" id="2_fj2y4"]
 [ext_resource type="Texture2D" uid="uid://bdxmo2whbcvpm" path="res://Assets/Aseprite/TileSets/GrassLand/GrassBlades-sheet.png" id="3_uctqq"]
 [ext_resource type="Texture2D" uid="uid://p48sxdjn64if" path="res://Assets/Aseprite/TileSets/Ship/CrashedShip.png" id="4_ww1ao"]
 [ext_resource type="Texture2D" uid="uid://cko8i48mtgyyq" path="res://Assets/Aseprite/TileSets/Ship/Plane wing.png" id="5_ee1bq"]
-[ext_resource type="TileSet" uid="uid://dbyuscmlmr8yb" path="res://TileSets/Trees.tres" id="6_3r78l"]
+[ext_resource type="TileSet" uid="uid://dbyuscmlmr8yb" path="res://TileSets and Maps/Trees.tres" id="6_3r78l"]
 [ext_resource type="PackedScene" uid="uid://muarfi8bnf7w" path="res://Objects/Rocks/ship_rock.tscn" id="7_ha6bj"]
 [ext_resource type="Texture2D" uid="uid://behxxpewpnaq2" path="res://Assets/Aseprite/TileSets/GrassLand/Grass_1_Middle.png" id="8_ha6bj"]
 [ext_resource type="Texture2D" uid="uid://dvlik3spqod6k" path="res://Assets/Aseprite/TileSets/GrassLand/Grass_Tiles_1.png" id="9_3pwgu"]
@@ -13,12 +13,12 @@
 [ext_resource type="Texture2D" uid="uid://posuqkwqkjlk" path="res://Assets/Aseprite/TileSets/GrassLand/Grass_Tiles_1_Blob_TEST_1.png" id="11_gtpjk"]
 [ext_resource type="Texture2D" uid="uid://dpo2owjl5i3x6" path="res://Assets/Aseprite/TileSets/GrassLand/Path_Decoration.png" id="12_yr760"]
 [ext_resource type="Texture2D" uid="uid://dqfejymu0cblf" path="res://Assets/Aseprite/TileSets/GrassLand/Path_Middle.png" id="13_k1y68"]
-[ext_resource type="TileSet" uid="uid://dp5pmqkn56fu1" path="res://TileSets/beach.tres" id="14_3pwgu"]
-[ext_resource type="TileSet" uid="uid://dh5fhulsen0w8" path="res://TileSets/water.tres" id="15_1fbki"]
-[ext_resource type="PackedScene" uid="uid://cqy0uxv3hsb7x" path="res://TileSets/Footstep areas/grass_area.tscn" id="16_gtpjk"]
-[ext_resource type="PackedScene" uid="uid://bfys2l6u87pf0" path="res://TileSets/Footstep areas/dirt_area.tscn" id="17_yr760"]
+[ext_resource type="TileSet" uid="uid://dp5pmqkn56fu1" path="res://TileSets and Maps/beach.tres" id="14_3pwgu"]
+[ext_resource type="TileSet" uid="uid://dh5fhulsen0w8" path="res://TileSets and Maps/water.tres" id="15_1fbki"]
+[ext_resource type="PackedScene" uid="uid://cqy0uxv3hsb7x" path="res://TileSets and Maps/Footstep areas/grass_area.tscn" id="16_gtpjk"]
+[ext_resource type="PackedScene" uid="uid://bfys2l6u87pf0" path="res://TileSets and Maps/Footstep areas/dirt_area.tscn" id="17_yr760"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_he5fc"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yr760"]
 texture = ExtResource("2_fj2y4")
 0:0/0 = 0
 0:0/0/custom_data_0 = "Grass"
@@ -120,9 +120,9 @@ texture = ExtResource("2_fj2y4")
 [sub_resource type="TileSet" id="TileSet_g0iu5"]
 custom_data_layer_0/name = "footstep_sound"
 custom_data_layer_0/type = 4
-sources/1 = SubResource("TileSetAtlasSource_he5fc")
+sources/1 = SubResource("TileSetAtlasSource_yr760")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wcai"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1y68"]
 texture = ExtResource("3_uctqq")
 0:0/animation_columns = 2
 0:0/animation_mode = 1
@@ -141,7 +141,7 @@ texture = ExtResource("3_uctqq")
 4:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_7wcai"]
-sources/0 = SubResource("TileSetAtlasSource_7wcai")
+sources/0 = SubResource("TileSetAtlasSource_k1y68")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4ykpj"]
 texture = ExtResource("8_ha6bj")

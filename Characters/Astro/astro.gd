@@ -4,3 +4,6 @@ class_name AstroClassName #Used for export variables (States)
 
 
 var player_direction: Vector2 #used for my States in the StateMachine
+
+func on_fish_caught():
+	$StateMachine/Fishing.stop_fishing()

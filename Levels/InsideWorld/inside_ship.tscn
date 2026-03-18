@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://bwe7equgn4rc3"]
 
-[ext_resource type="TileSet" uid="uid://da4wjp75roi30" path="res://TileSets/FloorTiles.tres" id="1_5qtho"]
+[ext_resource type="TileSet" uid="uid://da4wjp75roi30" path="res://TileSets and Maps/FloorTiles.tres" id="1_5qtho"]
 [ext_resource type="Script" uid="uid://1u8gw2b2ewtq" path="res://Levels/InsideWorld/inside_ship.gd" id="1_rreq2"]
-[ext_resource type="TileSet" uid="uid://c1lobonb3g68f" path="res://TileSets/GrassLand.tres" id="2_i6q2a"]
+[ext_resource type="TileSet" uid="uid://c1lobonb3g68f" path="res://TileSets and Maps/GrassLand.tres" id="2_i6q2a"]
 [ext_resource type="PackedScene" uid="uid://dabu7exyrms0p" path="res://Characters/Astro/astro.tscn" id="2_nfuqv"]
 [ext_resource type="PackedScene" uid="uid://dvgqios0micgk" path="res://Objects/DoorTypes/door.tscn" id="4_i6q2a"]
 [ext_resource type="PackedScene" uid="uid://bh4wov0gh68c5" path="res://Components/LevelTransitions/fading_component.tscn" id="5_de1iu"]

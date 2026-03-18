@@ -30,9 +30,11 @@ SproutyDialogs="*uid://c8gxm75j80u8c"
 footstep_manager="*uid://cgum6wurcq1jv"
 FishingManager="*uid://ciro4efewux6s"
 AudioManager="*uid://u75jekcjqa5y"
+FishingState="*uid://ckjuj77ds8kbo"
 
 [display]
 
+window/size/mode=4
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 window/main_scene="uid://cu3lk2hnyq8it"
